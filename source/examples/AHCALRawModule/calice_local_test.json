@@ -1,0 +1,79 @@
+{
+    "HOSTS" :
+    {
+
+	"ahcalmonitoring":[	    
+	    {
+		"NAME":"EVENT_COLLECTOR",
+		"ARGS" : ["-c", "ahcal_event_collector", "-s", "LCIOStreamer"],
+		"ENV" : [
+			"DQM4HEP_PLUGIN_DLL=/home/calice/Programs/DQM4HEP-AHCAL/lib/libDQM4ILC.so",
+		    "DIM_DNS_NODE=localhost"
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/bin/dqm4hep_start_event_collector"
+	    },
+	    {
+		"NAME":"ME_COLLECTOR",
+		"ARGS" : ["-c", "ahcal_me_collector"],
+		"ENV" : [
+		    "DIM_DNS_NODE=localhost"
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/bin/dqm4hep_start_monitor_element_collector"
+	    },
+	    {
+		"NAME":"LCIO_EVENT_SERVICE",
+		"ARGS" : ["-f", "/home/calice/TestFile_ChannelbyChannel.slcio", "-c", "ahcal_event_collector", "-r", "-t", "100"],
+		"ENV" : [
+		    "DIM_DNS_NODE=localhost"
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/bin/dqm4hep_start_lcio_file_service"
+	    },
+	    {
+		"NAME":"AHCALRawModule",
+		"ARGS" : ["-f", "/home/calice/Programs/DQM4HEP-AHCAL/DQM4ILC/source/examples/AHCALRawModule/lcioAHCALTests.xml"],
+		"ENV" : [
+		    "DIM_DNS_NODE=localhost",
+		    "DQM4HEP_PLUGIN_DLL=/home/calice/Programs/DQM4HEP-AHCAL/lib/libAHCALRawModule.so:/home/calice/Programs/DQM4HEP-AHCAL/lib/libDQM4ILC.so"
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/bin/dqm4hep_start_analysis_module"	
+	    },
+	    {
+		"NAME":"AHCALRunControl",
+		"ARGS" : ["-r", "AHCALRunControl"],
+		"ENV" : [
+		    "DIM_DNS_NODE=localhost",
+		    "DQM4HEP_PLUGIN_DLL="
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/bin/dqm4hep_start_run_control"	
+	    },
+	    {
+		"NAME":"AHCALMonitorGUI",
+		"ARGS" : [],
+		"ENV" : [
+		    "DIM_DNS_NODE=localhost",
+		    "DQM4HEP_PLUGIN_DLL="
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/bin/dqm4hep_start_dqm_monitor_gui"	
+	    }
+	    /*
+	    {
+		"NAME":"RANDOM_ANALYSIS_MODULE",
+		"ARGS" : ["-f", "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/conf/randommodule.xml"],
+		"ENV" : [
+		    "DIM_DNS_NODE=localhost",
+		    "DQM4HEP_PLUGIN_DLL=/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/lib/libRandomModuleExample.so"
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/bin/dqm4hep_start_analysis_module"
+	    },
+	    {
+		"NAME":"STANDALONE_RANDOM_ANALYSIS_MODULE",
+		"ARGS" : ["-f", "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/conf/standalonerandommodule.xml"],
+		"ENV" : [
+		    "DIM_DNS_NODE=localhost",
+		    "DQM4HEP_PLUGIN_DLL=/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/lib/libStandaloneRandomModuleExample.so"
+		],
+		"PROGRAM" : "/home/calice/Programs/DQM4HEP-AHCAL/DQMCore/bin/dqm4hep_start_standalone_module"
+	    }*/      
+	]
+    }
+}
