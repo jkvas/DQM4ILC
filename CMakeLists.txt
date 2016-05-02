@@ -10,7 +10,7 @@ PROJECT( DQM4ILC )
 
 ### PACKAGE VERSIONS ########################################################
 SET( ${PROJECT_NAME}_VERSION_MAJOR 1 )
-SET( ${PROJECT_NAME}_VERSION_MINOR 1 )
+SET( ${PROJECT_NAME}_VERSION_MINOR 2 )
 SET( ${PROJECT_NAME}_VERSION_PATCH 0 )
 
 ###############################
@@ -31,28 +31,39 @@ IF (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-undefined-bool-conversion")
 ENDIF (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 
-# ----- dependencies -----
+# ----- settings -----
+LIST( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake )
+
+# ----- Find DQMCore package -----
+FIND_PACKAGE( DQMCore REQUIRED )
+LIST( APPEND CMAKE_MODULE_PATH ${DQMCore_DIR}/cmake )
+
+# ----- Find ILCUTIL package -----
 FIND_PACKAGE( ILCUTIL COMPONENTS ILCSOFT_CMAKE_MODULES streamlog REQUIRED )
 INCLUDE( ilcsoft_default_settings )
 
-LIST( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake )
-
-# From DQM4HEP
-FIND_PACKAGE( DQMCore REQUIRED )
-FIND_PACKAGE( xdrstream REQUIRED )
-FIND_PACKAGE( DIM REQUIRED )
-FIND_PACKAGE( LOG4CXX REQUIRED )
+# ----- Find xdrlcio package -----
 FIND_PACKAGE( xdrlcio REQUIRED )
 
-# From ILCSOFT
+# ----- Find LCIO package -----
 FIND_PACKAGE( LCIO REQUIRED )
+
+# ----- Find Marlin package -----
 FIND_PACKAGE( Marlin REQUIRED )
+
+# ----- Find GEAR package -----
 FIND_PACKAGE( GEAR REQUIRED )
 
-FOREACH( pkg DQMCore LCIO xdrstream xdrlcio DIM LOG4CXX Marlin GEAR )
+FOREACH( pkg DQMCore LCIO xdrlcio Marlin GEAR )
+
 	INCLUDE_DIRECTORIES( ${${pkg}_INCLUDE_DIRS} )
 	LINK_LIBRARIES( ${${pkg}_LIBRARIES} )
 	ADD_DEFINITIONS ( ${${pkg}_DEFINITIONS} )
+	
+	LIST( APPEND ${PROJECT_NAME}_DEPENDS_INCLUDE_DIRS ${${pkg}_INCLUDE_DIRS} )
+	LIST( APPEND ${PROJECT_NAME}_DEPENDS_LIBRARY_DIRS ${${pkg}_LIBRARY_DIRS} )
+	LIST( APPEND ${PROJECT_NAME}_DEPENDS_LIBRARIES ${${pkg}_LIBRARIES} )
+	
 ENDFOREACH()
 
 # ----- package options -----------------------------------------------------------------------
