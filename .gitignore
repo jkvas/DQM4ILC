@@ -2,3 +2,6 @@
 /build/
 /lib/
 /include/
+/DQM4ILCConfig.cmake
+/DQM4ILCConfigVersion.cmake
+/.gitignore
