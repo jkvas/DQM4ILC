@@ -1,0 +1,106 @@
+<dqm4hep>
+
+    <archiver open="true" directory="/tmp" />
+    
+    <network>
+        <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+        
+        <eventcollector type="DimEventClient">
+        	<parameter name="collectorName"> ahcal_event_collector </parameter>
+        	<parameter name="subEventIdentifier"> HCALEndcap </parameter>
+        	<parameter name="updateMode"> true </parameter>
+        	<parameter name="maxQueueSize"> 100 </parameter>
+        	<parameter name="streamerName"> LCIOStreamer </parameter>
+        </eventcollector>
+        
+        <monitorelementcollector name="ahcal_me_collector"/>
+    </network>
+    
+    <cycle type="TimerCycle" value="10" timeout="5" />
+
+    <module type="AHCALRawModule" name="MyAHCALRawModule">
+        
+        <parameter name="DumpEvent"> false </parameter>
+
+        <parameter name="ChipID1"> 129 </parameter>
+        <parameter name="ChipID2"> 130 </parameter>
+        <parameter name="ChipID3"> 131 </parameter>
+
+        <parameter name="ChannelNum1"> 2 </parameter>
+        <parameter name="ChannelNum2"> 5 </parameter>
+        <parameter name="ChannelNum3"> 18 </parameter>
+        
+		<monitorElement ID="ADC_hb0_ch1"
+			name="ADC_hb0_ch1" path="/Setting1" type="TH1I" title="ADC counts when hit bit 0" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="ADC_hb1_ch1"
+			name="ADC_hb1_ch1" path="/Setting1" type="TH1I" title="ADC counts when hit bit 1" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="TDC_hb0_ch1"
+			name="TDC_hb0_ch1" path="/Setting1" type="TH1I" title="TDC counts when hit bit 0" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="TDC_hb1_ch1"
+			name="TDC_hb1_ch1" path="/Setting1" type="TH1I" title="TDC counts when hit bit 1" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+        
+
+
+		<monitorElement ID="ADC_hb0_ch2"
+			name="ADC_hb0_ch2" path="/Setting2" type="TH1I" title="ADC counts when hit bit 0" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="ADC_hb1_ch2"
+			name="ADC_hb1_ch2" path="/Setting2" type="TH1I" title="ADC counts when hit bit 1" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="TDC_hb0_ch2"
+			name="TDC_hb0_ch2" path="/Setting2" type="TH1I" title="TDC counts when hit bit 0" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="TDC_hb1_ch2"
+			name="TDC_hb1_ch2" path="/Setting2" type="TH1I" title="TDC counts when hit bit 1" 
+			nBins="13000" min="0" max="13000"
+			resetPolicy="EndOfCycle" drawOption="E"/>
+        
+
+
+		<monitorElement ID="ADC_hb0_ch3"
+			name="ADC_hb0_ch3" path="/Setting3" type="TH1I" title="ADC counts when hit bit 0" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="ADC_hb1_ch3"
+			name="ADC_hb1_ch3" path="/Setting3" type="TH1I" title="ADC counts when hit bit 1" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="TDC_hb0_ch3"
+			name="TDC_hb0_ch3" path="/Setting3" type="TH1I" title="TDC counts when hit bit 0" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+		<monitorElement ID="TDC_hb1_ch3"
+			name="TDC_hb1_ch3" path="/Setting3" type="TH1I" title="TDC counts when hit bit 1" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+
+
+
+		<monitorElement ID="NHit"
+			name="NHit" path="/Global" type="TH1I" title="The number of hits distribution" 
+			nBins="1300" min="0" max="1300" 
+			resetPolicy="EndOfCycle" drawOption="E"/>
+        	
+    </module>
+
+</dqm4hep>

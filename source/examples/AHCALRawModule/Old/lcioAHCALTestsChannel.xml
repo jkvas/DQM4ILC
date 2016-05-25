@@ -1,0 +1,207 @@
+<dqm4hep>
+
+  <archiver open="true" directory="/tmp" />
+  
+  <network>
+    <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+    
+    <eventcollector type="DimEventClient">
+      <parameter name="collectorName"> ahcal_event_collector </parameter>
+      <parameter name="subEventIdentifier"> HCALEndcap </parameter>
+      <parameter name="updateMode"> true </parameter>
+      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="streamerName"> LCIOStreamer </parameter>
+    </eventcollector>
+    
+    <monitorelementcollector name="ahcal_me_collector"/>
+  </network>
+  
+  <cycle type="TimerCycle" value="10" timeout="5" />
+  
+  <module type="AHCALRawModuleChannel" name="MyAHCALRawModuleChannel">
+    
+    <parameter name="DumpEvent"> false </parameter>
+    
+    <parameter name="ChipID1"> 190 </parameter>
+    <parameter name="ChipID2"> 188 </parameter>
+    <parameter name="ChipID3"> 204 </parameter>
+    <parameter name="ChipID4"> 220 </parameter>
+
+    <parameter name="ChannelNum1"> 30 </parameter>
+    <parameter name="ChannelNum2"> 29 </parameter>
+    <parameter name="ChannelNum3"> 29 </parameter>
+    <parameter name="ChannelNum4"> 29 </parameter>
+    
+    <!-- case 1 -->
+    <monitorElement ID="ADC_hb0_ch1"
+		    name="ADC_hb0_ch1" path="/case1" type="TH1I" title="ADC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="ADC_hb1_ch1"
+		    name="ADC_hb1_ch1" path="/case1" type="TH1I" title="ADC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb0_ch1"
+		    name="TDC_hb0_ch1" path="/case1" type="TH1I" title="TDC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb1_ch1"
+		    name="TDC_hb1_ch1" path="/case1" type="TH1I" title="TDC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="ADC_ROC_ch1"
+		    name="ADC_ROC_ch1" path="/case1" type="TH2I" title="ADC vs cycle" 
+		    nBinsX="13000" minX="0" maxX="13000"
+		    nBinsY="45000" minY="0" maxY="45000" 
+		    resetPolicy="EndOfRun" drawOption="SCAT"/>
+
+    <monitorElement ID="WrongBits_ch1"
+		    name="WrongBits_ch1" path="/case1" type="TH1I" title="Wrong Bits" 
+		    nBins="7" min="-1.5" max="5.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="ADC_WrongBits_ch1"
+		    name="ADC_WrongBits_ch1" path="/case1" type="TH1I" title="ADC when wrong bits" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="TDC_WrongBits_ch1"
+		    name="TDC_WrongBits_ch1" path="/case1" type="TH1I" title="TDC when wrong bits" 
+ 		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <!-- case 2 -->
+    
+    <monitorElement ID="ADC_hb0_ch2"
+		    name="ADC_hb0_ch2" path="/case2" type="TH1I" title="ADC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="ADC_hb1_ch2"
+		    name="ADC_hb1_ch2" path="/case2" type="TH1I" title="ADC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb0_ch2"
+		    name="TDC_hb0_ch2" path="/case2" type="TH1I" title="TDC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb1_ch2"
+		    name="TDC_hb1_ch2" path="/case2" type="TH1I" title="TDC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5"
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="ADC_ROC_ch2"
+		    name="ADC_ROC_ch2" path="/case2" type="TH2I" title="ADC vs cycle" 
+		    nBinsX="13000" minX="0" maxX="13000"
+		    nBinsY="45000" minY="0" maxY="45000" 
+		    resetPolicy="EndOfRun" drawOption="SCAT"/>
+
+    <monitorElement ID="WrongBits_ch2"
+		    name="WrongBits_ch2" path="/case2" type="TH1I" title="Wrong Bits" 
+		    nBins="7" min="-1.5" max="5.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="ADC_WrongBits_ch2"
+		    name="ADC_WrongBits_ch2" path="/case2" type="TH1I" title="ADC when wrong bits" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="TDC_WrongBits_ch2"
+		    name="TDC_WrongBits_ch2" path="/case2" type="TH1I" title="TDC when wrong bits" 
+ 		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/> 
+
+    <!-- case 3 -->
+
+    <monitorElement ID="ADC_hb0_ch3"
+		    name="ADC_hb0_ch3" path="/case3" type="TH1I" title="ADC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="ADC_hb1_ch3"
+		    name="ADC_hb1_ch3" path="/case3" type="TH1I" title="ADC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb0_ch3"
+		    name="TDC_hb0_ch3" path="/case3" type="TH1I" title="TDC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb1_ch3"
+		    name="TDC_hb1_ch3" path="/case3" type="TH1I" title="TDC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="ADC_ROC_ch3"
+		    name="ADC_ROC_ch3" path="/case3" type="TH2I" title="ADC vs cycle" 
+		    nBinsX="13000" minX="0" maxX="13000"
+		    nBinsY="45000" minY="0" maxY="45000" 
+		    resetPolicy="EndOfRun" drawOption="SCAT"/>
+
+    <monitorElement ID="WrongBits_ch3"
+		    name="WrongBits_ch3" path="/case3" type="TH1I" title="Wrong Bits" 
+		    nBins="7" min="-1.5" max="5.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="ADC_WrongBits_ch3"
+		    name="ADC_WrongBits_ch3" path="/case3" type="TH1I" title="ADC when wrong bits" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="TDC_WrongBits_ch3"
+		    name="TDC_WrongBits_ch3" path="/case3" type="TH1I" title="TDC when wrong bits" 
+ 		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/> 
+    <!-- case 4 -->
+
+    <monitorElement ID="ADC_hb0_ch4"
+		    name="ADC_hb0_ch4" path="/case4" type="TH1I" title="ADC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="ADC_hb1_ch4"
+		    name="ADC_hb1_ch4" path="/case4" type="TH1I" title="ADC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb0_ch4"
+		    name="TDC_hb0_ch4" path="/case4" type="TH1I" title="TDC counts when hit bit 0" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_hb1_ch4"
+		    name="TDC_hb1_ch4" path="/case4" type="TH1I" title="TDC counts when hit bit 1" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="ADC_ROC_ch4"
+		    name="ADC_ROC_ch4" path="/case4" type="TH2I" title="ADC vs cycle" 
+		    nBinsX="14000" minX="0" maxX="14000"
+		    nBinsY="45000" minY="0" maxY="45000" 
+		    resetPolicy="EndOfRun" drawOption="SCAT"/>
+
+    <monitorElement ID="WrongBits_ch4"
+		    name="WrongBits_ch4" path="/case4" type="TH1I" title="Wrong Bits" 
+		    nBins="7" min="-1.5" max="5.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="ADC_WrongBits_ch4"
+		    name="ADC_WrongBits_ch4" path="/case4" type="TH1I" title="ADC when wrong bits" 
+		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+    <monitorElement ID="TDC_WrongBits_ch4"
+		    name="TDC_WrongBits_ch4" path="/case4" type="TH1I" title="TDC when wrong bits" 
+ 		    nBins="4095" min="0.5" max="4095.5" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/> 
+    
+  </module>
+  
+</dqm4hep>

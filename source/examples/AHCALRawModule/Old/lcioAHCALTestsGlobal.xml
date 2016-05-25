@@ -1,0 +1,58 @@
+<dqm4hep>
+
+    <archiver open="true" directory="/tmp" />
+    
+    <network>
+        <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+        
+        <eventcollector type="DimEventClient">
+        	<parameter name="collectorName"> ahcal_event_collector </parameter>
+        	<parameter name="subEventIdentifier"> HCALEndcap </parameter>
+        	<parameter name="updateMode"> true </parameter>
+        	<parameter name="maxQueueSize"> 100 </parameter>
+        	<parameter name="streamerName"> LCIOStreamer </parameter>
+        </eventcollector>
+        
+        <monitorelementcollector name="ahcal_me_collector"/>
+    </network>
+    
+    <cycle type="TimerCycle" value="10" timeout="5" />
+
+    <module type="AHCALRawModuleChannel" name="MyAHCALRawModuleChannel">
+        
+        <parameter name="DumpEvent"> false </parameter>
+
+	<parameter name="ChipID1"> 172 </parameter>
+	<parameter name="ChipID2"> 188 </parameter>
+	<parameter name="ChipID3"> 204 </parameter>
+	<parameter name="ChipID3"> 220 </parameter>
+	
+	<parameter name="ChannelNum1"> 29 </parameter>
+	<parameter name="ChannelNum2"> 29 </parameter>
+	<parameter name="ChannelNum3"> 29 </parameter>
+	<parameter name="ChannelNum3"> 29 </parameter>
+	
+
+	<monitorElement ID="ADC_hb0"
+			name="ADC_hb0" path="/Global/" type="TH1I" title="ADC counts when hit bit 0, all channels" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+	<monitorElement ID="ADC_hb1"
+			name="ADC_hb1" path="/Global/" type="TH1I" title="ADC counts when hit bit 1, all channels" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+	<monitorElement ID="TDC_hb0"
+			name="TDC_hb0" path="/Global/" type="TH1I" title="TDC counts when hit bit 0, all channels" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+	<monitorElement ID="TDC_hb1"
+			name="TDC_hb1" path="/Global/" type="TH1I" title="TDC counts when hit bit 1, all channels" 
+			nBins="13000" min="0" max="13000" 
+			resetPolicy="EndOfRun" drawOption="HISTO"/>
+        	
+    </module>
+
+</dqm4hep>

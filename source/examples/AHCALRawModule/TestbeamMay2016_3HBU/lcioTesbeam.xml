@@ -1,0 +1,217 @@
+<dqm4hep>
+
+  <archiver open="true" directory="/tmp" />
+  
+  <network>
+    <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+    
+    <eventcollector type="DimEventClient">
+      <parameter name="collectorName"> ahcal_event_collector </parameter>
+      <parameter name="subEventIdentifier"> HCALEndcap </parameter>
+      <parameter name="updateMode"> true </parameter>
+      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="streamerName"> LCIOStreamer </parameter>
+    </eventcollector>
+    
+    <monitorelementcollector name="ahcal_me_collector"/>
+  </network>
+  
+  <cycle type="TimerCycle" value="1" timeout="1" />
+  
+  <module type="Testbeam" name="MyTestbeam">
+    
+    <!-- channels -->
+
+    <parameter name="ChipIDLayer1"> 222 </parameter>
+    <parameter name="ChipIDLayer2"> 230 </parameter>
+    <parameter name="ChipIDLayer3"> 238 </parameter>
+
+    <parameter name="ChannelNum1"> 30 </parameter>
+    <parameter name="ChannelNum2"> 31 </parameter>
+    <parameter name="ChannelNum3"> 24 </parameter>
+    <parameter name="ChannelNum4"> 25 </parameter>
+
+    <parameter name="DumpEvent"> false </parameter>    
+
+
+    <!-- ADC -->
+    <monitorElement ID="ADC_300"
+		    name="ADC_300" path="/ADC" type="TH2I" 
+		    nBinsX="36" minX="-0.5" maxX="35.5" 
+		    nBinsY="40" minY="219.5" maxY="259.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+   <monitorElement ID="ADC_500"
+		    name="ADC_500" path="/ADC" type="TH2I" 
+		    nBinsX="36" minX="-0.5" maxX="35.5" 
+		    nBinsY="40" minY="219.5" maxY="259.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+
+ <!-- Layer 1 -->
+ <!-- ############################################## -->
+ <!-- channel 1 -->
+    <monitorElement ID="ADC_Layer1_1"
+		    name="ADC_Layer1_1" path="/Layer1" type="TH1I" title="ADC, Layer 1, ch1" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer1_1"
+		    name="TDC_Layer1_1" path="/Layer1" type="TH1I" title="TDC, Layer 1, ch1" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 2 -->
+    <monitorElement ID="ADC_Layer1_2"
+		    name="ADC_Layer1_2" path="/Layer1" type="TH1I" title="ADC, Layer 1, ch2" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer1_2"
+		    name="TDC_Layer1_2" path="/Layer1" type="TH1I" title="TDC, Layer 1, ch2" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 3 -->
+    <monitorElement ID="ADC_Layer1_3"
+		    name="ADC_Layer1_3" path="/Layer1" type="TH1I" title="ADC, Layer 1, ch3" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer1_3"
+		    name="TDC_Layer1_3" path="/Layer1" type="TH1I" title="TDC, Layer 1, ch3" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 4 -->
+    <monitorElement ID="ADC_Layer1_4"
+		    name="ADC_Layer1_4" path="/Layer1" type="TH1I" title="ADC, Layer 1, ch4" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer1_4"
+		    name="TDC_Layer1_4" path="/Layer1" type="TH1I" title="TDC, Layer 1, ch4" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+<!-- Layer2 -->
+ <!-- ############################################## -->
+ <!-- channel 1 -->
+    <monitorElement ID="ADC_Layer2_1"
+		    name="ADC_Layer2_1" path="/Layer2" type="TH1I" title="ADC, Layer2, ch1" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer2_1"
+		    name="TDC_Layer2_1" path="/Layer2" type="TH1I" title="TDC, Layer2, ch1" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 2 -->
+    <monitorElement ID="ADC_Layer2_2"
+		    name="ADC_Layer2_2" path="/Layer2" type="TH1I" title="ADC, Layer2, ch2" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer2_2"
+		    name="TDC_Layer2_2" path="/Layer2" type="TH1I" title="TDC, Layer2, ch2" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 3 -->
+    <monitorElement ID="ADC_Layer2_3"
+		    name="ADC_Layer2_3" path="/Layer2" type="TH1I" title="ADC, Layer2, ch3" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer2_3"
+		    name="TDC_Layer2_3" path="/Layer2" type="TH1I" title="TDC, Layer2, ch3" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 4 -->
+    <monitorElement ID="ADC_Layer2_4"
+		    name="ADC_Layer2_4" path="/Layer2" type="TH1I" title="ADC, Layer2, ch4" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer2_4"
+		    name="TDC_Layer2_4" path="/Layer2" type="TH1I" title="TDC, Layer2, ch4" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+<!-- Layer3 -->
+ <!-- ############################################## -->
+ <!-- channel 1 -->
+    <monitorElement ID="ADC_Layer3_1"
+		    name="ADC_Layer3_1" path="/Layer3" type="TH1I" title="ADC, Layer3, ch1" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer3_1"
+		    name="TDC_Layer3_1" path="/Layer3" type="TH1I" title="TDC, Layer3, ch1" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 2 -->
+    <monitorElement ID="ADC_Layer3_2"
+		    name="ADC_Layer3_2" path="/Layer3" type="TH1I" title="ADC, Layer3, ch2" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer3_2"
+		    name="TDC_Layer3_2" path="/Layer3" type="TH1I" title="TDC, Layer3, ch2" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 3 -->
+    <monitorElement ID="ADC_Layer3_3"
+		    name="ADC_Layer3_3" path="/Layer3" type="TH1I" title="ADC, Layer3, ch3" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer3_3"
+		    name="TDC_Layer3_3" path="/Layer3" type="TH1I" title="TDC, Layer3, ch3" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 4 -->
+    <monitorElement ID="ADC_Layer3_4"
+		    name="ADC_Layer3_4" path="/Layer3" type="TH1I" title="ADC, Layer3, ch4" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_Layer3_4"
+		    name="TDC_Layer3_4" path="/Layer3" type="TH1I" title="TDC, Layer3, ch4" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <!-- TEMPERATURE-->
+
+  <monitorElement ID="TempAverage_1"
+                    name="TempAverage_1" path="/Temp_Layer1" type="user" ROOTClass="TGraph" title="Temp (average) on Layer 1" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+  <monitorElement ID="TempDIF_1"
+                    name="TempDIF_1" path="/Temp_Layer1" type="user" ROOTClass="TGraph" title="Temp, DIF, on Layer 1" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+  <monitorElement ID="TempPWR_1"
+                    name="TempPWR_1" path="/Temp_Layer1" type="user" ROOTClass="TGraph" title="Temp, PWR, on Layer 1" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+
+  <monitorElement ID="TempAverage_2"
+                    name="TempAverage_2" path="/Temp_Layer2" type="user" ROOTClass="TGraph" title="Temp (average) on Layer 2" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+  <monitorElement ID="TempDIF_2"
+                    name="TempDIF_2" path="/Temp_Layer2" type="user" ROOTClass="TGraph" title="Temp, DIF, on Layer 2" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+  <monitorElement ID="TempPWR_2"
+                    name="TempPWR_2" path="/Temp_Layer2" type="user" ROOTClass="TGraph" title="Temp, PWR, on Layer 2" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+
+  <monitorElement ID="TempAverage_3"
+                    name="TempAverage_3" path="/Temp_Layer3" type="user" ROOTClass="TGraph" title="Temp (average) on Layer 3" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+  <monitorElement ID="TempDIF_3"
+                    name="TempDIF_3" path="/Temp_Layer3" type="user" ROOTClass="TGraph" title="Temp, DIF, on Layer 3" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+  <monitorElement ID="TempPWR_3"
+                    name="TempPWR_3" path="/Temp_Layer3" type="user" ROOTClass="TGraph" title="Temp, PWR, on Layer 3" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+
+    
+  </module>
+
+ 
+  
+</dqm4hep>

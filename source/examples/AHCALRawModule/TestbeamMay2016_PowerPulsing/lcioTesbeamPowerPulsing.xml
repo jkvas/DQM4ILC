@@ -1,0 +1,166 @@
+<dqm4hep>
+
+  <archiver open="true" directory="/tmp" />
+  
+  <network>
+    <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+    
+    <eventcollector type="DimEventClient">
+      <parameter name="collectorName"> ahcal_event_collector </parameter>
+      <parameter name="subEventIdentifier"> HCALEndcap </parameter>
+      <parameter name="updateMode"> true </parameter>
+      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="streamerName"> LCIOStreamer </parameter>
+    </eventcollector>
+    
+    <monitorelementcollector name="ahcal_me_collector"/>
+  </network>
+  
+  <cycle type="TimerCycle" value="1" timeout="1" />
+  
+  <module type="Testbeam" name="MyTestbeamPowerPulsing">
+    
+    <!-- channels -->
+
+    <parameter name="ChipID1"> 237 </parameter>
+    <parameter name="ChipID2"> 237 </parameter>
+    <parameter name="ChipID3"> 238 </parameter>
+    <parameter name="ChipID4"> 238 </parameter>
+
+    <parameter name="ChannelNum1"> 18 </parameter>
+    <parameter name="ChannelNum2"> 12 </parameter>
+    <parameter name="ChannelNum3"> 23 </parameter>
+    <parameter name="ChannelNum4"> 17 </parameter>
+
+    <parameter name="memcell"> 1 </parameter>
+
+
+    <!-- ADC -->
+    <monitorElement ID="ADC_300"
+		    name="ADC_300" path="/ADC" type="TH2I" 
+		    nBinsX="36" minX="-0.5" maxX="35.5" 
+		    nBinsY="40" minY="219.5" maxY="259.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+   <monitorElement ID="ADC_300_memcell"
+		    name="ADC_300_memcell" path="/ADC" type="TH2I" 
+		    nBinsX="36" minX="-0.5" maxX="35.5" 
+		    nBinsY="40" minY="219.5" maxY="259.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+ <!-- ############################################## -->
+ <!-- channel 1 -->
+    <monitorElement ID="ADC_1"
+		    name="ADC_1" path="/smallBXID" type="TH1I" title="ADC, Chip 237, ch 0" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_1"
+		    name="TDC_1" path="/smallBXID" type="TH1I" title="TDC, Chip 237, ch 0" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 2 -->
+    <monitorElement ID="ADC_2"
+		    name="ADC_2" path="/smallBXID" type="TH1I" title="ADC, Chip 239, ch 35" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_2"
+		    name="TDC_2" path="/smallBXID" type="TH1I" title="TDC, Chip 239, ch 35" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 3 -->
+    <monitorElement ID="ADC_3"
+		    name="ADC_3" path="/smallBXID" type="TH1I" title="ADC, Chip 238, ch 5" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_3"
+		    name="TDC_3" path="/smallBXID" type="TH1I" title="TDC, Chip 238, ch 5" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 4 -->
+    <monitorElement ID="ADC_4"
+		    name="ADC_4" path="/smallBXID" type="TH1I" title="ADC, Chip 240, ch 30" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_4"
+		    name="TDC_4" path="/smallBXID" type="TH1I" title="TDC, Chip 240, ch3 0" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+
+
+ <!-- ############################################## -->
+ <!-- channel 1 -->
+    <monitorElement ID="ADC_memcell_1"
+		    name="ADC_memcell_1" path="/LargeBXID" type="TH1I" title="ADC, Chip 237, ch 0" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_memcell_1"
+		    name="TDC_memcell_1" path="/LargeBXID" type="TH1I" title="TDC, Chip 237, ch 0" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 2 -->
+    <monitorElement ID="ADC_memcell_2"
+		    name="ADC_memcell_2" path="/LargeBXID" type="TH1I" title="ADC, Chip 239, ch 35" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_memcell_2"
+		    name="TDC_memcell_2" path="/LargeBXID" type="TH1I" title="TDC, Chip 239, ch 35" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 3 -->
+    <monitorElement ID="ADC_memcell_3"
+		    name="ADC_memcell_3" path="/LargeBXID" type="TH1I" title="ADC, Chip 238, ch 5" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_memcell_3"
+		    name="TDC_memcell_3" path="/LargeBXID" type="TH1I" title="TDC, Chip 238, ch 5" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+<!-- channel 4 -->
+    <monitorElement ID="ADC_memcell_4"
+		    name="ADC_memcell_4" path="/LargeBXID" type="TH1I" title="ADC, Chip 240, ch 30" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+    <monitorElement ID="TDC_memcell_4"
+		    name="TDC_memcell_4" path="/LargeBXID" type="TH1I" title="TDC, Chip 240, ch3 0" 
+		    nBins="1000" min="2.5" max="5002.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+
+
+ <!-- Memcell Stats -->
+    <monitorElement ID="MemCell_1"
+		    name="MemCell_1" path="/AllMemcell" type="TH1I" title="MemCell, Chip 237, ch 0, adc > 300" 
+		    nBins="16" min="-0.5" max="15.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    <monitorElement ID="MemCell_2"
+		    name="MemCell_2" path="/AllMemcell" type="TH1I" title="MemCell, Chip 239, ch 35, adc > 300" 
+		    nBins="16" min="-0.5" max="15.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    <monitorElement ID="MemCell_3"
+		    name="MemCell_3" path="/AllMemcell" type="TH1I" title="MemCell, Chip 238, ch 5, adc > 300" 
+		    nBins="16" min="-0.5" max="15.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    <monitorElement ID="MemCell_4"
+		    name="MemCell_4" path="/AllMemcell" type="TH1I" title="MemCell, Chip 240, ch 30, adc > 300" 
+		    nBins="16" min="-0.5" max="15.5"  
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
+    
+
+    
+
+
+    
+    
+  </module>
+
+ 
+  
+</dqm4hep>
