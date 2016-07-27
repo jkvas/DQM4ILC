@@ -1,0 +1,178 @@
+<dqm4hep>
+
+  <archiver open="true" directory="/tmp" />
+  
+  <network>
+    <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+    
+    <eventcollector type="DimEventClient">
+      <parameter name="collectorName"> ahcal_event_collector </parameter>
+      <parameter name="subEventIdentifier"> HCALEndcap </parameter>
+      <parameter name="updateMode"> true </parameter>
+      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="streamerName"> LCIOStreamer </parameter>
+    </eventcollector>
+    
+    <monitorelementcollector name="ahcal_me_collector"/>
+  </network>
+  
+  <cycle type="TimerCycle" value="1" timeout="1" />
+  
+  <module type="Temperature" name="MyTemperature">
+
+
+    <!-- channels -->
+
+    <parameter name="DumpEvent"> false </parameter>    
+
+   
+    <!-- TEMPERATURE-->
+
+
+    <!-- Average-->
+
+    <monitorElement ID="TempAverage_1"
+                    name="TempAverage_1" path="/Temp_Layer1" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 1" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_2"
+                    name="TempAverage_2" path="/Temp_Layer2" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 2" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_3"
+                    name="TempAverage_3" path="/Temp_Layer3" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 3" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_4"
+                    name="TempAverage_4" path="/Temp_Layer4" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 4" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_5"
+                    name="TempAverage_5" path="/Temp_Layer5" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 5" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_6"
+                    name="TempAverage_6" path="/Temp_Layer6" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 6" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_7"
+                    name="TempAverage_7" path="/Temp_Layer7" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 7" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_8"
+                    name="TempAverage_8" path="/Temp_Layer8" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 8" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_9"
+                    name="TempAverage_9" path="/Temp_Layer9" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 9" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_10"
+                    name="TempAverage_10" path="/Temp_Layer10" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 10" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_11"
+                    name="TempAverage_11" path="/Temp_Layer11" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 11" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_12"
+                    name="TempAverage_12" path="/Temp_Layer12" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 12" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_13"
+                    name="TempAverage_13" path="/Temp_Layer13" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 13" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_14"
+                    name="TempAverage_14" path="/Temp_Layer14" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 14" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_15"
+                    name="TempAverage_15" path="/Temp_Layer15" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 15" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+  <!-- DIF-->
+
+    <monitorElement ID="TempDIF_1"
+                    name="TempDIF_1" path="/Temp_Layer1" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 1" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_2"
+                    name="TempDIF_2" path="/Temp_Layer2" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 2" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_3"
+                    name="TempDIF_3" path="/Temp_Layer3" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 3" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_4"
+                    name="TempDIF_4" path="/Temp_Layer4" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 4" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_5"
+                    name="TempDIF_5" path="/Temp_Layer5" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 5" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_6"
+                    name="TempDIF_6" path="/Temp_Layer6" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 6" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_7"
+                    name="TempDIF_7" path="/Temp_Layer7" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 7" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_8"
+                    name="TempDIF_8" path="/Temp_Layer8" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 8" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_9"
+                    name="TempDIF_9" path="/Temp_Layer9" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 9" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_10"
+                    name="TempDIF_10" path="/Temp_Layer10" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 10" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_11"
+                    name="TempDIF_11" path="/Temp_Layer11" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 11" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_12"
+                    name="TempDIF_12" path="/Temp_Layer12" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 12" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_13"
+                    name="TempDIF_13" path="/Temp_Layer13" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 13" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_14"
+                    name="TempDIF_14" path="/Temp_Layer14" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 14" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_15"
+                    name="TempDIF_15" path="/Temp_Layer15" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 15" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+
+  <!-- PWR-->
+
+    <monitorElement ID="TempPWR_1"
+                    name="TempPWR_1" path="/Temp_Layer1" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 1" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_2"
+                    name="TempPWR_2" path="/Temp_Layer2" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 2" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_3"
+                    name="TempPWR_3" path="/Temp_Layer3" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 3" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_4"
+                    name="TempPWR_4" path="/Temp_Layer4" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 4" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+   <monitorElement ID="TempPWR_5"
+                    name="TempPWR_5" path="/Temp_Layer5" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 5" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_6"
+                    name="TempPWR_6" path="/Temp_Layer6" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 6" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_7"
+                    name="TempPWR_7" path="/Temp_Layer7" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 7" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_8"
+                    name="TempPWR_8" path="/Temp_Layer8" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 8" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_9"
+                    name="TempPWR_9" path="/Temp_Layer9" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 9" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_10"
+                    name="TempPWR_10" path="/Temp_Layer10" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 10" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_11"
+                    name="TempPWR_11" path="/Temp_Layer11" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 11" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_12"
+                    name="TempPWR_12" path="/Temp_Layer12" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 12" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_13"
+                    name="TempPWR_13" path="/Temp_Layer13" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 13" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_14"
+                    name="TempPWR_14" path="/Temp_Layer14" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 14" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_15"
+                    name="TempPWR_15" path="/Temp_Layer15" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 15" 
+                    resetPolicy="NoReset" drawOption="alp"/>
+
+  </module>  
+ 
+  
+</dqm4hep>

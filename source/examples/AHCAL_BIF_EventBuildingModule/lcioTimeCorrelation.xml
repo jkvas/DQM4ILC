@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <dqm4hep>
 
   <archiver open="true" directory="/tmp" />
@@ -20,6 +21,15 @@
   
   <module type="TimeCorrelation" name="MyTimeCorrelation">
     
+    <parameter name="Chip1"> 237 </parameter>
+    <parameter name="Chip2"> 241 </parameter>
+    <parameter name="Chip3"> 117 </parameter>
+
+
+    <parameter name="Channel1"> 0 </parameter>
+    <parameter name="Channel2"> 0 </parameter>
+    <parameter name="Channel3"> 0 </parameter>
+
     <!-- Wrong Bits -->
 
     <monitorElement ID="TDCvsTime_1"

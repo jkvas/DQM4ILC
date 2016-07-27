@@ -1,0 +1,112 @@
+<dqm4hep>
+
+  <archiver open="true" directory="/tmp" />
+  
+  <network>
+    <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+    
+    <eventcollector type="DimEventClient">
+      <parameter name="collectorName"> ahcal_event_collector </parameter>
+      <parameter name="subEventIdentifier"> HCALEndcap </parameter>
+      <parameter name="updateMode"> true </parameter>
+      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="streamerName"> LCIOStreamer </parameter>
+    </eventcollector>
+    
+    <monitorelementcollector name="ahcal_me_collector"/>
+  </network>
+  
+  <cycle type="TimerCycle" value="1" timeout="1" />
+  
+  <module type="HitMap" name="MyHitMaps">
+
+    <parameter name="GeometryFilename"> /home/calice/TB2016/varios/ElectronicsMapping/geometrymap_airstack.xml </parameter>
+
+    
+    <!-- channels -->
+
+    <parameter name="DumpEvent"> false </parameter>    
+
+    <!-- ADC -->
+    <monitorElement ID="ADC_300_l01" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="ADC_300_l02" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="ADC_300_l03" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l03"
+
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="ADC_300_l04" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="ADC_300_l05" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="ADC_300_l06" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l06"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="ADC_300_l07" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l08" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l08"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l09" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l09"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l10" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l10"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l11" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l11"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l12" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l12"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l13" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l13"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l14" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l14"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   <monitorElement ID="ADC_300_l15" path="/ADC" type="TH2I" 
+		    name ="ADC_300_l15"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+   
+
+  </module>  
+ 
+  
+</dqm4hep>

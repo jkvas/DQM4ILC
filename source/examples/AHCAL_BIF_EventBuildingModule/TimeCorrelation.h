@@ -69,6 +69,14 @@ protected:
 	DQMMonitorElementPtr                        m_pBXIDvsTime_3;
         DQMMonitorElementPtr                        m_pBXIDvsBXIDbif_3;
 
+	int m_Chip1;
+	int m_Chip2;
+	int m_Chip3;
+
+	int m_Channel1;
+	int m_Channel2;
+	int m_Channel3;
+
 
 	bool                                        m_dumpEvent;
 

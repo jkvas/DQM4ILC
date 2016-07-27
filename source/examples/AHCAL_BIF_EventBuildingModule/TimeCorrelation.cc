@@ -102,6 +102,27 @@ namespace dqm4hep
   {
     LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- readSettings()" );
 
+    m_Chip1 = 0;
+    m_Chip2 = 0;
+    m_Chip3 = 0;
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, 
+                            DQMXmlHelper::readParameterValue(xmlHandle, "Chip1", m_Chip1));
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, 
+                            DQMXmlHelper::readParameterValue(xmlHandle, "Chip2", m_Chip2));
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, 
+                            DQMXmlHelper::readParameterValue(xmlHandle, "Chip3", m_Chip3));
+
+    m_Channel1 = 0;
+    m_Channel2 = 0;
+    m_Channel3 = 0;
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, 
+                            DQMXmlHelper::readParameterValue(xmlHandle, "Channel1", m_Channel1));
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, 
+                            DQMXmlHelper::readParameterValue(xmlHandle, "Channel2", m_Channel2));
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, 
+                            DQMXmlHelper::readParameterValue(xmlHandle, "Channel3", m_Channel3));
+
+
     //---------------------------------------------------------------------
     //channel 1
     m_pTDCvsTime_1 = NULL;
@@ -321,7 +342,7 @@ namespace dqm4hep
 
 
 	    // std::cout<<it->first<<" "<<  it->second.size() <<std::endl;
-	    std::cout<<new_rBIF.size() <<std::endl;
+	    // std::cout<<new_rBIF.size() <<std::endl;
 
 	    //Create new BIF Blocks
 	    for(unsigned int ibif = 0; ibif  < new_rBIF.size(); ibif++)
@@ -343,7 +364,7 @@ namespace dqm4hep
 		unsigned long long int TimeStamp = ( (unsigned long long int)TS_high<<32 | TS_low );
 		
 
-		int _bifoffset = 106000;
+		int _bifoffset = 73170;
 		//Relative time to start acquisition
 		unsigned long long int RelativeTime = TimeStamp - TimeStamp_start;
 		//BXID of the Trigger
@@ -374,16 +395,16 @@ namespace dqm4hep
 			
 			if(it->first == BXID_BIF && hitbit_adc==hitbit_tdc && gainbit_adc==gainbit_tdc && hitbit_adc==1 && adc > 0) {
 		  
-			  if(it->second.at(iraw)[ChipIDIndex]==238 && f==5) {
+			  if(it->second.at(iraw)[ChipIDIndex]==m_Chip1 && f==m_Channel1) {
 			    Int_t pointID = m_pTDCvsTime_1->get<TGraph>()->GetN();
 			    m_pTDCvsTime_1->get<TGraph>()->SetPoint(pointID, Time_BIF, tdc );
 			  }
 
-			  if(it->second.at(iraw)[ChipIDIndex]==238 ) {
+			  if(it->second.at(iraw)[ChipIDIndex]==m_Chip2 && f==m_Channel2 ) {
 			    Int_t pointID = m_pTDCvsTime_2->get<TGraph>()->GetN();
 			    m_pTDCvsTime_2->get<TGraph>()->SetPoint(pointID, Time_BIF, tdc );
 			  }
-			  if(it->second.at(iraw)[ChipIDIndex]==238  && f == 30 ) {
+			  if(it->second.at(iraw)[ChipIDIndex]==m_Chip3 && f==m_Channel3 ) {
 			    Int_t pointID = m_pTDCvsTime_3->get<TGraph>()->GetN();
 			    m_pTDCvsTime_3->get<TGraph>()->SetPoint(pointID, Time_BIF, tdc );
 			  }
