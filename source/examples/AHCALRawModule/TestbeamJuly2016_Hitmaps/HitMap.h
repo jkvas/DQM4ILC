@@ -61,6 +61,10 @@ public:
 
  protected:
 
+        DQMMonitorElementPtr                        m_pMIP_300;
+        DQMMonitorElementPtr                        m_pPed_300;
+
+
 	// MIP hitmaps
         DQMMonitorElementPtr                        m_pMIP_300_l01;
 	DQMMonitorElementPtr                        m_pMIP_300_l02;

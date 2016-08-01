@@ -108,8 +108,14 @@ namespace dqm4hep
     const dqm4hep::TiXmlHandle xmlGeometryFileHandle(&m_geometryFile);
 
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, HitMap::buildGeometryMap(xmlGeometryFileHandle));
+    
 
-
+  //---------------------------------------------------------------------
+    //3-D hitmaps
+    m_pMIP_300 = NULL;
+    m_pPed_300 = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300", m_pMIP_300));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300", m_pPed_300));
 
     //---------------------------------------------------------------------
     //MIP hitmaps
@@ -320,6 +326,7 @@ namespace dqm4hep
 			int J = ( ijk  % 10000 ) /100;
 			int K = ( ijk  % 10000 ) % 100;
 			if(adc>300) {
+			  m_pMIP_300->get<TH3I>()->Fill(K,I,J,adc);
 			  if(K==1) m_pMIP_300_l01->get<TH2I>()->Fill(I,J,adc);
 			  if(K==2) m_pMIP_300_l02->get<TH2I>()->Fill(I,J,adc);
 			  if(K==3) m_pMIP_300_l03->get<TH2I>()->Fill(I,J,adc);
@@ -338,6 +345,7 @@ namespace dqm4hep
 			}
 
 			if(adc<=300) {
+			  m_pPed_300->get<TH3I>()->Fill(K,I,J,adc);
 			  if(K==1) m_pPed_300_l01->get<TH2I>()->Fill(I,J,adc);
 			  if(K==2) m_pPed_300_l02->get<TH2I>()->Fill(I,J,adc);
 			  if(K==3) m_pPed_300_l03->get<TH2I>()->Fill(I,J,adc);

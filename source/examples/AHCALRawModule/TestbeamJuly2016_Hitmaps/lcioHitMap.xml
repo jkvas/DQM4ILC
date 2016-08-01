@@ -27,6 +27,22 @@
 
     <parameter name="DumpEvent"> false </parameter>    
 
+    <!-- 3D -->
+    <monitorElement ID="MIP_300" path="/3D" type="TH3I" 
+		    name ="MIP_300"
+		    nBinsX="15" minX="0.5" maxX="15.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    nBinsZ="12" minZ="0.5" maxZ="12.5" 
+		    resetPolicy="EndOfRun" drawOption="GLISO"/>
+
+    <monitorElement ID="Ped_300" path="/3D" type="TH3I" 
+		    name ="Ped_300"
+		    nBinsX="15" minX="0.5" maxX="15.5" 
+		    nBinsY="12" minY="0.5" maxY="12.5" 
+		    nBinsZ="12" minZ="0.5" maxZ="12.5" 
+		    resetPolicy="EndOfRun" drawOption="GLTF3"/>
+
+
     <!-- MIP -->
     <monitorElement ID="MIP_300_l01" path="/MIP" type="TH2I" 
 		    name ="MIP_300_l01"
