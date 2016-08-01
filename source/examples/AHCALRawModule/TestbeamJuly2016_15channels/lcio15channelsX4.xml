@@ -1,15 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <dqm4hep>
 
   <archiver open="true" directory="/tmp" />
   
   <network>
     <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
-    
+
     <eventcollector type="DimEventClient">
       <parameter name="collectorName"> ahcal_event_collector </parameter>
       <parameter name="subEventIdentifier"> HCALEndcap </parameter>
       <parameter name="updateMode"> true </parameter>
-      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="maxQueueSize"> 10000 </parameter>
       <parameter name="streamerName"> LCIOStreamer </parameter>
     </eventcollector>
     
@@ -23,21 +24,18 @@
     <!-- channels to CHECK-->
     <!-- SHIFTER TASK: choose the channels (up to 4)and the asic (from 1-4) where they are-->
 
-    <parameter name="ChannelNr_a"> 0 </parameter>
-    <parameter name="asicNr_a"> 1 </parameter>
+    <!--parameter name="ChannelNr_a"> 9 </parameter-->
+    <!--parameter name="ChannelNr_b"> 8 </parameter-->
+    <!--parameter name="ChannelNr_c"> 3 </parameter-->
+    <!--parameter name="ChannelNr_d"> 2 </parameter-->
 
-    <parameter name="ChannelNr_b"> 5 </parameter>
-    <parameter name="asicNr_b"> 2 </parameter>
-
-    <parameter name="ChannelNr_c"> 35 </parameter>
-    <parameter name="asicNr_c"> 3 </parameter>
-
-    <parameter name="ChannelNr_d"> 30 </parameter>
-    <parameter name="asicNr_d"> 4 </parameter>
+    <!--parameter name="asicNr_a"> 2 </parameter-->
+    <!--parameter name="asicNr_b"> 2 </parameter-->
+    <!--parameter name="asicNr_c"> 2 </parameter-->
+    <!--parameter name="asicNr_d"> 2 </parameter-->
 
 
     <!-- Histograms: do not modify this part-->
-
 
     <!-- option a -->
     <!-- ############################################################################ -->

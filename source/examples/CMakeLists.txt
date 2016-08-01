@@ -10,7 +10,8 @@ ADD_SHARED_LIBRARY( CaloHitModule CaloHitModule/CaloHitModule.cc )
 ADD_SHARED_LIBRARY( AHCALRawModule4Channels AHCALRawModule/4Channels/AHCALRawModuleChannel.cc )
 ADD_SHARED_LIBRARY( AHCALRawModuleT0 AHCALRawModule/T0/AHCALRawModuleT0.cc )
 ADD_SHARED_LIBRARY( AHCALRawModuleGlobal AHCALRawModule/Global/AHCALRawModuleGlobal.cc )
-ADD_SHARED_LIBRARY( TimeCorrelation AHCAL_BIF_EventBuildingModule/TimeCorrelation.cc )
+ADD_SHARED_LIBRARY( TimeCorrelation AHCAL_BIF_EventBuildingModule/PlotCorrelations/TimeCorrelation.cc )
+ADD_SHARED_LIBRARY( FindOffset AHCAL_BIF_EventBuildingModule/FindOffset/FindOffset.cc )
 ADD_SHARED_LIBRARY( HitMaps AHCALRawModule/TestbeamJuly2016_Hitmaps/HitMap.cc )
 ADD_SHARED_LIBRARY( Temperature AHCALRawModule/TestbeamJuly2016_Temperature/Temperature.cc )
 ADD_SHARED_LIBRARY( ChannelsPlots AHCALRawModule/TestbeamJuly2016_15channels/Testbeam.cc )
@@ -20,13 +21,14 @@ TARGET_LINK_LIBRARIES( AHCALRawModule4Channels ${PROJECT_NAME} )
 TARGET_LINK_LIBRARIES( AHCALRawModuleT0 ${PROJECT_NAME} )
 TARGET_LINK_LIBRARIES( AHCALRawModuleGlobal ${PROJECT_NAME} )
 TARGET_LINK_LIBRARIES( TimeCorrelation ${PROJECT_NAME} )
+TARGET_LINK_LIBRARIES( FindOffset ${PROJECT_NAME} )
 TARGET_LINK_LIBRARIES( HitMaps ${PROJECT_NAME} )
 TARGET_LINK_LIBRARIES( Temperature ${PROJECT_NAME} )
 TARGET_LINK_LIBRARIES( ChannelsPlots ${PROJECT_NAME} )
 
 
 INSTALL( 
-	TARGETS CaloHitModule AHCALRawModule4Channels AHCALRawModuleT0 AHCALRawModuleGlobal TimeCorrelation HitMaps Temperature ChannelsPlots
+	TARGETS CaloHitModule AHCALRawModule4Channels AHCALRawModuleT0 AHCALRawModuleGlobal TimeCorrelation FindOffset HitMaps Temperature ChannelsPlots
 	LIBRARY DESTINATION  lib 
 )
 

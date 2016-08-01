@@ -112,39 +112,73 @@ namespace dqm4hep
 
 
     //---------------------------------------------------------------------
-    //ADC hitmaps
-    m_pADC_300_l01 = NULL;
-    m_pADC_300_l02 = NULL;
-    m_pADC_300_l03 = NULL;
-    m_pADC_300_l04 = NULL;
-    m_pADC_300_l05 = NULL;
-    m_pADC_300_l06 = NULL;
-    m_pADC_300_l07 = NULL;
-    m_pADC_300_l08 = NULL;
-    m_pADC_300_l09 = NULL;
-    m_pADC_300_l10 = NULL;
-    m_pADC_300_l11 = NULL;
-    m_pADC_300_l12 = NULL;
-    m_pADC_300_l13 = NULL;
-    m_pADC_300_l14 = NULL;
-    m_pADC_300_l15 = NULL;
+    //MIP hitmaps
+    m_pMIP_300_l01 = NULL;
+    m_pMIP_300_l02 = NULL;
+    m_pMIP_300_l03 = NULL;
+    m_pMIP_300_l04 = NULL;
+    m_pMIP_300_l05 = NULL;
+    m_pMIP_300_l06 = NULL;
+    m_pMIP_300_l07 = NULL;
+    m_pMIP_300_l08 = NULL;
+    m_pMIP_300_l09 = NULL;
+    m_pMIP_300_l10 = NULL;
+    m_pMIP_300_l11 = NULL;
+    m_pMIP_300_l12 = NULL;
+    m_pMIP_300_l13 = NULL;
+    m_pMIP_300_l14 = NULL;
+    m_pMIP_300_l15 = NULL;
 
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l01", m_pADC_300_l01));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l02", m_pADC_300_l02));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l03", m_pADC_300_l03));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l04", m_pADC_300_l04));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l05", m_pADC_300_l05));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l06", m_pADC_300_l06));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l07", m_pADC_300_l07));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l08", m_pADC_300_l08));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l09", m_pADC_300_l09));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l10", m_pADC_300_l10));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l11", m_pADC_300_l11));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l12", m_pADC_300_l12));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l13", m_pADC_300_l13));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l14", m_pADC_300_l14));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "ADC_300_l15", m_pADC_300_l15));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l01", m_pMIP_300_l01));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l02", m_pMIP_300_l02));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l03", m_pMIP_300_l03));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l04", m_pMIP_300_l04));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l05", m_pMIP_300_l05));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l06", m_pMIP_300_l06));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l07", m_pMIP_300_l07));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l08", m_pMIP_300_l08));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l09", m_pMIP_300_l09));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l10", m_pMIP_300_l10));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l11", m_pMIP_300_l11));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l12", m_pMIP_300_l12));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l13", m_pMIP_300_l13));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l14", m_pMIP_300_l14));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_300_l15", m_pMIP_300_l15));
 
+
+    //---------------------------------------------------------------------
+    //Ped hitmaps
+    m_pPed_300_l01 = NULL;
+    m_pPed_300_l02 = NULL;
+    m_pPed_300_l03 = NULL;
+    m_pPed_300_l04 = NULL;
+    m_pPed_300_l05 = NULL;
+    m_pPed_300_l06 = NULL;
+    m_pPed_300_l07 = NULL;
+    m_pPed_300_l08 = NULL;
+    m_pPed_300_l09 = NULL;
+    m_pPed_300_l10 = NULL;
+    m_pPed_300_l11 = NULL;
+    m_pPed_300_l12 = NULL;
+    m_pPed_300_l13 = NULL;
+    m_pPed_300_l14 = NULL;
+    m_pPed_300_l15 = NULL;
+
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l01", m_pPed_300_l01));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l02", m_pPed_300_l02));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l03", m_pPed_300_l03));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l04", m_pPed_300_l04));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l05", m_pPed_300_l05));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l06", m_pPed_300_l06));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l07", m_pPed_300_l07));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l08", m_pPed_300_l08));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l09", m_pPed_300_l09));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l10", m_pPed_300_l10));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l11", m_pPed_300_l11));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l12", m_pPed_300_l12));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l13", m_pPed_300_l13));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l14", m_pPed_300_l14));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_300_l15", m_pPed_300_l15));
   
     //-----------------------------------------------------
     m_dumpEvent = false;
@@ -278,30 +312,48 @@ namespace dqm4hep
 
 			if( hitbit_adc != hitbit_tdc || pAHCALRaw->getIntVal(EvtNrIndex) ==0 ) continue;
 
-			if(adc<300 || hitbit_adc != 1) continue;
+			if(hitbit_adc != 1) continue;
 
 		     
 			int ijk = electronicsToIJK(pAHCALRaw->getIntVal(ChipIDIndex),f);
 			int I = ijk / 10000;
 			int J = ( ijk  % 10000 ) /100;
 			int K = ( ijk  % 10000 ) % 100;
+			if(adc>300) {
+			  if(K==1) m_pMIP_300_l01->get<TH2I>()->Fill(I,J,adc);
+			  if(K==2) m_pMIP_300_l02->get<TH2I>()->Fill(I,J,adc);
+			  if(K==3) m_pMIP_300_l03->get<TH2I>()->Fill(I,J,adc);
+			  if(K==4) m_pMIP_300_l04->get<TH2I>()->Fill(I,J,adc);
+			  if(K==5) m_pMIP_300_l05->get<TH2I>()->Fill(I,J,adc);
+			  if(K==6) m_pMIP_300_l06->get<TH2I>()->Fill(I,J,adc);
+			  if(K==7) m_pMIP_300_l07->get<TH2I>()->Fill(I,J,adc);
+			  if(K==8) m_pMIP_300_l08->get<TH2I>()->Fill(I,J,adc);
+			  if(K==9) m_pMIP_300_l09->get<TH2I>()->Fill(I,J,adc);
+			  if(K==10) m_pMIP_300_l10->get<TH2I>()->Fill(I,J,adc);
+			  if(K==11) m_pMIP_300_l11->get<TH2I>()->Fill(I,J,adc);
+			  if(K==12) m_pMIP_300_l12->get<TH2I>()->Fill(I,J,adc);
+			  if(K==13) m_pMIP_300_l13->get<TH2I>()->Fill(I,J,adc);
+			  if(K==14) m_pMIP_300_l14->get<TH2I>()->Fill(I,J,adc);
+			  if(K==15) m_pMIP_300_l15->get<TH2I>()->Fill(I,J,adc);
+			}
 
-			if(K==1) m_pADC_300_l01->get<TH2I>()->Fill(I,J,adc);
-			if(K==2) m_pADC_300_l02->get<TH2I>()->Fill(I,J,adc);
-			if(K==3) m_pADC_300_l03->get<TH2I>()->Fill(I,J,adc);
-			if(K==4) m_pADC_300_l04->get<TH2I>()->Fill(I,J,adc);
-			if(K==5) m_pADC_300_l05->get<TH2I>()->Fill(I,J,adc);
-			if(K==6) m_pADC_300_l06->get<TH2I>()->Fill(I,J,adc);
-			if(K==7) m_pADC_300_l07->get<TH2I>()->Fill(I,J,adc);
-			if(K==8) m_pADC_300_l08->get<TH2I>()->Fill(I,J,adc);
-			if(K==9) m_pADC_300_l09->get<TH2I>()->Fill(I,J,adc);
-			if(K==10) m_pADC_300_l10->get<TH2I>()->Fill(I,J,adc);
-			if(K==11) m_pADC_300_l11->get<TH2I>()->Fill(I,J,adc);
-			if(K==12) m_pADC_300_l12->get<TH2I>()->Fill(I,J,adc);
-			if(K==13) m_pADC_300_l13->get<TH2I>()->Fill(I,J,adc);
-			if(K==14) m_pADC_300_l14->get<TH2I>()->Fill(I,J,adc);
-			if(K==15) m_pADC_300_l15->get<TH2I>()->Fill(I,J,adc);
-
+			if(adc<=300) {
+			  if(K==1) m_pPed_300_l01->get<TH2I>()->Fill(I,J,adc);
+			  if(K==2) m_pPed_300_l02->get<TH2I>()->Fill(I,J,adc);
+			  if(K==3) m_pPed_300_l03->get<TH2I>()->Fill(I,J,adc);
+			  if(K==4) m_pPed_300_l04->get<TH2I>()->Fill(I,J,adc);
+			  if(K==5) m_pPed_300_l05->get<TH2I>()->Fill(I,J,adc);
+			  if(K==6) m_pPed_300_l06->get<TH2I>()->Fill(I,J,adc);
+			  if(K==7) m_pPed_300_l07->get<TH2I>()->Fill(I,J,adc);
+			  if(K==8) m_pPed_300_l08->get<TH2I>()->Fill(I,J,adc);
+			  if(K==9) m_pPed_300_l09->get<TH2I>()->Fill(I,J,adc);
+			  if(K==10) m_pPed_300_l10->get<TH2I>()->Fill(I,J,adc);
+			  if(K==11) m_pPed_300_l11->get<TH2I>()->Fill(I,J,adc);
+			  if(K==12) m_pPed_300_l12->get<TH2I>()->Fill(I,J,adc);
+			  if(K==13) m_pPed_300_l13->get<TH2I>()->Fill(I,J,adc);
+			  if(K==14) m_pPed_300_l14->get<TH2I>()->Fill(I,J,adc);
+			  if(K==15) m_pPed_300_l15->get<TH2I>()->Fill(I,J,adc);
+			}
 
 
 		      }//for f

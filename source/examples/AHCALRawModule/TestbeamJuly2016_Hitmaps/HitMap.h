@@ -61,22 +61,39 @@ public:
 
  protected:
 
-	// ADC hitmaps
-        DQMMonitorElementPtr                        m_pADC_300_l01;
-	DQMMonitorElementPtr                        m_pADC_300_l02;
-        DQMMonitorElementPtr                        m_pADC_300_l03;
-        DQMMonitorElementPtr                        m_pADC_300_l04;
-        DQMMonitorElementPtr                        m_pADC_300_l05;
-        DQMMonitorElementPtr                        m_pADC_300_l06;
-        DQMMonitorElementPtr                        m_pADC_300_l07;
-        DQMMonitorElementPtr                        m_pADC_300_l08;
-        DQMMonitorElementPtr                        m_pADC_300_l09;
-        DQMMonitorElementPtr                        m_pADC_300_l10;
-        DQMMonitorElementPtr                        m_pADC_300_l11;
-        DQMMonitorElementPtr                        m_pADC_300_l12;
-        DQMMonitorElementPtr                        m_pADC_300_l13;
-        DQMMonitorElementPtr                        m_pADC_300_l14;
-        DQMMonitorElementPtr                        m_pADC_300_l15;
+	// MIP hitmaps
+        DQMMonitorElementPtr                        m_pMIP_300_l01;
+	DQMMonitorElementPtr                        m_pMIP_300_l02;
+        DQMMonitorElementPtr                        m_pMIP_300_l03;
+        DQMMonitorElementPtr                        m_pMIP_300_l04;
+        DQMMonitorElementPtr                        m_pMIP_300_l05;
+        DQMMonitorElementPtr                        m_pMIP_300_l06;
+        DQMMonitorElementPtr                        m_pMIP_300_l07;
+        DQMMonitorElementPtr                        m_pMIP_300_l08;
+        DQMMonitorElementPtr                        m_pMIP_300_l09;
+        DQMMonitorElementPtr                        m_pMIP_300_l10;
+        DQMMonitorElementPtr                        m_pMIP_300_l11;
+        DQMMonitorElementPtr                        m_pMIP_300_l12;
+        DQMMonitorElementPtr                        m_pMIP_300_l13;
+        DQMMonitorElementPtr                        m_pMIP_300_l14;
+        DQMMonitorElementPtr                        m_pMIP_300_l15;
+
+	// Ped hitmaps
+        DQMMonitorElementPtr                        m_pPed_300_l01;
+	DQMMonitorElementPtr                        m_pPed_300_l02;
+        DQMMonitorElementPtr                        m_pPed_300_l03;
+        DQMMonitorElementPtr                        m_pPed_300_l04;
+        DQMMonitorElementPtr                        m_pPed_300_l05;
+        DQMMonitorElementPtr                        m_pPed_300_l06;
+        DQMMonitorElementPtr                        m_pPed_300_l07;
+        DQMMonitorElementPtr                        m_pPed_300_l08;
+        DQMMonitorElementPtr                        m_pPed_300_l09;
+        DQMMonitorElementPtr                        m_pPed_300_l10;
+        DQMMonitorElementPtr                        m_pPed_300_l11;
+        DQMMonitorElementPtr                        m_pPed_300_l12;
+        DQMMonitorElementPtr                        m_pPed_300_l13;
+        DQMMonitorElementPtr                        m_pPed_300_l14;
+        DQMMonitorElementPtr                        m_pPed_300_l15;
 
         bool                                        m_dumpEvent;
 
