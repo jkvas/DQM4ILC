@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dqm4hep>
+
+  <archiver open="true" directory="/tmp" />
+  
+  <network>
+    <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+    
+    <eventcollector type="DimEventClient">
+      <parameter name="collectorName"> ahcal_event_collector </parameter>
+      <parameter name="subEventIdentifier"> HCALEndcap </parameter>
+      <parameter name="updateMode"> true </parameter>
+      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="streamerName"> LCIOStreamer </parameter>
+    </eventcollector>
+    
+    <monitorelementcollector name="ahcal_me_collector"/>
+  </network>
+  
+  <cycle type="TimerCycle" value="1" timeout="1" />
+  
+  <module type="TimeCorrelation" name="MyTimeCorrelation">
+    
+    <!-- no power pulsing offset -->
+    <!--parameter name="bifoffset"> 68030 </parameter-->
+    <parameter name="bifoffset"> 196055 </parameter>
+
+      <!-- ASIC1 -->
+
+    <monitorElement ID="TDCvsTime_01_a"
+		    name="TDCvsTime_01_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_02_a"
+		    name="TDCvsTime_02_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_03_a"
+		    name="TDCvsTime_03_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_04_a"
+		    name="TDCvsTime_04_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_05_a"
+		    name="TDCvsTime_05_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_06_a"
+		    name="TDCvsTime_06_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_07_a"
+		    name="TDCvsTime_07_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_08_a"
+		    name="TDCvsTime_08_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_09_a"
+		    name="TDCvsTime_09_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_10_a"
+		    name="TDCvsTime_10_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_11_a"
+		    name="TDCvsTime_11_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_12_a"
+		    name="TDCvsTime_12_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_13_a"
+		    name="TDCvsTime_13_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_14_a"
+		    name="TDCvsTime_14_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_15_a"
+		    name="TDCvsTime_15_a" path="/ASIC1" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+
+     <!-- ASIC2 -->
+
+    <monitorElement ID="TDCvsTime_01_b"
+		    name="TDCvsTime_01_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_02_b"
+		    name="TDCvsTime_02_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_03_b"
+		    name="TDCvsTime_03_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_04_b"
+		    name="TDCvsTime_04_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_05_b"
+		    name="TDCvsTime_05_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_06_b"
+		    name="TDCvsTime_06_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_07_b"
+		    name="TDCvsTime_07_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_08_b"
+		    name="TDCvsTime_08_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_09_b"
+		    name="TDCvsTime_09_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_10_b"
+		    name="TDCvsTime_10_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_11_b"
+		    name="TDCvsTime_11_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_12_b"
+		    name="TDCvsTime_12_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_13_b"
+		    name="TDCvsTime_13_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_14_b"
+		    name="TDCvsTime_14_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_15_b"
+		    name="TDCvsTime_15_b" path="/ASIC2" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+
+    <!-- ASIC3 -->
+
+    <monitorElement ID="TDCvsTime_01_c"
+		    name="TDCvsTime_01_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_02_c"
+		    name="TDCvsTime_02_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_03_c"
+		    name="TDCvsTime_03_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_04_c"
+		    name="TDCvsTime_04_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_05_c"
+		    name="TDCvsTime_05_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_06_c"
+		    name="TDCvsTime_06_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_07_c"
+		    name="TDCvsTime_07_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_08_c"
+		    name="TDCvsTime_08_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_09_c"
+		    name="TDCvsTime_09_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_10_c"
+		    name="TDCvsTime_10_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_11_c"
+		    name="TDCvsTime_11_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_12_c"
+		    name="TDCvsTime_12_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_13_c"
+		    name="TDCvsTime_13_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_14_c"
+		    name="TDCvsTime_14_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_15_c"
+		    name="TDCvsTime_15_c" path="/ASIC3" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+
+ <!-- ASIC4 -->
+
+    <monitorElement ID="TDCvsTime_01_d"
+		    name="TDCvsTime_01_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_02_d"
+		    name="TDCvsTime_02_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_03_d"
+		    name="TDCvsTime_03_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_04_d"
+		    name="TDCvsTime_04_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_05_d"
+		    name="TDCvsTime_05_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_06_d"
+		    name="TDCvsTime_06_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_07_d"
+		    name="TDCvsTime_07_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_08_d"
+		    name="TDCvsTime_08_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_09_d"
+		    name="TDCvsTime_09_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_10_d"
+		    name="TDCvsTime_10_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_11_d"
+		    name="TDCvsTime_11_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_12_d"
+		    name="TDCvsTime_12_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_13_d"
+		    name="TDCvsTime_13_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_14_d"
+		    name="TDCvsTime_14_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+    <monitorElement ID="TDCvsTime_15_d"
+		    name="TDCvsTime_15_d" path="/ASIC4" type="user" ROOTClass="TGraph" title="TDC vs BIF time" 
+		    resetPolicy="EndOfRun" drawOption="ap"/>
+
+
+  </module>
+
+ 
+  
+</dqm4hep>
