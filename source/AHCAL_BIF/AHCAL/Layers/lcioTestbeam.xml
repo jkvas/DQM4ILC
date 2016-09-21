@@ -19,7 +19,7 @@
   
   <cycle type="TimerCycle" value="1" timeout="1" />
   
-  <module type="AHCAL_15Layers" name="AHCAL_15Layers">
+  <module type="AHCAL_15Layers" name="myAHCAL_15Layers">
     
     <parameter name="DumpEvent"> false </parameter>    
 

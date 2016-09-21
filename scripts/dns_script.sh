@@ -1,0 +1,2 @@
+dns &
+dimjc_daemon

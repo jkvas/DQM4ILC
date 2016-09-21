@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<dqm4hep>
+    <runinfo>
+        <runnumber value="351" />
+        <detector name="" />
+        <description value="" />
+        <parameters>
+            <parameter name="ChannelNr_a" value="0" />
+            <parameter name="ChannelNr_b" value="5" />
+            <parameter name="ChannelNr_c" value="35" />
+            <parameter name="ChannelNr_d" value="30" />
+            <parameter name="asicNr_a" value="1" />
+            <parameter name="asicNr_b" value="2" />
+            <parameter name="asicNr_c" value="3" />
+            <parameter name="asicNr_d" value="4" />
+        </parameters>
+    </runinfo>
+</dqm4hep>

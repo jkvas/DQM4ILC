@@ -1,0 +1,479 @@
+<?xml version="1.0" ?>
+<dqm4hep>
+    <monitoring>
+        <dimDnsNode value="localhost" />
+        <view>
+            <meView>
+                <collector name="ahcal_me_collector">
+                    <module name="myAHCAL_15Layers">
+                        <item path="/Maps/3D/" name="MIP_300" checked="0" />
+                        <item path="/Maps/3D/" name="Ped_300" checked="0" />
+                        <item path="/Maps/MIP/" name="MIP_300_l01" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l02" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l03" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l04" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l05" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l06" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l07" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l08" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l09" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l10" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l11" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l12" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l13" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l14" checked="1" />
+                        <item path="/Maps/MIP/" name="MIP_300_l15" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l01" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l02" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l03" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l04" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l05" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l06" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l07" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l08" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l09" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l10" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l11" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l12" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l13" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l14" checked="1" />
+                        <item path="/Maps/Ped/" name="Ped_300_l15" checked="1" />
+                        <item path="/Temp/Average/" name="TempAverage_01" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_02" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_03" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_04" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_05" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_06" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_07" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_08" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_09" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_10" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_11" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_12" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_13" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_14" checked="0" />
+                        <item path="/Temp/Average/" name="TempAverage_15" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_01" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_02" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_03" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_04" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_05" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_06" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_07" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_08" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_09" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_10" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_11" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_12" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_13" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_14" checked="0" />
+                        <item path="/Temp/DIF/" name="TempDIF_15" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_01" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_02" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_03" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_04" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_05" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_06" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_07" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_08" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_09" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_10" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_11" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_12" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_13" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_14" checked="0" />
+                        <item path="/Temp/PWR/" name="TempPWR_15" checked="0" />
+                    </module>
+                    <module name="MyTestbeam1">
+                        <item path="/option_a/" name="ADC_01" checked="0" />
+                        <item path="/option_a/" name="ADC_02" checked="0" />
+                        <item path="/option_a/" name="ADC_03" checked="0" />
+                        <item path="/option_a/" name="ADC_04" checked="0" />
+                        <item path="/option_a/" name="ADC_05" checked="0" />
+                        <item path="/option_a/" name="ADC_06" checked="0" />
+                        <item path="/option_a/" name="ADC_07" checked="0" />
+                        <item path="/option_a/" name="ADC_08" checked="0" />
+                        <item path="/option_a/" name="ADC_09" checked="0" />
+                        <item path="/option_a/" name="ADC_10" checked="0" />
+                        <item path="/option_a/" name="ADC_11" checked="0" />
+                        <item path="/option_a/" name="ADC_12" checked="0" />
+                        <item path="/option_a/" name="ADC_13" checked="0" />
+                        <item path="/option_a/" name="ADC_14" checked="0" />
+                        <item path="/option_a/" name="ADC_15" checked="0" />
+                        <item path="/option_a/" name="TDC_01" checked="0" />
+                        <item path="/option_a/" name="TDC_02" checked="0" />
+                        <item path="/option_a/" name="TDC_03" checked="0" />
+                        <item path="/option_a/" name="TDC_04" checked="0" />
+                        <item path="/option_a/" name="TDC_05" checked="0" />
+                        <item path="/option_a/" name="TDC_06" checked="0" />
+                        <item path="/option_a/" name="TDC_07" checked="0" />
+                        <item path="/option_a/" name="TDC_08" checked="0" />
+                        <item path="/option_a/" name="TDC_09" checked="0" />
+                        <item path="/option_a/" name="TDC_10" checked="0" />
+                        <item path="/option_a/" name="TDC_11" checked="0" />
+                        <item path="/option_a/" name="TDC_12" checked="0" />
+                        <item path="/option_a/" name="TDC_13" checked="0" />
+                        <item path="/option_a/" name="TDC_14" checked="0" />
+                        <item path="/option_a/" name="TDC_15" checked="0" />
+                        <item path="/option_b/" name="ADC_01" checked="0" />
+                        <item path="/option_b/" name="ADC_02" checked="0" />
+                        <item path="/option_b/" name="ADC_03" checked="0" />
+                        <item path="/option_b/" name="ADC_04" checked="0" />
+                        <item path="/option_b/" name="ADC_05" checked="0" />
+                        <item path="/option_b/" name="ADC_06" checked="0" />
+                        <item path="/option_b/" name="ADC_07" checked="0" />
+                        <item path="/option_b/" name="ADC_08" checked="0" />
+                        <item path="/option_b/" name="ADC_09" checked="0" />
+                        <item path="/option_b/" name="ADC_10" checked="0" />
+                        <item path="/option_b/" name="ADC_11" checked="0" />
+                        <item path="/option_b/" name="ADC_12" checked="0" />
+                        <item path="/option_b/" name="ADC_13" checked="0" />
+                        <item path="/option_b/" name="ADC_14" checked="0" />
+                        <item path="/option_b/" name="ADC_15" checked="0" />
+                        <item path="/option_b/" name="TDC_01" checked="0" />
+                        <item path="/option_b/" name="TDC_02" checked="0" />
+                        <item path="/option_b/" name="TDC_03" checked="0" />
+                        <item path="/option_b/" name="TDC_04" checked="0" />
+                        <item path="/option_b/" name="TDC_05" checked="0" />
+                        <item path="/option_b/" name="TDC_06" checked="0" />
+                        <item path="/option_b/" name="TDC_07" checked="0" />
+                        <item path="/option_b/" name="TDC_08" checked="0" />
+                        <item path="/option_b/" name="TDC_09" checked="0" />
+                        <item path="/option_b/" name="TDC_10" checked="0" />
+                        <item path="/option_b/" name="TDC_11" checked="0" />
+                        <item path="/option_b/" name="TDC_12" checked="0" />
+                        <item path="/option_b/" name="TDC_13" checked="0" />
+                        <item path="/option_b/" name="TDC_14" checked="0" />
+                        <item path="/option_b/" name="TDC_15" checked="0" />
+                        <item path="/option_c/" name="ADC_01" checked="0" />
+                        <item path="/option_c/" name="ADC_02" checked="0" />
+                        <item path="/option_c/" name="ADC_03" checked="0" />
+                        <item path="/option_c/" name="ADC_04" checked="0" />
+                        <item path="/option_c/" name="ADC_05" checked="0" />
+                        <item path="/option_c/" name="ADC_06" checked="0" />
+                        <item path="/option_c/" name="ADC_07" checked="0" />
+                        <item path="/option_c/" name="ADC_08" checked="0" />
+                        <item path="/option_c/" name="ADC_09" checked="0" />
+                        <item path="/option_c/" name="ADC_10" checked="0" />
+                        <item path="/option_c/" name="ADC_11" checked="0" />
+                        <item path="/option_c/" name="ADC_12" checked="0" />
+                        <item path="/option_c/" name="ADC_13" checked="0" />
+                        <item path="/option_c/" name="ADC_14" checked="0" />
+                        <item path="/option_c/" name="ADC_15" checked="0" />
+                        <item path="/option_c/" name="TDC_01" checked="0" />
+                        <item path="/option_c/" name="TDC_02" checked="0" />
+                        <item path="/option_c/" name="TDC_03" checked="0" />
+                        <item path="/option_c/" name="TDC_04" checked="0" />
+                        <item path="/option_c/" name="TDC_05" checked="0" />
+                        <item path="/option_c/" name="TDC_06" checked="0" />
+                        <item path="/option_c/" name="TDC_07" checked="0" />
+                        <item path="/option_c/" name="TDC_08" checked="0" />
+                        <item path="/option_c/" name="TDC_09" checked="0" />
+                        <item path="/option_c/" name="TDC_10" checked="0" />
+                        <item path="/option_c/" name="TDC_11" checked="0" />
+                        <item path="/option_c/" name="TDC_12" checked="0" />
+                        <item path="/option_c/" name="TDC_13" checked="0" />
+                        <item path="/option_c/" name="TDC_14" checked="0" />
+                        <item path="/option_c/" name="TDC_15" checked="0" />
+                        <item path="/option_d/" name="ADC_01" checked="0" />
+                        <item path="/option_d/" name="ADC_02" checked="0" />
+                        <item path="/option_d/" name="ADC_03" checked="0" />
+                        <item path="/option_d/" name="ADC_04" checked="0" />
+                        <item path="/option_d/" name="ADC_05" checked="0" />
+                        <item path="/option_d/" name="ADC_06" checked="0" />
+                        <item path="/option_d/" name="ADC_07" checked="0" />
+                        <item path="/option_d/" name="ADC_08" checked="0" />
+                        <item path="/option_d/" name="ADC_09" checked="0" />
+                        <item path="/option_d/" name="ADC_10" checked="0" />
+                        <item path="/option_d/" name="ADC_11" checked="0" />
+                        <item path="/option_d/" name="ADC_12" checked="0" />
+                        <item path="/option_d/" name="ADC_13" checked="0" />
+                        <item path="/option_d/" name="ADC_14" checked="0" />
+                        <item path="/option_d/" name="ADC_15" checked="0" />
+                        <item path="/option_d/" name="TDC_01" checked="0" />
+                        <item path="/option_d/" name="TDC_02" checked="0" />
+                        <item path="/option_d/" name="TDC_03" checked="0" />
+                        <item path="/option_d/" name="TDC_04" checked="0" />
+                        <item path="/option_d/" name="TDC_05" checked="0" />
+                        <item path="/option_d/" name="TDC_06" checked="0" />
+                        <item path="/option_d/" name="TDC_07" checked="0" />
+                        <item path="/option_d/" name="TDC_08" checked="0" />
+                        <item path="/option_d/" name="TDC_09" checked="0" />
+                        <item path="/option_d/" name="TDC_10" checked="0" />
+                        <item path="/option_d/" name="TDC_11" checked="0" />
+                        <item path="/option_d/" name="TDC_12" checked="0" />
+                        <item path="/option_d/" name="TDC_13" checked="0" />
+                        <item path="/option_d/" name="TDC_14" checked="0" />
+                        <item path="/option_d/" name="TDC_15" checked="0" />
+                    </module>
+                </collector>
+            </meView>
+            <canvasView>
+                <canvasArea name="HitMap">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l03" />
+                    </canvas>
+                    <canvas x="1200" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l04" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l05" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l06" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l07" />
+                    </canvas>
+                    <canvas x="1200" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l08" />
+                    </canvas>
+                    <canvas x="0" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l09" />
+                    </canvas>
+                    <canvas x="400" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l10" />
+                    </canvas>
+                    <canvas x="800" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l11" />
+                    </canvas>
+                    <canvas x="1200" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l12" />
+                    </canvas>
+                    <canvas x="3" y="733" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l13" />
+                    </canvas>
+                    <canvas x="402" y="728" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l14" />
+                    </canvas>
+                    <canvas x="805" y="728" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/MIP" name="MIP_300_l15" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="PedestalMap">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l03" />
+                    </canvas>
+                    <canvas x="1200" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l04" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l05" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l06" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l07" />
+                    </canvas>
+                    <canvas x="1200" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l08" />
+                    </canvas>
+                    <canvas x="0" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l09" />
+                    </canvas>
+                    <canvas x="400" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l10" />
+                    </canvas>
+                    <canvas x="800" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l11" />
+                    </canvas>
+                    <canvas x="1200" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l12" />
+                    </canvas>
+                    <canvas x="-1" y="727" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l13" />
+                    </canvas>
+                    <canvas x="391" y="727" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l14" />
+                    </canvas>
+                    <canvas x="794" y="729" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Maps/Ped" name="Ped_300_l15" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="ADC spectra">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_a" name="ADC_01" />
+                    </canvas>
+                    <canvas x="0" y="251" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_b" name="ADC_01" />
+                    </canvas>
+                    <canvas x="399" y="1" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_c" name="ADC_01" />
+                    </canvas>
+                    <canvas x="396" y="251" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_d" name="ADC_01" />
+                    </canvas>
+                    <canvas x="-2" y="501" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_a" name="ADC_06" />
+                    </canvas>
+                    <canvas x="397" y="501" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_b" name="ADC_06" />
+                    </canvas>
+                    <canvas x="-3" y="749" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_c" name="ADC_06" />
+                    </canvas>
+                    <canvas x="397" y="750" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="MyTestbeam1" path="option_d" name="ADC_06" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="TEMP_Average">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_03" />
+                    </canvas>
+                    <canvas x="1200" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_04" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_05" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_06" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_07" />
+                    </canvas>
+                    <canvas x="1200" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_08" />
+                    </canvas>
+                    <canvas x="0" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_09" />
+                    </canvas>
+                    <canvas x="400" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_10" />
+                    </canvas>
+                    <canvas x="800" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_11" />
+                    </canvas>
+                    <canvas x="1200" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_12" />
+                    </canvas>
+                    <canvas x="403" y="730" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_13" />
+                    </canvas>
+                    <canvas x="4" y="731" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_14" />
+                    </canvas>
+                    <canvas x="802" y="730" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/Average" name="TempAverage_15" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="TEMP_DIF">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_03" />
+                    </canvas>
+                    <canvas x="1200" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_04" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_05" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_06" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_07" />
+                    </canvas>
+                    <canvas x="1200" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_08" />
+                    </canvas>
+                    <canvas x="0" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_09" />
+                    </canvas>
+                    <canvas x="400" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_10" />
+                    </canvas>
+                    <canvas x="800" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_11" />
+                    </canvas>
+                    <canvas x="1200" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_12" />
+                    </canvas>
+                    <canvas x="-2" y="735" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_13" />
+                    </canvas>
+                    <canvas x="397" y="739" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_14" />
+                    </canvas>
+                    <canvas x="794" y="736" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/DIF" name="TempDIF_15" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="TEM_PWR">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_03" />
+                    </canvas>
+                    <canvas x="1200" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_04" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_05" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_06" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_07" />
+                    </canvas>
+                    <canvas x="1200" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_08" />
+                    </canvas>
+                    <canvas x="0" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_09" />
+                    </canvas>
+                    <canvas x="400" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_10" />
+                    </canvas>
+                    <canvas x="800" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_11" />
+                    </canvas>
+                    <canvas x="1200" y="500" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_12" />
+                    </canvas>
+                    <canvas x="7" y="728" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_13" />
+                    </canvas>
+                    <canvas x="400" y="735" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_14" />
+                    </canvas>
+                    <canvas x="803" y="734" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="myAHCAL_15Layers" path="Temp/PWR" name="TempPWR_15" />
+                    </canvas>
+                </canvasArea>
+            </canvasView>
+        </view>
+        <controller>
+            <collector value="ahcal_me_collector" />
+        </controller>
+    </monitoring>
+</dqm4hep>
