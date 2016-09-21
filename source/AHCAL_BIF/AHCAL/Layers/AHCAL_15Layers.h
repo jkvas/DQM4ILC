@@ -64,6 +64,10 @@ protected:
 
 	//################################################################
 	// temperature 
+        DQMMonitorElementPtr                        m_DAQerrors;
+
+	//################################################################
+	// temperature 
         DQMMonitorElementPtr                        m_pTempAverage_1;
         DQMMonitorElementPtr                        m_pTempAverage_2;
         DQMMonitorElementPtr                        m_pTempAverage_3;
@@ -157,6 +161,9 @@ protected:
 
 	//##########################################################################
 	bool                                        m_dumpEvent;
+
+	int goodDAQ;
+	int badDAQ;
 
 }; 
 

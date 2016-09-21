@@ -29,7 +29,19 @@
 
     <parameter name="GeometryFilename"> /home/calice/TB2016/varios/ElectronicsMapping/geometrymap_airstack.xml </parameter>
 
+
+
+   <!--  ######################################################  --> 
+    <!--  AHCAL DAQ quality plots--> 
+    <!--  ######################################################  --> 
+
+    <monitorElement ID="DAQerrors"
+                    name="DAQerrors" path="/DAQquality" type="user" ROOTClass="TGraph" title="Ratio of ROC with DAQ errors vs chipID" 
+                    resetPolicy="EndOfRun" drawOption="ap*"/>
+
+   <!--  ######################################################  --> 
     <!-- 3D -->
+   <!--  ######################################################  --> 
     <monitorElement ID="MIP_300" path="/Maps/3D" type="TH3I" 
 		    name ="MIP_300"
 		    nBinsX="15" minX="0.5" maxX="15.5" 

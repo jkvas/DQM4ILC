@@ -90,6 +90,10 @@ namespace dqm4hep
     LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- readSettings()" );
 
 
+   // ########################################################################################################################################
+    // Monitorize the DAQ errors
+    m_DAQerrors= NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "DAQerrors", m_DAQerrors));
 
     // ########################################################################################################################################
     // TEMPERATURE
@@ -357,13 +361,6 @@ namespace dqm4hep
 	  {
 
 	    const int nElements = pLCCollection->getNumberOfElements();
-	    //   if(nElements !=3) continue;
-
-	    //   std::string timestamp = pLCCollection->getParameters().getStringVal("Timestamp");
-	    //  struct tm tm;
-	    //  strptime(timestamp.c_str(), "%a, %d %b %Y %H:%M:%S %z", &tm);
-	    //  time_t epoch;
-	    //  epoch = mktime(&tm);
 	    long64 epoch = pLCEvent->getTimeStamp();
 	    
 	    for(int e=0 ; e<nElements ; e++)
@@ -520,6 +517,10 @@ namespace dqm4hep
 	    if(pLCCollection->getTypeName() == EVENT::LCIO::LCGENERICOBJECT)
 	      {
 
+		int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");
+		if(daqquality==1) goodDAQ++;
+		else badDAQ++;
+
 		const int nElements = pLCCollection->getNumberOfElements();
 		for(int e=0 ; e<nElements ; e++)
 		  {
@@ -535,6 +536,11 @@ namespace dqm4hep
 		      continue;
 		    }
 
+		    float ratiobadDAQ = badDAQ / (badDAQ + goodDAQ) ;
+		    Int_t ip = pAHCALRaw->getIntVal(ChipIDIndex);
+		    if(badDAQ > 0 ) m_DAQerrors->get<TGraph>()->SetPoint(ip, pAHCALRaw->getIntVal(ChipIDIndex), ratiobadDAQ );
+
+		    if( daqquality!=1 ) continue;
 		    //---------------------------------------------------------------------------------------
 		    for(int f=0; f<36; f++ ) {
 		      // Vectors for storing our TDC and ADC by channel
@@ -560,7 +566,7 @@ namespace dqm4hep
 		      hitbit_tdc = (tdcRAW & 0x1000)?1:0;
 		      gainbit_tdc = (tdcRAW & 0x2000)?1:0;
 		      
-		      
+
 		      if( hitbit_adc != hitbit_tdc || pAHCALRaw->getIntVal(EvtNrIndex) ==0 ) continue;
 		      
 		      if(hitbit_adc != 1) continue;
@@ -653,6 +659,9 @@ namespace dqm4hep
 
     std::string timeStr;
     DQMCoreTool::timeToHMS(startTime, timeStr);
+
+    goodDAQ = 0;
+    badDAQ = 0;
 
     LOG4CXX_INFO( dqmMainLogger , "Start time " << timeStr );
     LOG4CXX_INFO( dqmMainLogger , "Detector is " << pRun->getDetectorName() );
