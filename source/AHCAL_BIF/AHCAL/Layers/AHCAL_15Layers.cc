@@ -535,15 +535,6 @@ namespace dqm4hep
 		      continue;
 		    }
 
-		    //--------------------------------------------------------------------------------------------------
-		    //fill the BXID  map with all entries
-		    int bxid = pAHCALRaw->getIntVal(BxIDIndex);
-		    std::vector<int> rawdata;
-		    for(int iraw=0; iraw < pAHCALRaw->getNInt(); iraw++) rawdata.push_back(pAHCALRaw->getIntVal(iraw));
-		    rData[bxid].push_back(rawdata);
-		    rawdata.clear();
-		    //---------------------------------------------------------------------------------------------------
-
 		    //---------------------------------------------------------------------------------------
 		    for(int f=0; f<36; f++ ) {
 		      // Vectors for storing our TDC and ADC by channel
