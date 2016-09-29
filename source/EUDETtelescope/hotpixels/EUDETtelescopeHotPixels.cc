@@ -186,11 +186,12 @@ namespace dqm4hep
 		  for (int x = 0; x < 1152; ++x) {
 		    for (int y = 0; y < 576; ++y) {
 		      bin = plane_map_array[x][y];
-
+		      double Hotpixelcut_1 =0.95;
+		      double Hotpixelcut_2 = 1/100;
 
 		      if( bin != 0) {
 			occupancy = bin / (double)currentEventNum;
-			if (occupancy > Hotpixelcut_1 && ((1. / (double)(currentEventNum)) < Hotpixelcut_2)) {
+			if (currentEventNum > 100)  {
 			  if(e==0) m_pHotPix1->get<TH2I>()->Fill(x, y, occupancy);
 			  if(e==1) m_pHotPix2->get<TH2I>()->Fill(x, y, occupancy);
 			  if(e==2) m_pHotPix3->get<TH2I>()->Fill(x, y, occupancy);
@@ -256,10 +257,33 @@ namespace dqm4hep
     LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- endOfRun()" );
     LOG4CXX_INFO( dqmMainLogger , "Run no " << pRun->getRunNumber() );
 
+    std::cout<< "<dqm4hepHotPixelsMap>"<< std::endl;
+    for (int sensor =0; sensor < 6; sensor ++) {
+      std::cout<< "<sensor id=\""<<sensor+1<<"\""<< std::endl;
+      
+      for (int x = 0; x < 1152; ++x) {
+	for (int y = 0; y < 576; ++y) {
+	  bool hotpixel = false;
+	  if(sensor==0 && m_pHotPix1->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==1 && m_pHotPix2->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==2 && m_pHotPix3->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==3 && m_pHotPix4->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==4 && m_pHotPix5->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==5 && m_pHotPix6->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+
+	  if(hotpixel == true) std::cout<< "<pixel x=\""<<x<<"\"  y=\""<<y<<"\"\/>"<< std::endl;
+	}
+      }
+      std::cout<< "<\/sensor>"<< std::endl;
+    }     
+
+    std::cout<< "<\/dqm4hepHotPixelsMap>"<< std::endl;
+
+    
     time_t endTime = std::chrono::system_clock::to_time_t(pRun->getEndTime());
     std::string timeStr;
     DQMCoreTool::timeToHMS(endTime, timeStr);
-
+ 		  
     LOG4CXX_INFO( dqmMainLogger , "End time " << timeStr );
 
     return STATUS_CODE_SUCCESS;

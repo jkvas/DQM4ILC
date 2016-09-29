@@ -1,0 +1,138 @@
+<dqm4hepHotPixelsMap>
+
+<sensor id="1">
+<pixel x="27"  y="272"/>
+<pixel x="292"  y="66"/>
+<pixel x="293"  y="66"/>
+<pixel x="604"  y="103"/>
+<pixel x="647"  y="103"/>
+<pixel x="714"  y="144"/>
+<pixel x="1119"  y="338"/>
+</sensor>
+
+<sensor id="2">
+<pixel x="27"  y="272"/>
+<pixel x="292"  y="66"/>
+<pixel x="293"  y="66"/>
+<pixel x="604"  y="103"/>
+<pixel x="647"  y="103"/>
+<pixel x="714"  y="144"/>
+<pixel x="1119"  y="338"/>
+</sensor>
+
+<sensor id="3">
+<pixel x="27"  y="272"/>
+<pixel x="292"  y="66"/>
+<pixel x="293"  y="66"/>
+<pixel x="604"  y="103"/>
+<pixel x="647"  y="103"/>
+<pixel x="714"  y="144"/>
+<pixel x="1119"  y="338"/>
+</sensor>
+
+<sensor id="4">
+<pixel x="27"  y="272"/>
+<pixel x="30"  y="272"/>
+<pixel x="52"  y="272"/>
+<pixel x="67"  y="272"/>
+<pixel x="68"  y="272"/>
+<pixel x="69"  y="272"/>
+<pixel x="70"  y="272"/>
+<pixel x="71"  y="272"/>
+<pixel x="72"  y="272"/>
+<pixel x="73"  y="272"/>
+<pixel x="74"  y="272"/>
+<pixel x="75"  y="272"/>
+<pixel x="76"  y="272"/>
+<pixel x="77"  y="272"/>
+<pixel x="78"  y="272"/>
+<pixel x="292"  y="66"/>
+<pixel x="293"  y="66"/>
+<pixel x="604"  y="103"/>
+<pixel x="647"  y="103"/>
+<pixel x="714"  y="144"/>
+<pixel x="719"  y="144"/>
+<pixel x="721"  y="144"/>
+<pixel x="722"  y="140"/>
+<pixel x="722"  y="143"/>
+<pixel x="722"  y="144"/>
+<pixel x="1119"  y="338"/>
+</sensor>
+
+<sensor id="5">
+<pixel x="27"  y="272"/>
+<pixel x="30"  y="272"/>
+<pixel x="52"  y="272"/>
+<pixel x="67"  y="272"/>
+<pixel x="68"  y="272"/>
+<pixel x="69"  y="272"/>
+<pixel x="70"  y="272"/>
+<pixel x="71"  y="272"/>
+<pixel x="72"  y="272"/>
+<pixel x="73"  y="272"/>
+<pixel x="74"  y="272"/>
+<pixel x="75"  y="272"/>
+<pixel x="76"  y="272"/>
+<pixel x="77"  y="272"/>
+<pixel x="78"  y="272"/>
+<pixel x="292"  y="66"/>
+<pixel x="293"  y="66"/>
+<pixel x="604"  y="103"/>
+<pixel x="647"  y="103"/>
+<pixel x="714"  y="144"/>
+<pixel x="719"  y="144"/>
+<pixel x="721"  y="144"/>
+<pixel x="722"  y="140"/>
+<pixel x="722"  y="143"/>
+<pixel x="722"  y="144"/>
+<pixel x="1119"  y="338"/>
+</sensor>
+
+<sensor id="6">
+<pixel x="27"  y="272"/>
+<pixel x="30"  y="272"/>
+<pixel x="52"  y="272"/>
+<pixel x="67"  y="272"/>
+<pixel x="68"  y="272"/>
+<pixel x="69"  y="272"/>
+<pixel x="70"  y="272"/>
+<pixel x="71"  y="272"/>
+<pixel x="72"  y="272"/>
+<pixel x="73"  y="272"/>
+<pixel x="74"  y="272"/>
+<pixel x="75"  y="272"/>
+<pixel x="76"  y="272"/>
+<pixel x="77"  y="272"/>
+<pixel x="78"  y="272"/>
+<pixel x="292"  y="66"/>
+<pixel x="293"  y="66"/>
+<pixel x="590"  y="103"/>
+<pixel x="595"  y="103"/>
+<pixel x="598"  y="103"/>
+<pixel x="600"  y="103"/>
+<pixel x="601"  y="103"/>
+<pixel x="603"  y="103"/>
+<pixel x="604"  y="103"/>
+<pixel x="605"  y="103"/>
+<pixel x="606"  y="103"/>
+<pixel x="607"  y="103"/>
+<pixel x="644"  y="103"/>
+<pixel x="645"  y="103"/>
+<pixel x="646"  y="103"/>
+<pixel x="647"  y="103"/>
+<pixel x="648"  y="103"/>
+<pixel x="649"  y="103"/>
+<pixel x="650"  y="103"/>
+<pixel x="651"  y="103"/>
+<pixel x="652"  y="103"/>
+<pixel x="653"  y="103"/>
+<pixel x="714"  y="144"/>
+<pixel x="719"  y="144"/>
+<pixel x="721"  y="144"/>
+<pixel x="722"  y="140"/>
+<pixel x="722"  y="143"/>
+<pixel x="722"  y="144"/>
+<pixel x="1119"  y="338"/>
+</sensor>
+
+</dqm4hepHotPixelsMap>
