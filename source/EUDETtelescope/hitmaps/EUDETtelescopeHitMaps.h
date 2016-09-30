@@ -53,6 +53,9 @@ public:
 	StatusCode endOfRun(DQMRun *pRun);
 	StatusCode endModule();
 
+	StatusCode buildHotPixelsMap(const TiXmlHandle xmlHandle);
+
+
 protected:
 	DQMMonitorElementPtr                        m_pX2;
 	DQMMonitorElementPtr                        m_pX3;
@@ -65,6 +68,18 @@ protected:
 	DQMMonitorElementPtr                        m_pY4;
 	DQMMonitorElementPtr                        m_pY5;
 	DQMMonitorElementPtr                        m_pY6;
+
+
+        std::string                                 m_hotpixelsFilename;
+
+        std::map<int, int>                          hotpixelsmap1;
+        std::map<int, int>                          hotpixelsmap2;
+        std::map<int, int>                          hotpixelsmap3;
+        std::map<int, int>                          hotpixelsmap4;
+        std::map<int, int>                          hotpixelsmap5;
+        std::map<int, int>                          hotpixelsmap6;
+        std::vector<std::map<int, int>>             hotpixelsMap;
+
 
 	bool                                        m_dumpEvent;
 };

@@ -23,33 +23,33 @@
         <parameter name="DumpEvent"> false </parameter>
                	
        	<monitorElement ID="HotPix1"
-        	name="HotPix1" path="/HotPixels" type="TH2I" title="HotPixel Sensor 1" 
-        	nBinsX="1152" minX="0" maxX="1152" nBinsY="576" minY="0" maxY="576" 
+        	name="HotPix1" path="/" type="TH2F" title="HotPixel Sensor 1" 
+        	nBinsX="1152" minX="-0.5" maxX="1151.5" nBinsY="576" minY="-0.5" maxY="575.5" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
 
        	<monitorElement ID="HotPix2"
-        	name="HotPix2" path="/HotPixels" type="TH2I" title="HotPixel Sensor 2" 
-        	nBinsX="1152" minX="0" maxX="1152" nBinsY="576" minY="0" maxY="576" 
+        	name="HotPix2" path="/" type="TH2F" title="HotPixel Sensor 2" 
+        	nBinsX="1152" minX="-0.5" maxX="1151.5" nBinsY="576" minY="-0.5" maxY="575.5" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
 
        	<monitorElement ID="HotPix3"
-        	name="HotPix3" path="/HotPixels" type="TH2I" title="HotPixel Sensor 3" 
-        	nBinsX="1152" minX="0" maxX="1152" nBinsY="576" minY="0" maxY="576" 
+        	name="HotPix3" path="/" type="TH2F" title="HotPixel Sensor 3" 
+        	nBinsX="1152" minX="-0.5" maxX="1151.5" nBinsY="576" minY="-0.5" maxY="575.5" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
 
        	<monitorElement ID="HotPix4"
-        	name="HotPix4" path="/HotPixels" type="TH2I" title="HotPixel Sensor 4" 
-        	nBinsX="1152" minX="0" maxX="1152" nBinsY="576" minY="0" maxY="576" 
+        	name="HotPix4" path="/" type="TH2F" title="HotPixel Sensor 4" 
+        	nBinsX="1152" minX="-0.5" maxX="1151.5" nBinsY="576" minY="-0.5" maxY="575.5" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
 
        	<monitorElement ID="HotPix5"
-        	name="HotPix5" path="/HotPixels" type="TH2I" title="HotPixel Sensor 5" 
-        	nBinsX="1152" minX="0" maxX="1152" nBinsY="576" minY="0" maxY="576" 
+        	name="HotPix5" path="/" type="TH2F" title="HotPixel Sensor 5" 
+        	nBinsX="1152" minX="-0.5" maxX="1151.5" nBinsY="576" minY="-0.5" maxY="575.5" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
 
        	<monitorElement ID="HotPix6"
-        	name="HotPix6" path="/HotPixels" type="TH2I" title="HotPixel Sensor 6" 
-        	nBinsX="1152" minX="0" maxX="1152" nBinsY="576" minY="0" maxY="576" 
+        	name="HotPix6" path="/" type="TH2F" title="HotPixel Sensor 6" 
+        	nBinsX="1152" minX="-0.5" maxX="1151.5" nBinsY="576" minY="-0.5" maxY="575.5" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
     </module>
 

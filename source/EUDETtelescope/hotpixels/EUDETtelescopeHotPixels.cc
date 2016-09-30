@@ -96,18 +96,54 @@ namespace dqm4hep
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,
 													     "DumpEvent", m_dumpEvent));
 
-    plane_map_array = new int *[1152];
-    if (plane_map_array != NULL) {
+    plane_map_array_0 = new int *[1152];
+    if (plane_map_array_0 != NULL) {
       for (int j = 0; j < 1152; j++) {
-        plane_map_array[j] = new int[576];
+        plane_map_array_0[j] = new int[576];
       }
     }
 
-    for (int i = 0; i < 1152; i++) {
-      for (int j = 0; j < 576; j++) {
-	plane_map_array[i][j] = 0;
+    plane_map_array_1 = new int *[1152];
+    if (plane_map_array_1 != NULL) {
+      for (int j = 0; j < 1152; j++) {
+        plane_map_array_1[j] = new int[576];
       }
     }
+
+   plane_map_array_2 = new int *[1152];
+    if (plane_map_array_2 != NULL) {
+      for (int j = 0; j < 1152; j++) {
+        plane_map_array_2[j] = new int[576];
+      }
+    }
+
+    plane_map_array_3 = new int *[1152];
+    if (plane_map_array_3 != NULL) {
+      for (int j = 0; j < 1152; j++) {
+        plane_map_array_3[j] = new int[576];
+      }
+    }
+    
+    plane_map_array_4 = new int *[1152];
+    if (plane_map_array_4 != NULL) {
+      for (int j = 0; j < 1152; j++) {
+        plane_map_array_4[j] = new int[576];
+      }
+    }
+    
+    plane_map_array_5 = new int *[1152];
+    if (plane_map_array_5 != NULL) {
+      for (int j = 0; j < 1152; j++) {
+        plane_map_array_5[j] = new int[576];
+      }
+    }
+ 
+    InitArrayMap(plane_map_array_0);
+    InitArrayMap(plane_map_array_1);
+    InitArrayMap(plane_map_array_2);
+    InitArrayMap(plane_map_array_3);
+    InitArrayMap(plane_map_array_4);
+    InitArrayMap(plane_map_array_5);
 
     currentEventNum = 0;
 
@@ -180,24 +216,35 @@ namespace dqm4hep
 		    int x = pEUDETtelescopeHotPixels->getChargeValues().at(i);
 		    int y = pEUDETtelescopeHotPixels->getChargeValues().at(i+1);
 
-		    plane_map_array[x][y] = plane_map_array[x][y] + 1;
+		    if(e==0) plane_map_array_0[x][y] = plane_map_array_0[x][y] + 1;
+		    if(e==1) plane_map_array_1[x][y] = plane_map_array_1[x][y] + 1;
+		    if(e==2) plane_map_array_2[x][y] = plane_map_array_2[x][y] + 1;
+		    if(e==3) plane_map_array_3[x][y] = plane_map_array_3[x][y] + 1;
+		    if(e==4) plane_map_array_4[x][y] = plane_map_array_4[x][y] + 1;
+		    if(e==5) plane_map_array_5[x][y] = plane_map_array_5[x][y] + 1;
+
 		  }
 
 		  for (int x = 0; x < 1152; ++x) {
 		    for (int y = 0; y < 576; ++y) {
-		      bin = plane_map_array[x][y];
-		      double Hotpixelcut_1 =0.95;
+		      if(e==0) bin = plane_map_array_0[x][y];
+		      if(e==1) bin = plane_map_array_1[x][y];
+		      if(e==2) bin = plane_map_array_2[x][y];
+		      if(e==3) bin = plane_map_array_3[x][y];
+		      if(e==4) bin = plane_map_array_4[x][y];
+		      if(e==5) bin = plane_map_array_5[x][y];
+		      double Hotpixelcut_1 =0.8;
 		      double Hotpixelcut_2 = 1/100;
 
 		      if( bin != 0) {
 			occupancy = bin / (double)currentEventNum;
-			if (currentEventNum > 100)  {
-			  if(e==0) m_pHotPix1->get<TH2I>()->Fill(x, y, occupancy);
-			  if(e==1) m_pHotPix2->get<TH2I>()->Fill(x, y, occupancy);
-			  if(e==2) m_pHotPix3->get<TH2I>()->Fill(x, y, occupancy);
-			  if(e==3) m_pHotPix4->get<TH2I>()->Fill(x, y, occupancy);
-			  if(e==4) m_pHotPix5->get<TH2I>()->Fill(x, y, occupancy);
-			  if(e==5) m_pHotPix6->get<TH2I>()->Fill(x, y, occupancy);
+			if (currentEventNum > 100 && occupancy > 0.05)  {
+			  if(e==0) m_pHotPix1->get<TH2F>()->Fill(x, y, occupancy);
+			  if(e==1) m_pHotPix2->get<TH2F>()->Fill(x, y, occupancy);
+			  if(e==2) m_pHotPix3->get<TH2F>()->Fill(x, y, occupancy);
+			  if(e==3) m_pHotPix4->get<TH2F>()->Fill(x, y, occupancy);
+			  if(e==4) m_pHotPix5->get<TH2F>()->Fill(x, y, occupancy);
+			  if(e==5) m_pHotPix6->get<TH2F>()->Fill(x, y, occupancy);
 			}
 		      }
 		    }
@@ -259,19 +306,19 @@ namespace dqm4hep
 
     std::cout<< "<dqm4hepHotPixelsMap>"<< std::endl;
     for (int sensor =0; sensor < 6; sensor ++) {
-      std::cout<< "<sensor id=\""<<sensor+1<<"\""<< std::endl;
+      std::cout<< "<sensor id=\""<<sensor+1<<"\">"<< std::endl;
       
       for (int x = 0; x < 1152; ++x) {
 	for (int y = 0; y < 576; ++y) {
 	  bool hotpixel = false;
-	  if(sensor==0 && m_pHotPix1->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
-	  if(sensor==1 && m_pHotPix2->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
-	  if(sensor==2 && m_pHotPix3->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
-	  if(sensor==3 && m_pHotPix4->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
-	  if(sensor==4 && m_pHotPix5->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
-	  if(sensor==5 && m_pHotPix6->get<TH2I>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==0 && m_pHotPix1->get<TH2F>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==1 && m_pHotPix2->get<TH2F>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==2 && m_pHotPix3->get<TH2F>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==3 && m_pHotPix4->get<TH2F>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==4 && m_pHotPix5->get<TH2F>()->GetBinContent(x, y) > 0 ) hotpixel=true;
+	  if(sensor==5 && m_pHotPix6->get<TH2F>()->GetBinContent(x, y) > 0 ) hotpixel=true;
 
-	  if(hotpixel == true) std::cout<< "<pixel x=\""<<x<<"\"  y=\""<<y<<"\"\/>"<< std::endl;
+	  if(hotpixel == true) std::cout<< "<pixel x=\""<<x-1<<"\"  y=\""<<y-1<<"\"\/>"<< std::endl;
 	}
       }
       std::cout<< "<\/sensor>"<< std::endl;
@@ -288,6 +335,15 @@ namespace dqm4hep
 
     return STATUS_CODE_SUCCESS;
   }
+
+  void EUDETtelescopeHotPixels::InitArrayMap( int **plane_map_array ) {   
+    for (int i = 0; i < 1152; i++) {
+      for (int j = 0; j < 576; j++) {
+	plane_map_array[i][j] = 0;
+      }
+    }
+  }
+
 
 } 
 

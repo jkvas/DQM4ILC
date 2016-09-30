@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <dqm4hep>
 
     <archiver open="true" directory="/tmp" />
@@ -17,52 +18,54 @@
     </network>
     
     <cycle type="TimerCycle" value="10" timeout="5" />
-
+    
     <module type="EUDETtelescopeHitMaps" name="MyEUDETtelescopeHitMaps">
-        
-        <parameter name="DumpEvent"> false </parameter>
+      
+      <parameter name="DumpEvent"> false </parameter>
+      
+      <parameter name="HotPixelsFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/EUDETtelescope/hotpixels/hotpixelsmap_05.xml </parameter>
                	
        	<monitorElement ID="profileX2"
         	name="profileX2" path="/XProfiles" type="TH2I" title="The X correlation between X1 and X2" 
-        	nBinsX="80" minX="0" maxX="1152" nBinsY="80" minY="0" maxY="1152" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="100" minY="0" maxY="1152" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileX3"
         	name="profileX3" path="/XProfiles" type="TH2I" title="The X correlation between X1 and X3" 
-        	nBinsX="80" minX="0" maxX="1152" nBinsY="80" minY="0" maxY="1152" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="100" minY="0" maxY="1152" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileX4"
         	name="profileX4" path="/XProfiles" type="TH2I" title="The X correlation between X1 and X4" 
-        	nBinsX="80" minX="0" maxX="1152" nBinsY="80" minY="0" maxY="1152" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="100" minY="0" maxY="1152" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileX5"
         	name="profileX5" path="/XProfiles" type="TH2I" title="The X correlation between X1 and X5" 
-        	nBinsX="80" minX="0" maxX="1152" nBinsY="80" minY="0" maxY="1152" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="100" minY="0" maxY="1152" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileX6"
         	name="profileX6" path="/XProfiles" type="TH2I" title="The X correlation between X1 and X6" 
-        	nBinsX="80" minX="0" maxX="1152" nBinsY="80" minY="0" maxY="1152" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="100" minY="0" maxY="1152" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
 
        	<monitorElement ID="profileY2"
-        	name="profileX2" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y2" 
+        	name="profileY2" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y2" 
         	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY3"
-        	name="profileX3" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y3" 
+        	name="profileY3" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y3" 
         	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY4"
-        	name="profileX4" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y4" 
+        	name="profileY4" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y4" 
         	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY5"
-        	name="profileX5" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y5" 
+        	name="profileY5" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y5" 
         	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY6"
-        	name="profileX6" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y6" 
+        	name="profileY6" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y6" 
         	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
-        	resetPolicy="EndOfCycle" drawOption="colz"/>
+        	resetPolicy="EndOfRun" drawOption="colz"/>
 
     </module>
 

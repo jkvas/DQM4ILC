@@ -52,6 +52,7 @@ public:
 	StatusCode startOfRun(DQMRun *pRun);
 	StatusCode endOfRun(DQMRun *pRun);
 	StatusCode endModule();
+	void InitArrayMap(int **plane_map_array);
 
 protected:
 	DQMMonitorElementPtr                        m_pHotPix1;
@@ -64,7 +65,14 @@ protected:
 
 	bool                                        m_dumpEvent;
 	double currentEventNum;
-	int **plane_map_array; // store an array representing the map
+	int **plane_map_array_0; // store an array representing the map
+	int **plane_map_array_1; // store an array representing the map
+	int **plane_map_array_2; // store an array representing the map
+	int **plane_map_array_3; // store an array representing the map
+	int **plane_map_array_4; // store an array representing the map
+	int **plane_map_array_5; // store an array representing the map
+
+
 };
 
 } 

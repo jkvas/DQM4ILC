@@ -4,12 +4,27 @@
 <sensor id="2">
 </sensor>
 <sensor id="3">
+<pixel x="331"  y="12"/>
+<pixel x="476"  y="411"/>
+<pixel x="770"  y="36"/>
+<pixel x="797"  y="288"/>
+<pixel x="967"  y="523"/>
 </sensor>
 <sensor id="4">
+<pixel x="2"  y="272"/>
+<pixel x="3"  y="272"/>
+<pixel x="5"  y="272"/>
+<pixel x="12"  y="272"/>
+<pixel x="19"  y="272"/>
 <pixel x="24"  y="272"/>
 <pixel x="26"  y="271"/>
+<pixel x="26"  y="272"/>
+<pixel x="27"  y="272"/>
 <pixel x="29"  y="271"/>
+<pixel x="30"  y="272"/>
 <pixel x="31"  y="271"/>
+<pixel x="36"  y="272"/>
+<pixel x="46"  y="271"/>
 <pixel x="47"  y="271"/>
 <pixel x="48"  y="271"/>
 <pixel x="51"  y="271"/>
@@ -33,6 +48,8 @@
 <pixel x="75"  y="271"/>
 <pixel x="76"  y="271"/>
 <pixel x="77"  y="271"/>
+<pixel x="346"  y="267"/>
+<pixel x="464"  y="123"/>
 <pixel x="713"  y="143"/>
 <pixel x="718"  y="143"/>
 <pixel x="720"  y="143"/>
@@ -42,6 +59,9 @@
 <pixel x="729"  y="144"/>
 </sensor>
 <sensor id="5">
+<pixel x="419"  y="318"/>
+<pixel x="422"  y="387"/>
+<pixel x="911"  y="132"/>
 <pixel x="1118"  y="337"/>
 </sensor>
 <sensor id="6">

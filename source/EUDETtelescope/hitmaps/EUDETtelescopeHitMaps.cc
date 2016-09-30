@@ -79,6 +79,26 @@ namespace dqm4hep
   {
     LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- readSettings()" );
 
+    // ----------------------------
+    // Hot pixels Map
+    // ----------------------------
+
+    std::string m_hotpixelsFilename = "";
+
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,
+                                                                                                             "HotPixelsFilename", m_hotpixelsFilename));
+
+    dqm4hep::TiXmlDocument m_hotpixelsFile(m_hotpixelsFilename);
+    
+    if( ! m_hotpixelsFile.LoadFile() )
+      return dqm4hep::STATUS_CODE_FAILURE;
+
+     const dqm4hep::TiXmlHandle xmlGeometryFileHandle(&m_hotpixelsFile);
+
+     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, EUDETtelescopeHitMaps::buildHotPixelsMap(xmlGeometryFileHandle));
+
+    // ----------------------------
+
     m_pX2 = NULL;
     m_pX3 = NULL;
     m_pX4 = NULL;
@@ -166,7 +186,13 @@ namespace dqm4hep
 
 	      double x_1 = pEUDETtelescopeHitMaps_1->getChargeValues().at(i);
 	      double y_1 = pEUDETtelescopeHitMaps_1->getChargeValues().at(i+1);
+	      bool hotpix=false;
 
+	      for (std::map<int,int>::iterator it=hotpixelsMap[0].begin(); it!=hotpixelsMap[0].end(); ++it) 
+		if( x_1 == it->first && y_1==it->second) hotpix=true;
+
+	      if(hotpix==false) {
+		
 	      for(int e=1 ; e<nElements ; e++)
 		{
 		  const EVENT::TrackerData *const pEUDETtelescopeHitMaps = dynamic_cast<const EVENT::TrackerData *const>(pLCCollection->getElementAt(e));
@@ -177,21 +203,30 @@ namespace dqm4hep
 		  for(int i=0; i< pEUDETtelescopeHitMaps->getChargeValues().size(); i+=4) {
 		    double x = pEUDETtelescopeHitMaps->getChargeValues().at(i);
 		    double y = pEUDETtelescopeHitMaps->getChargeValues().at(i+1);
-				
-		    if(e==1) m_pX2->get<TH2I>()->Fill(x_1, x);
-		    if(e==2) m_pX3->get<TH2I>()->Fill(x_1, x);
-		    if(e==3) m_pX4->get<TH2I>()->Fill(x_1, x);
-		    if(e==4) m_pX5->get<TH2I>()->Fill(x_1, x);
-		    if(e==5) m_pX6->get<TH2I>()->Fill(x_1, x);
 
-		    if(e==1) m_pY2->get<TH2I>()->Fill(y_1, y);
-		    if(e==2) m_pY3->get<TH2I>()->Fill(y_1, y);
-		    if(e==3) m_pY4->get<TH2I>()->Fill(y_1, y);
-		    if(e==4) m_pY5->get<TH2I>()->Fill(y_1, y);
-		    if(e==5) m_pY6->get<TH2I>()->Fill(y_1, y);
+		    hotpix=false;
+
+		    for (std::map<int,int>::iterator it=hotpixelsMap[e].begin(); it!=hotpixelsMap[e].end(); ++it) 
+		      if( x == it->first && y == it->second) hotpix=true;
+				
+		    if(hotpix==false){ 
+		      
+		      if(e==1) m_pX2->get<TH2I>()->Fill(x_1, x);
+		      if(e==2) m_pX3->get<TH2I>()->Fill(x_1, x);
+		      if(e==3) m_pX4->get<TH2I>()->Fill(x_1, x);
+		      if(e==4) m_pX5->get<TH2I>()->Fill(x_1, x);
+		      if(e==5) m_pX6->get<TH2I>()->Fill(x_1, x);
+		      
+		      if(e==1) m_pY2->get<TH2I>()->Fill(y_1, y);
+		      if(e==2) m_pY3->get<TH2I>()->Fill(y_1, y);
+		      if(e==3) m_pY4->get<TH2I>()->Fill(y_1, y);
+		      if(e==4) m_pY5->get<TH2I>()->Fill(y_1, y);
+		      if(e==5) m_pY6->get<TH2I>()->Fill(y_1, y);
+		    }
 				
 		  }
 		}
+	      }
 			  
 	    }
 	  }
@@ -254,6 +289,66 @@ namespace dqm4hep
 
     return STATUS_CODE_SUCCESS;
   }
+
+
+  StatusCode EUDETtelescopeHitMaps::buildHotPixelsMap(const TiXmlHandle xmlHandle)
+  {
+
+    LOG4CXX_INFO( dqmMainLogger , "Building Hot Pixels map..." );
+
+    //Getting the very first child of the XML file; in our case, this is the dqm4hepGeometryMap bracket.
+    const dqm4hep::TiXmlHandle xmlFileHandle(xmlHandle.FirstChildElement().Element());
+
+    //Iterate over each layer
+    for (dqm4hep::TiXmlElement *pSensorXmlElement = xmlFileHandle.FirstChild("sensor").Element(); NULL != pSensorXmlElement; pSensorXmlElement = pSensorXmlElement->NextSiblingElement("sensor"))
+      {
+
+	dqm4hep::TiXmlHandle pSensorHandle(pSensorXmlElement);
+
+	//Iterate over each pixel
+	for (dqm4hep::TiXmlElement *pPixelXmlElement = pSensorHandle.FirstChild("pixel").Element(); NULL != pPixelXmlElement; pPixelXmlElement = pPixelXmlElement->NextSiblingElement("pixel"))
+	  {
+
+	    dqm4hep::TiXmlHandle pPixelHandle(pPixelXmlElement);
+
+	    int SensorID, pixelX, pixelY;
+
+		//Pull out all the data: pixel number, channel number, ijk
+		pSensorXmlElement->QueryValueAttribute<int>("id", &SensorID);
+		pPixelXmlElement->QueryValueAttribute<int>("x", &pixelX);
+		pPixelXmlElement->QueryValueAttribute<int>("y", &pixelY);
+
+		if(SensorID==1) hotpixelsmap1.insert(std::make_pair(pixelX, pixelY));
+		if(SensorID==2) hotpixelsmap2.insert(std::make_pair(pixelX, pixelY));
+		if(SensorID==3) hotpixelsmap3.insert(std::make_pair(pixelX, pixelY));
+		if(SensorID==4) hotpixelsmap4.insert(std::make_pair(pixelX, pixelY));
+		if(SensorID==5) hotpixelsmap5.insert(std::make_pair(pixelX, pixelY));
+		if(SensorID==6) hotpixelsmap6.insert(std::make_pair(pixelX, pixelY));
+
+
+	  }
+	  
+      }
+
+    std::cout<<hotpixelsmap1.size()<<std::endl;
+    std::cout<<hotpixelsmap2.size()<<std::endl;
+    std::cout<<hotpixelsmap3.size()<<std::endl;
+    std::cout<<hotpixelsmap4.size()<<std::endl;
+    std::cout<<hotpixelsmap5.size()<<std::endl;
+    std::cout<<hotpixelsmap6.size()<<std::endl;
+    hotpixelsMap.push_back(hotpixelsmap1);
+    hotpixelsMap.push_back(hotpixelsmap2);
+    hotpixelsMap.push_back(hotpixelsmap3);
+    hotpixelsMap.push_back(hotpixelsmap4);
+    hotpixelsMap.push_back(hotpixelsmap5);
+    hotpixelsMap.push_back(hotpixelsmap6);
+
+    LOG4CXX_INFO( dqmMainLogger , "Geometry map built successfully." );
+
+    return STATUS_CODE_SUCCESS;
+
+  }
+
 
 } 
 
