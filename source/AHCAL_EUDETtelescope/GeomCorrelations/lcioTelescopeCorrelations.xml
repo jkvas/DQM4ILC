@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dqm4hep>
+
+  <archiver open="true" directory="/tmp" />
+  
+  <network>
+    <runcontrol type="DimRunControlClient" name="AHCALRunControl" />
+    
+    <eventcollector type="DimEventClient">
+      <parameter name="collectorName"> ahcal_event_collector </parameter>
+      <parameter name="subEventIdentifier"> HCALEndcap </parameter>
+      <parameter name="updateMode"> true </parameter>
+      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="streamerName"> LCIOStreamer </parameter>
+    </eventcollector>
+    
+    <monitorelementcollector name="ahcal_me_collector"/>
+  </network>
+  
+  <cycle type="TimerCycle" value="1" timeout="1" />
+  
+  <module type="TelescopeAHCALCorrelations" name="TelescopeAHCALCorrelations">
+    
+    <parameter name="DumpEvent"> false </parameter>    
+
+
+    <!--  ######################################################  --> 
+    <!--  telescope hotpixel mapping  --> 
+    <!--  ######################################################  --> 
+
+      <parameter name="HotPixelsFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/EUDETtelescope/hotpixels/hotpixelsmap_05.xml </parameter>
+
+    <!--  ######################################################  --> 
+    <!--  AHCAL mapping plots --> 
+    <!--  ######################################################  --> 
+
+    <parameter name="GeometryFilename"> /home/calice/TB2016/varios/ElectronicsMapping/geometrymap_airstack.xml </parameter>
+
+    <!--  ######################################################  --> 
+    <!--  Correlation plots   --> 
+    <!--  ######################################################  --> 
+
+   <!-- X_I -->
+    <monitorElement ID="X_I_300_l01" path="/X/I" type="TH2I"    title="The X0 vs I Layer 1" 
+		    name ="X_I_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_I_300_l02" path="/X/I" type="TH2I"    title="The X0 vs I Layer 2" 
+		    name ="X_I_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_I_300_l03" path="/X/I" type="TH2I"    title="The X0 vs I Layer 3" 
+		    name ="X_I_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_I_300_l04" path="/X/I" type="TH2I"    title="The X0 vs I Layer 4" 
+		    name ="X_I_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_I_300_l05" path="/X/I" type="TH2I"    title="The X0 vs I Layer 5" 
+		    name ="X_I_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_I_300_l06" path="/X/I" type="TH2I"   title="The X0 vs I Layer 6" 
+		    name ="X_I_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+    <!-- X_J -->
+    <monitorElement ID="X_J_300_l01" path="/X/J" type="TH2I"    title="The X0 vs J Layer 1" 
+		    name ="X_J_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_J_300_l02" path="/X/J" type="TH2I"    title="The X0 vs J Layer 2" 
+		    name ="X_J_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_J_300_l03" path="/X/J" type="TH2I"    title="The X0 vs J Layer 3" 
+		    name ="X_J_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_J_300_l04" path="/X/J" type="TH2I"    title="The X0 vs J Layer 4" 
+		    name ="X_J_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_J_300_l05" path="/X/J" type="TH2I"    title="The X0 vs J Layer 5" 
+		    name ="X_J_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_J_300_l06" path="/X/J" type="TH2I"   title="The X0 vs J Layer 6" 
+		    name ="X_J_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+  
+    <!-- Y_I -->
+    <monitorElement ID="Y_I_300_l01" path="/Y/I" type="TH2I"   title="The Y0 vs I Layer 1" 
+		    name ="Y_I_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_I_300_l02" path="/Y/I" type="TH2I"   title="The Y0 vs I Layer 2" 
+		    name ="Y_I_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_I_300_l03" path="/Y/I" type="TH2I"   title="The Y0 vs I Layer 3" 
+		    name ="Y_I_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_I_300_l04" path="/Y/I" type="TH2I"   title="The Y0 vs I Layer 4" 
+		    name ="Y_I_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_I_300_l05" path="/Y/I" type="TH2I"   title="The Y0 vs I Layer 5" 
+		    name ="Y_I_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_I_300_l06" path="/Y/I" type="TH2I"  title="The Y0 vs I Layer 6" 
+		    name ="Y_I_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+    <!-- Y_J -->
+    <monitorElement ID="Y_J_300_l01" path="/Y/J" type="TH2I"   title="The Y0 vs J Layer 1" 
+		    name ="Y_J_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_J_300_l02" path="/Y/J" type="TH2I"   title="The Y0 vs J Layer 2" 
+		    name ="Y_J_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_J_300_l03" path="/Y/J" type="TH2I"   title="The Y0 vs J Layer 3" 
+		    name ="Y_J_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_J_300_l04" path="/Y/J" type="TH2I"   title="The Y0 vs J Layer 4" 
+		    name ="Y_J_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_J_300_l05" path="/Y/J" type="TH2I"   title="The Y0 vs J Layer 5" 
+		    name ="Y_J_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_J_300_l06" path="/Y/J" type="TH2I"  title="The Y0 vs J Layer 6" 
+		    name ="Y_J_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+
+
+  </module>
+
+ 
+  
+</dqm4hep>
