@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<dqm4hep>
+    <monitoring>
+        <dimDnsNode value="localhost" />
+        <view>
+            <meView>
+                <collector name="ahcal_me_collector">
+                    <module name="TelescopeAHCALCorrelations">
+                        <item path="/TimeCorrelations/" name="CorrelatedBXID" checked="1" />
+                        <item path="/TimeCorrelations/" name="LDA_TLU_Offset" checked="1" />
+                        <item path="/TimeCorrelations/" name="TimeCycle" checked="1" />
+                        <item path="/TimeCorrelations/" name="TriggerID" checked="1" />
+                        <item path="/X/I/" name="X_I_300_l01" checked="1" />
+                        <item path="/X/I/" name="X_I_300_l02" checked="1" />
+                        <item path="/X/I/" name="X_I_300_l03" checked="1" />
+                        <item path="/X/I/" name="X_I_300_l04" checked="1" />
+                        <item path="/X/I/" name="X_I_300_l05" checked="1" />
+                        <item path="/X/I/" name="X_I_300_l07" checked="1" />
+                        <item path="/X/J/" name="X_J_300_l01" checked="0" />
+                        <item path="/X/J/" name="X_J_300_l02" checked="0" />
+                        <item path="/X/J/" name="X_J_300_l03" checked="0" />
+                        <item path="/X/J/" name="X_J_300_l04" checked="0" />
+                        <item path="/X/J/" name="X_J_300_l05" checked="0" />
+                        <item path="/X/J/" name="X_J_300_l07" checked="0" />
+                        <item path="/Y/I/" name="Y_I_300_l01" checked="0" />
+                        <item path="/Y/I/" name="Y_I_300_l02" checked="0" />
+                        <item path="/Y/I/" name="Y_I_300_l03" checked="0" />
+                        <item path="/Y/I/" name="Y_I_300_l04" checked="0" />
+                        <item path="/Y/I/" name="Y_I_300_l05" checked="0" />
+                        <item path="/Y/I/" name="Y_I_300_l07" checked="0" />
+                        <item path="/Y/J/" name="Y_J_300_l01" checked="1" />
+                        <item path="/Y/J/" name="Y_J_300_l02" checked="1" />
+                        <item path="/Y/J/" name="Y_J_300_l03" checked="1" />
+                        <item path="/Y/J/" name="Y_J_300_l04" checked="1" />
+                        <item path="/Y/J/" name="Y_J_300_l05" checked="1" />
+                        <item path="/Y/J/" name="Y_J_300_l07" checked="1" />
+                        <item path="/noCorrelated/X/I/" name="X_noC_I_300_l01" checked="1" />
+                        <item path="/noCorrelated/X/I/" name="X_noC_I_300_l02" checked="1" />
+                        <item path="/noCorrelated/X/I/" name="X_noC_I_300_l03" checked="1" />
+                        <item path="/noCorrelated/X/I/" name="X_noC_I_300_l04" checked="1" />
+                        <item path="/noCorrelated/X/I/" name="X_noC_I_300_l05" checked="1" />
+                        <item path="/noCorrelated/X/I/" name="X_noC_I_300_l07" checked="1" />
+                        <item path="/noCorrelated/X/J/" name="X_noC_J_300_l01" checked="0" />
+                        <item path="/noCorrelated/X/J/" name="X_noC_J_300_l02" checked="0" />
+                        <item path="/noCorrelated/X/J/" name="X_noC_J_300_l03" checked="0" />
+                        <item path="/noCorrelated/X/J/" name="X_noC_J_300_l04" checked="0" />
+                        <item path="/noCorrelated/X/J/" name="X_noC_J_300_l05" checked="0" />
+                        <item path="/noCorrelated/X/J/" name="X_noC_J_300_l07" checked="0" />
+                        <item path="/noCorrelated/Y/I/" name="Y_noC_I_300_l01" checked="0" />
+                        <item path="/noCorrelated/Y/I/" name="Y_noC_I_300_l02" checked="0" />
+                        <item path="/noCorrelated/Y/I/" name="Y_noC_I_300_l03" checked="0" />
+                        <item path="/noCorrelated/Y/I/" name="Y_noC_I_300_l04" checked="0" />
+                        <item path="/noCorrelated/Y/I/" name="Y_noC_I_300_l05" checked="0" />
+                        <item path="/noCorrelated/Y/I/" name="Y_noC_I_300_l07" checked="0" />
+                        <item path="/noCorrelated/Y/J/" name="Y_noC_J_300_l01" checked="1" />
+                        <item path="/noCorrelated/Y/J/" name="Y_noC_J_300_l02" checked="1" />
+                        <item path="/noCorrelated/Y/J/" name="Y_noC_J_300_l03" checked="1" />
+                        <item path="/noCorrelated/Y/J/" name="Y_noC_J_300_l04" checked="1" />
+                        <item path="/noCorrelated/Y/J/" name="Y_noC_J_300_l05" checked="1" />
+                        <item path="/noCorrelated/Y/J/" name="Y_noC_J_300_l07" checked="1" />
+                    </module>
+                </collector>
+            </meView>
+            <canvasView>
+                <canvasArea name="Correlations X-I">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="X/I" name="X_I_300_l01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="X/I" name="X_I_300_l02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="X/I" name="X_I_300_l03" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="X/I" name="X_I_300_l04" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="X/I" name="X_I_300_l05" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="X/I" name="X_I_300_l07" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="Correlations Y-J">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="Y/J" name="Y_J_300_l01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="Y/J" name="Y_J_300_l02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="Y/J" name="Y_J_300_l03" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="Y/J" name="Y_J_300_l04" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="Y/J" name="Y_J_300_l05" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="Y/J" name="Y_J_300_l07" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="Bad Correlations X-I">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/X/I" name="X_noC_I_300_l01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/X/I" name="X_noC_I_300_l02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/X/I" name="X_noC_I_300_l03" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/X/I" name="X_noC_I_300_l04" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/X/I" name="X_noC_I_300_l05" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/X/I" name="X_noC_I_300_l07" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="Bad Correlations Y-J">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/Y/J" name="Y_noC_J_300_l01" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/Y/J" name="Y_noC_J_300_l02" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/Y/J" name="Y_noC_J_300_l03" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/Y/J" name="Y_noC_J_300_l04" />
+                    </canvas>
+                    <canvas x="400" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/Y/J" name="Y_noC_J_300_l05" />
+                    </canvas>
+                    <canvas x="800" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="noCorrelated/Y/J" name="Y_noC_J_300_l07" />
+                    </canvas>
+                </canvasArea>
+                <canvasArea name="TimeCorrelations">
+                    <canvas x="0" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="TimeCorrelations" name="CorrelatedBXID" />
+                    </canvas>
+                    <canvas x="400" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="TimeCorrelations" name="LDA_TLU_Offset" />
+                    </canvas>
+                    <canvas x="800" y="0" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="TimeCorrelations" name="TimeCycle" />
+                    </canvas>
+                    <canvas x="0" y="250" w="400" h="250">
+                        <monitorElement collector="ahcal_me_collector" module="TelescopeAHCALCorrelations" path="TimeCorrelations" name="TriggerID" />
+                    </canvas>
+                </canvasArea>
+            </canvasView>
+        </view>
+        <controller>
+            <collector value="ahcal_me_collector" />
+        </controller>
+    </monitoring>
+</dqm4hep>

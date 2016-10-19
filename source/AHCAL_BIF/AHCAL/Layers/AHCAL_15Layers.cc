@@ -566,8 +566,11 @@ namespace dqm4hep
 		      hitbit_tdc = (tdcRAW & 0x1000)?1:0;
 		      gainbit_tdc = (tdcRAW & 0x2000)?1:0;
 		      
+		      if(pAHCALRaw->getIntVal(0)==107) {
+			std::cout<<"chip: "<<pAHCALRaw->getIntVal(ChipIDIndex) <<" mem:" <<pAHCALRaw->getIntVal(EvtNrIndex)<< " chn:"<<f<< 			  " hb:"<<hitbit_adc<<hitbit_tdc<<" adc:"<<adc<<" tdc:"<<tdc<<std::endl;
+		      }
 
-		      if( hitbit_adc != hitbit_tdc || pAHCALRaw->getIntVal(EvtNrIndex) ==0 ) continue;
+		      if( hitbit_adc != hitbit_tdc || pAHCALRaw->getIntVal(EvtNrIndex)==0 ) continue;
 		      
 		      if(hitbit_adc != 1) continue;
 		      
@@ -726,6 +729,7 @@ namespace dqm4hep
 
 		//Formatting data to go into our map
 		ChpChnNum = ChipID*100+ChannelID;
+		I=12-I;
 		ijkNum = I*10000 + J*100 + K;
 
 

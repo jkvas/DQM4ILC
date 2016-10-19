@@ -107,7 +107,17 @@ namespace dqm4hep
 
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, Correlations::buildGeometryMap(xmlGeometryFileHandle));
 
-  
+    //---------------------------------------------------------------------
+    //Correlation time plots 
+    m_pLDA_TLU_Offset = NULL;
+    m_pTriggerID = NULL;
+    m_pTimeCycle = NULL;
+    m_pCorrelatedBXID = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "LDA_TLU_Offset", m_pLDA_TLU_Offset));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "TriggerID", m_pTriggerID));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "TimeCycle", m_pTimeCycle));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "CorrelatedBXID", m_pCorrelatedBXID));
+
     //---------------------------------------------------------------------
     //Correlation X with AHCAL-I (ADC > 30)
     m_pX_I_300_l01 = NULL;
@@ -170,6 +180,69 @@ namespace dqm4hep
     RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_J_300_l05", m_pY_J_300_l05));
     RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_J_300_l06", m_pY_J_300_l06));
 
+
+    //---------------------------------------------------------------------
+    //Correlation X with AHCAL-I (ADC > 30) for non correlated (in time) hits
+    m_pX_noC_I_300_l01 = NULL;
+    m_pX_noC_I_300_l02 = NULL;
+    m_pX_noC_I_300_l03 = NULL;
+    m_pX_noC_I_300_l04 = NULL;
+    m_pX_noC_I_300_l05 = NULL;
+    m_pX_noC_I_300_l06 = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_I_300_l01", m_pX_noC_I_300_l01));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_I_300_l02", m_pX_noC_I_300_l02));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_I_300_l03", m_pX_noC_I_300_l03));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_I_300_l04", m_pX_noC_I_300_l04));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_I_300_l05", m_pX_noC_I_300_l05));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_I_300_l06", m_pX_noC_I_300_l06));
+
+  
+    //--------------------------------------------------------------------
+    //Correlation Y with AHCAL-I (ADC > 30) for non correlated (in time) hits
+    m_pY_noC_I_300_l01 = NULL;
+    m_pY_noC_I_300_l02 = NULL;
+    m_pY_noC_I_300_l03 = NULL;
+    m_pY_noC_I_300_l04 = NULL;
+    m_pY_noC_I_300_l05 = NULL;
+    m_pY_noC_I_300_l06 = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_I_300_l01", m_pY_noC_I_300_l01));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_I_300_l02", m_pY_noC_I_300_l02));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_I_300_l03", m_pY_noC_I_300_l03));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_I_300_l04", m_pY_noC_I_300_l04));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_I_300_l05", m_pY_noC_I_300_l05));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_I_300_l06", m_pY_noC_I_300_l06));
+
+    //---------------------------------------------------------------------
+    //Correlation X with AHCAL-J (ADC > 30) for non correlated (in time) hits
+    m_pX_noC_J_300_l01 = NULL;
+    m_pX_noC_J_300_l02 = NULL;
+    m_pX_noC_J_300_l03 = NULL;
+    m_pX_noC_J_300_l04 = NULL;
+    m_pX_noC_J_300_l05 = NULL;
+    m_pX_noC_J_300_l06 = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_J_300_l01", m_pX_noC_J_300_l01));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_J_300_l02", m_pX_noC_J_300_l02));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_J_300_l03", m_pX_noC_J_300_l03));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_J_300_l04", m_pX_noC_J_300_l04));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_J_300_l05", m_pX_noC_J_300_l05));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "X_noC_J_300_l06", m_pX_noC_J_300_l06));
+
+  
+    //--------------------------------------------------------------------
+    //Correlation Y with AHCAL-J (ADC > 30) for non correlated (in time) hits
+    m_pY_noC_J_300_l01 = NULL;
+    m_pY_noC_J_300_l02 = NULL;
+    m_pY_noC_J_300_l03 = NULL;
+    m_pY_noC_J_300_l04 = NULL;
+    m_pY_noC_J_300_l05 = NULL;
+    m_pY_noC_J_300_l06 = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_J_300_l01", m_pY_noC_J_300_l01));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_J_300_l02", m_pY_noC_J_300_l02));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_J_300_l03", m_pY_noC_J_300_l03));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_J_300_l04", m_pY_noC_J_300_l04));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_J_300_l05", m_pY_noC_J_300_l05));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Y_noC_J_300_l06", m_pY_noC_J_300_l06));
+
    
   
 
@@ -189,9 +262,9 @@ namespace dqm4hep
     if( ! m_hotpixelsFile.LoadFile() )
       return dqm4hep::STATUS_CODE_FAILURE;
 
-     const dqm4hep::TiXmlHandle xmlGeometryTelescopeFileHandle(&m_hotpixelsFile);
+    const dqm4hep::TiXmlHandle xmlGeometryTelescopeFileHandle(&m_hotpixelsFile);
 
-     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, Correlations::buildHotPixelsMap(xmlGeometryTelescopeFileHandle));
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, Correlations::buildHotPixelsMap(xmlGeometryTelescopeFileHandle));
 
 
     // ####################################################################################################################################
@@ -239,6 +312,8 @@ namespace dqm4hep
 
     EVENT::LCEvent *pLCEvent = pEvent->getEvent<EVENT::LCEvent>();
 
+    int evtnumber = pLCEvent->getEventNumber();
+
     if(!pLCEvent)
       return STATUS_CODE_FAILURE;
 
@@ -251,154 +326,221 @@ namespace dqm4hep
     std::vector<int> X_sensor0;
     std::vector<int> Y_sensor0;
 
+    int allcollections=0;
+
     for(std::vector<std::string>::const_iterator colIter = pCollectionNames->begin();
 	colIter != pCollectionNames->end() ; ++colIter)
       {
 
 	const std::string &collectionName(*colIter);
 
-	EVENT::LCCollection *pLCCollection = pLCEvent->getCollection(collectionName);
+	if(collectionName=="TimeStamps" || collectionName=="EUDAQDataScCAL" || collectionName=="zsdata" ) 
+	  allcollections++;
+      }
 
-	// #####################################################################################################################
-	// TELESCOPE section
-	if(pLCCollection->getTypeName() == EVENT::LCIO::TRACKERDATA)
+    if(allcollections != 3)  {
+      return STATUS_CODE_SUCCESS;
+    }   else {
+
+	
+      EVENT::LCCollection *pLCCollection = pLCEvent->getCollection("TimeStamps");
+
+      // #####################################################################################################################
+      // Timestamp section
+
+      const EVENT::LCGenericObject *const pTimeStampsRaw = 
+	dynamic_cast<const EVENT::LCGenericObject *const>(pLCCollection->getElementAt(0));
+
+      unsigned int start_TS_low = (unsigned int)pTimeStampsRaw->getIntVal(0);
+      unsigned int start_TS_high = (unsigned int)pTimeStampsRaw->getIntVal(1);
+      unsigned long long int TimeStamp_start = 0;
+      TimeStamp_start = ( (unsigned long long int)start_TS_high<<32 | start_TS_low )*25./1000.;
+	
+      unsigned int stop_TS_low = (unsigned int)pTimeStampsRaw->getIntVal(2);
+      unsigned int stop_TS_high = (unsigned int)pTimeStampsRaw->getIntVal(3);
+      unsigned long long int TimeStamp_stop = 0;
+      TimeStamp_stop = ( (unsigned long long int)stop_TS_high<<32 | stop_TS_low )*25./1000.;
+	
+      unsigned int trig_TS_low = (unsigned int)pTimeStampsRaw->getIntVal(4);
+      unsigned int trig_TS_high = (unsigned int)pTimeStampsRaw->getIntVal(5);
+      unsigned long long int TimeStamp_trig = 0;  
+      TimeStamp_trig = ( (unsigned long long int)trig_TS_high<<32 | trig_TS_low )*25./1000.;
+  
+      unsigned long long int TimeStamp_tlu = pLCEvent->getTimeStamp();
+	
+      Int_t Npoints = m_pLDA_TLU_Offset->get<TGraph>()->GetN();
+      m_pLDA_TLU_Offset->get<TGraph>()->SetPoint(Npoints,TimeStamp_trig,TimeStamp_tlu);
+ 
+      Npoints = m_pTriggerID->get<TGraph>()->GetN();
+      m_pTriggerID->get<TGraph>()->SetPoint(Npoints,TimeStamp_trig,TimeStamp_trig-TimeStamp_start);
+
+      Npoints = m_pTimeCycle->get<TGraph>()->GetN();
+      m_pTimeCycle->get<TGraph>()->SetPoint(Npoints,TimeStamp_trig,TimeStamp_stop-TimeStamp_start);
+
+     
+      // #####################################################################################################################
+      // TELESCOPE section
+      pLCCollection = pLCEvent->getCollection("zsdata");
+
+      UTIL::CellIDDecoder<EVENT::TrackerData> cellIdDecoder(pLCCollection);
+      
+      const int nElements = pLCCollection->getNumberOfElements();
+      
+      const EVENT::TrackerData *const pEUDETtelescopeHitMaps_1 = dynamic_cast<const EVENT::TrackerData *const>(pLCCollection->getElementAt(0));
+      
+      
+      for(int i=0; i< pEUDETtelescopeHitMaps_1->getChargeValues().size(); i+=4) {
+	double x_1 = pEUDETtelescopeHitMaps_1->getChargeValues().at(i);
+	double y_1 = pEUDETtelescopeHitMaps_1->getChargeValues().at(i+1);
+	bool hotpix=false;
+	
+	for (std::map<int,int>::iterator it=hotpixelsMap[0].begin(); it!=hotpixelsMap[0].end(); ++it) 
+	  if( x_1 == it->first && y_1==it->second) hotpix=true;
+	
+	if(hotpix==false) {
+	  X_sensor0.push_back(x_1);
+	  Y_sensor0.push_back(y_1);
+	}      
+      }
+      
+      // #####################################################################################################################
+      // AHCAL section
+      pLCCollection = pLCEvent->getCollection("EUDAQDataScCAL");
+	
+    
+      int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");
+      if( daqquality==1 ) {
+	    
+	const int nElements = pLCCollection->getNumberOfElements();
+
+	for(int e=0 ; e<nElements ; e++)
 	  {
-	    UTIL::CellIDDecoder<EVENT::TrackerData> cellIdDecoder(pLCCollection);
+	    const EVENT::LCGenericObject *const pAHCALRaw = 
+	      dynamic_cast<const EVENT::LCGenericObject *const>(pLCCollection->getElementAt(e));
+	  
+	    const int nChannels = pAHCALRaw->getIntVal(NChannelsIndex);
+	  
+	    //---------------------------------------------------------------------------------------
+	    for(int f=0; f<nChannels; f++ ) {
+	      // Vectors for storing our TDC and ADC by channel
 	    
-	    const int nElements = pLCCollection->getNumberOfElements();
+	      int tdcRAW;
+	      int adcRAW;
+	      int tdc;
+	      int adc;
+	      int hitbit_tdc;
+	      int gainbit_tdc;
+	      int hitbit_adc;
+	      int gainbit_adc;
 	    
-	    const EVENT::TrackerData *const pEUDETtelescopeHitMaps_1 = dynamic_cast<const EVENT::TrackerData *const>(pLCCollection->getElementAt(0));
+	      tdcRAW = pAHCALRaw->getIntVal(TDCFirstChannelIndex+f);
+	      adcRAW = pAHCALRaw->getIntVal(ADCFirstChannelIndex+f);
 	    
-	    if(NULL == pEUDETtelescopeHitMaps_1)
-	      continue;
+	      tdc = tdcRAW%4096;
+	      adc = adcRAW%4096;
 	    
-	    for(int i=0; i< pEUDETtelescopeHitMaps_1->getChargeValues().size(); i+=4) {
-	      double x_1 = pEUDETtelescopeHitMaps_1->getChargeValues().at(i);
-	      double y_1 = pEUDETtelescopeHitMaps_1->getChargeValues().at(i+1);
-	      bool hotpix=false;
-	      
-	      for (std::map<int,int>::iterator it=hotpixelsMap[0].begin(); it!=hotpixelsMap[0].end(); ++it) 
-		if( x_1 == it->first && y_1==it->second) hotpix=true;
-	      
-	      if(hotpix==false) {
-		X_sensor0.push_back(x_1);
-		Y_sensor0.push_back(x_1);
-	      }      
-	    }
-	  }
+	      hitbit_adc = (adcRAW & 0x1000)?1:0;
+	      gainbit_adc = (adcRAW & 0x2000)?1:0;
+	    
+	      hitbit_tdc = (tdcRAW & 0x1000)?1:0;
+	      gainbit_tdc = (tdcRAW & 0x2000)?1:0;
+		  
+			
+	      if( hitbit_adc == hitbit_tdc && pAHCALRaw->getIntVal(EvtNrIndex) !=0 && hitbit_adc == 1) {
+		  
+	    
+		int ijk = electronicsToIJK(pAHCALRaw->getIntVal(ChipIDIndex),f);
+		int I = ijk / 10000;
+		int J = ( ijk  % 10000 ) /100;
+		int K = ( ijk  % 10000 ) % 100;
 
 
-	// #####################################################################################################################
-	// AHCAL section
-	if(collectionName=="EUDAQDataScCAL")
-	  {
+		if(adc>300 ) {
+			  
+		  m_pCorrelatedBXID->get<TH1I>()->Fill((TimeStamp_trig-TimeStamp_start)-pAHCALRaw->getIntVal(BxIDIndex)*4);
 
-	    if(pLCCollection->getTypeName() == EVENT::LCIO::LCGENERICOBJECT)
-	      {
-
-		int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");
-		if( daqquality!=1 ) continue;
-
-		const int nElements = pLCCollection->getNumberOfElements();
-		for(int e=0 ; e<nElements ; e++)
-		  {
-		    const EVENT::LCGenericObject *const pAHCALRaw = 
-		      dynamic_cast<const EVENT::LCGenericObject *const>(pLCCollection->getElementAt(e));
-
-		    if(NULL == pAHCALRaw)
-		      continue;
-
-		    const int nChannels = pAHCALRaw->getIntVal(NChannelsIndex);
-		    if(nChannels!= 36) {
-		      LOG4CXX_INFO( dqmMainLogger , "Wrong number of channels ("<<nChannels<<"), skip event" ); 
-		      continue;
-		    }
-
-		    //---------------------------------------------------------------------------------------
-		    for(int f=0; f<36; f++ ) {
-		      // Vectors for storing our TDC and ADC by channel
-		      
-		      int tdcRAW;
-		      int adcRAW;
-		      int tdc;
-		      int adc;
-		      int hitbit_tdc;
-		      int gainbit_tdc;
-		      int hitbit_adc;
-		      int gainbit_adc;
-		      
-		      tdcRAW = pAHCALRaw->getIntVal(TDCFirstChannelIndex+f);
-		      adcRAW = pAHCALRaw->getIntVal(ADCFirstChannelIndex+f);
-		      
-		      tdc = tdcRAW%4096;
-		      adc = adcRAW%4096;
-		      
-		      hitbit_adc = (adcRAW & 0x1000)?1:0;
-		      gainbit_adc = (adcRAW & 0x2000)?1:0;
-		      
-		      hitbit_tdc = (tdcRAW & 0x1000)?1:0;
-		      gainbit_tdc = (tdcRAW & 0x2000)?1:0;
-		      
-
-		      if( hitbit_adc != hitbit_tdc || pAHCALRaw->getIntVal(EvtNrIndex) ==0 ) continue;
-		      
-		      if(hitbit_adc != 1) continue;
-		      
-		      
-		      int ijk = electronicsToIJK(pAHCALRaw->getIntVal(ChipIDIndex),f);
-		      int I = ijk / 10000;
-		      int J = ( ijk  % 10000 ) /100;
-		      int K = ( ijk  % 10000 ) % 100;
-		      if(adc>300) {
-			for(int i=0; i< X_sensor0.size(); i++) {
-			  if(K==1) m_pX_I_300_l01->get<TH2I>()->Fill(X_sensor0.at(i),I,adc);
-			  if(K==2) m_pX_I_300_l02->get<TH2I>()->Fill(X_sensor0.at(i),I,adc);
-			  if(K==3) m_pX_I_300_l03->get<TH2I>()->Fill(X_sensor0.at(i),I,adc);
-			  if(K==4) m_pX_I_300_l04->get<TH2I>()->Fill(X_sensor0.at(i),I,adc);
-			  if(K==5) m_pX_I_300_l05->get<TH2I>()->Fill(X_sensor0.at(i),I,adc);
-			  if(K==6) m_pX_I_300_l06->get<TH2I>()->Fill(X_sensor0.at(i),I,adc);
-
-			  if(K==1) m_pX_J_300_l01->get<TH2I>()->Fill(X_sensor0.at(i),J,adc);
-			  if(K==2) m_pX_J_300_l02->get<TH2I>()->Fill(X_sensor0.at(i),J,adc);
-			  if(K==3) m_pX_J_300_l03->get<TH2I>()->Fill(X_sensor0.at(i),J,adc);
-			  if(K==4) m_pX_J_300_l04->get<TH2I>()->Fill(X_sensor0.at(i),J,adc);
-			  if(K==5) m_pX_J_300_l05->get<TH2I>()->Fill(X_sensor0.at(i),J,adc);
-			  if(K==6) m_pX_J_300_l06->get<TH2I>()->Fill(X_sensor0.at(i),J,adc);
-			}
-			for(int i=0; i< Y_sensor0.size(); i++) {
-			  if(K==1) m_pY_I_300_l01->get<TH2I>()->Fill(Y_sensor0.at(i),I,adc);
-			  if(K==2) m_pY_I_300_l02->get<TH2I>()->Fill(Y_sensor0.at(i),I,adc);
-			  if(K==3) m_pY_I_300_l03->get<TH2I>()->Fill(Y_sensor0.at(i),I,adc);
-			  if(K==4) m_pY_I_300_l04->get<TH2I>()->Fill(Y_sensor0.at(i),I,adc);
-			  if(K==5) m_pY_I_300_l05->get<TH2I>()->Fill(Y_sensor0.at(i),I,adc);
-			  if(K==6) m_pY_I_300_l06->get<TH2I>()->Fill(Y_sensor0.at(i),I,adc);
-
-			  if(K==1) m_pY_J_300_l01->get<TH2I>()->Fill(Y_sensor0.at(i),J,adc);
-			  if(K==2) m_pY_J_300_l02->get<TH2I>()->Fill(Y_sensor0.at(i),J,adc);
-			  if(K==3) m_pY_J_300_l03->get<TH2I>()->Fill(Y_sensor0.at(i),J,adc);
-			  if(K==4) m_pY_J_300_l04->get<TH2I>()->Fill(Y_sensor0.at(i),J,adc);
-			  if(K==5) m_pY_J_300_l05->get<TH2I>()->Fill(Y_sensor0.at(i),J,adc);
-			  if(K==6) m_pY_J_300_l06->get<TH2I>()->Fill(Y_sensor0.at(i),J,adc);
-			}
-		      }
-		    }
-		    //---------------------------------------------------------------------------------------
+		  if( ((TimeStamp_trig-TimeStamp_start)-pAHCALRaw->getIntVal(BxIDIndex)*4)>50 && ((TimeStamp_trig-TimeStamp_start)-pAHCALRaw->getIntVal(BxIDIndex)*4)<62 ) {
 		    
-		    
-		  }//for elements
-		
-		X_sensor0.clear();
-		Y_sensor0.clear();
-		
-	      }// if LCGENERICOBJECT
-	    
-	  }//if collectionName == EUDAQDataScCAL
+		    for(int i=0; i< X_sensor0.size(); i++) {
+		      if(K==1) m_pX_I_300_l01->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==2) m_pX_I_300_l02->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==3) m_pX_I_300_l03->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==4) m_pX_I_300_l04->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==5) m_pX_I_300_l05->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==6) m_pX_I_300_l06->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      
+		      if(K==1) m_pX_J_300_l01->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==2) m_pX_J_300_l02->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==3) m_pX_J_300_l03->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==4) m_pX_J_300_l04->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==5) m_pX_J_300_l05->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==6) m_pX_J_300_l06->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		    }
+		    for(int i=0; i< Y_sensor0.size(); i++) {
+		      if(K==1) m_pY_I_300_l01->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==2) m_pY_I_300_l02->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==3) m_pY_I_300_l03->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==4) m_pY_I_300_l04->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==5) m_pY_I_300_l05->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==6) m_pY_I_300_l06->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      
+		      if(K==1) m_pY_J_300_l01->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==2) m_pY_J_300_l02->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==3) m_pY_J_300_l03->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==4) m_pY_J_300_l04->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==5) m_pY_J_300_l05->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==6) m_pY_J_300_l06->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		    }
+		  } else  {
+			  
+		    for(int i=0; i< X_sensor0.size(); i++) {
+		      if(K==1) m_pX_noC_I_300_l01->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==2) m_pX_noC_I_300_l02->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==3) m_pX_noC_I_300_l03->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==4) m_pX_noC_I_300_l04->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==5) m_pX_noC_I_300_l05->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      if(K==6) m_pX_noC_I_300_l06->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
+		      
+		      if(K==1) m_pX_noC_J_300_l01->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==2) m_pX_noC_J_300_l02->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==3) m_pX_noC_J_300_l03->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==4) m_pX_noC_J_300_l04->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==5) m_pX_noC_J_300_l05->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		      if(K==6) m_pX_noC_J_300_l06->get<TH2I>()->Fill(J,X_sensor0.at(i),adc);
+		    }
+		    for(int i=0; i< Y_sensor0.size(); i++) {
+		      if(K==1) m_pY_noC_I_300_l01->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==2) m_pY_noC_I_300_l02->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==3) m_pY_noC_I_300_l03->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==4) m_pY_noC_I_300_l04->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==5) m_pY_noC_I_300_l05->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      if(K==6) m_pY_noC_I_300_l06->get<TH2I>()->Fill(I,Y_sensor0.at(i),adc);
+		      
+		      if(K==1) m_pY_noC_J_300_l01->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==2) m_pY_noC_J_300_l02->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==3) m_pY_noC_J_300_l03->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==4) m_pY_noC_J_300_l04->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==5) m_pY_noC_J_300_l05->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		      if(K==6) m_pY_noC_J_300_l06->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
+		    }
+		  }
+		}
+	
+	      }
+	      //---------------------------------------------------------------------------------------
+	    }		    
+	  }//for elements
 
       }
+      X_sensor0.clear();
+      Y_sensor0.clear();
+      
+    }  
+
     return STATUS_CODE_SUCCESS;
     
   }
-
+  
   //-------------------------------------------------------------------------------------------------
 
   StatusCode Correlations::startOfCycle()
@@ -495,6 +637,8 @@ namespace dqm4hep
 		pChannelXmlElement->QueryValueAttribute<int>("j", &J);
 		pChannelXmlElement->QueryValueAttribute<int>("k", &K);
 
+		I=12-I;
+
 		//Formatting data to go into our map
 		ChpChnNum = ChipID*100+ChannelID;
 		ijkNum = I*10000 + J*100 + K;
@@ -576,17 +720,17 @@ namespace dqm4hep
 
 	    int SensorID, pixelX, pixelY;
 
-		//Pull out all the data: pixel number, channel number, ijk
-		pSensorXmlElement->QueryValueAttribute<int>("id", &SensorID);
-		pPixelXmlElement->QueryValueAttribute<int>("x", &pixelX);
-		pPixelXmlElement->QueryValueAttribute<int>("y", &pixelY);
+	    //Pull out all the data: pixel number, channel number, ijk
+	    pSensorXmlElement->QueryValueAttribute<int>("id", &SensorID);
+	    pPixelXmlElement->QueryValueAttribute<int>("x", &pixelX);
+	    pPixelXmlElement->QueryValueAttribute<int>("y", &pixelY);
 
-		if(SensorID==1) hotpixelsmap1.insert(std::make_pair(pixelX, pixelY));
-		if(SensorID==2) hotpixelsmap2.insert(std::make_pair(pixelX, pixelY));
-		if(SensorID==3) hotpixelsmap3.insert(std::make_pair(pixelX, pixelY));
-		if(SensorID==4) hotpixelsmap4.insert(std::make_pair(pixelX, pixelY));
-		if(SensorID==5) hotpixelsmap5.insert(std::make_pair(pixelX, pixelY));
-		if(SensorID==6) hotpixelsmap6.insert(std::make_pair(pixelX, pixelY));
+	    if(SensorID==1) hotpixelsmap1.insert(std::make_pair(pixelX, pixelY));
+	    if(SensorID==2) hotpixelsmap2.insert(std::make_pair(pixelX, pixelY));
+	    if(SensorID==3) hotpixelsmap3.insert(std::make_pair(pixelX, pixelY));
+	    if(SensorID==4) hotpixelsmap4.insert(std::make_pair(pixelX, pixelY));
+	    if(SensorID==5) hotpixelsmap5.insert(std::make_pair(pixelX, pixelY));
+	    if(SensorID==6) hotpixelsmap6.insert(std::make_pair(pixelX, pixelY));
 
 
 	  }

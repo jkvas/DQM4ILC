@@ -23,8 +23,7 @@
       
       <parameter name="DumpEvent"> false </parameter>
       
-      <parameter name="HotPixelsFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/EUDETtelescope/hotpixels/hotpixelsmap_05.xml </parameter>
-               	
+      <parameter name="HotPixelsFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/EUDETtelescope/hotpixels/hotpixelsmap_october.xml </parameter>              
        	<monitorElement ID="profileX2"
         	name="profileX2" path="/XProfiles" type="TH2I" title="The X correlation between X1 and X2" 
         	nBinsX="100" minX="0" maxX="1152" nBinsY="100" minY="0" maxY="1152" 
@@ -48,24 +47,51 @@
 
        	<monitorElement ID="profileY2"
         	name="profileY2" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y2" 
-        	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
+        	nBinsX="50" minX="0" maxX="576" nBinsY="50" minY="0" maxY="576" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY3"
         	name="profileY3" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y3" 
-        	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
+        	nBinsX="50" minX="0" maxX="576" nBinsY="50" minY="0" maxY="576" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY4"
         	name="profileY4" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y4" 
-        	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
+        	nBinsX="50" minX="0" maxX="576" nBinsY="50" minY="0" maxY="576" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY5"
         	name="profileY5" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y5" 
-        	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
+        	nBinsX="50" minX="0" maxX="576" nBinsY="50" minY="0" maxY="576" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
        	<monitorElement ID="profileY6"
         	name="profileY6" path="/YProfiles" type="TH2I" title="The Y correlation between Y1 and Y6" 
-        	nBinsX="80" minX="0" maxX="576" nBinsY="80" minY="0" maxY="576" 
+        	nBinsX="50" minX="0" maxX="576" nBinsY="50" minY="0" maxY="576" 
         	resetPolicy="EndOfRun" drawOption="colz"/>
+
+        <monitorElement ID="HitMap1"
+        	name="HitMap1" path="/HitMap" type="TH2I" title="Sensor 1 XvsY" 
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="50" minY="0" maxY="576" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
+        <monitorElement ID="HitMap2"
+        	name="HitMap2" path="/HitMap" type="TH2I" title="Sensor 2 XvsY" 
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="50" minY="0" maxY="576" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
+        <monitorElement ID="HitMap3"
+        	name="HitMap3" path="/HitMap" type="TH2I" title="Sensor 3 XvsY" 
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="50" minY="0" maxY="576" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
+        <monitorElement ID="HitMap4"
+        	name="HitMap4" path="/HitMap" type="TH2I" title="Sensor 4 XvsY" 
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="50" minY="0" maxY="576" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
+        <monitorElement ID="HitMap5"
+        	name="HitMap5" path="/HitMap" type="TH2I" title="Sensor 5 XvsY" 
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="50" minY="0" maxY="576" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
+       <monitorElement ID="HitMap6"
+        	name="HitMap6" path="/HitMap" type="TH2I" title="Sensor 6 XvsY" 
+        	nBinsX="100" minX="0" maxX="1152" nBinsY="50" minY="0" maxY="576" 
+        	resetPolicy="EndOfRun" drawOption="colz"/>
+
+
 
     </module>
 

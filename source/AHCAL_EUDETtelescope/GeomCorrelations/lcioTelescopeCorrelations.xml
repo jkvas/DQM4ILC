@@ -10,7 +10,7 @@
       <parameter name="collectorName"> ahcal_event_collector </parameter>
       <parameter name="subEventIdentifier"> HCALEndcap </parameter>
       <parameter name="updateMode"> true </parameter>
-      <parameter name="maxQueueSize"> 100 </parameter>
+      <parameter name="maxQueueSize"> 5000 </parameter>
       <parameter name="streamerName"> LCIOStreamer </parameter>
     </eventcollector>
     
@@ -28,18 +28,41 @@
     <!--  telescope hotpixel mapping  --> 
     <!--  ######################################################  --> 
 
-      <parameter name="HotPixelsFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/EUDETtelescope/hotpixels/hotpixelsmap_05.xml </parameter>
+      <parameter name="HotPixelsFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/EUDETtelescope/hotpixels/hotpixelsmap_october.xml </parameter>
 
     <!--  ######################################################  --> 
     <!--  AHCAL mapping plots --> 
     <!--  ######################################################  --> 
 
-    <parameter name="GeometryFilename"> /home/calice/TB2016/varios/ElectronicsMapping/geometrymap_airstack.xml </parameter>
+    <parameter name="GeometryFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/AHCAL_BIF/AHCAL/ElectronicsMapping/maps/JulyAugust2016/geometrymap_airstack.xml </parameter>
+
 
     <!--  ######################################################  --> 
     <!--  Correlation plots   --> 
     <!--  ######################################################  --> 
 
+
+   <!-- TimePlots -->
+    <monitorElement ID="LDA_TLU_Offset" path="/TimeCorrelations" type="user" 
+		    name="LDA_TLU_Offset"
+		    ROOTClass="TGraph" title="Timestamp Trigger TLU vs Trigger LDA"
+		    resetPolicy="EndOfRun" drawOption="ap*"/>  
+
+    <monitorElement ID="TriggerID" path="/TimeCorrelations" type="user" 
+		    name="TriggerID"
+		    ROOTClass="TGraph" title=" Trig-START vs Trigger LDA"
+		    resetPolicy="EndOfRun" drawOption="ap*"/>  
+
+    <monitorElement ID="TimeCycle" path="/TimeCorrelations" type="user" 
+		    name="TimeCycle"
+		    ROOTClass="TGraph" title="STOP-START vs Trigger LDA"
+		    resetPolicy="EndOfRun" drawOption="ap*"/>  
+
+
+    <monitorElement ID="CorrelatedBXID" path="/TimeCorrelations" type="TH1I"    title="(trig-start) - bxid*4 [us]" 
+		    name ="CorrelatedBXID"
+		    nBins="1000" min="-100" max="4000" 
+		    resetPolicy="EndOfRun" drawOption="HISTO"/>
    <!-- X_I -->
     <monitorElement ID="X_I_300_l01" path="/X/I" type="TH2I"    title="The X0 vs I Layer 1" 
 		    name ="X_I_300_l01"
@@ -169,6 +192,135 @@
 		    nBinsY="50" minY="0" maxY="576" 
 		    resetPolicy="EndOfRun" drawOption="colz"/>
 
+
+  <!-- X_noC_I -->
+    <monitorElement ID="X_noC_I_300_l01" path="/noCorrelated/X/I" type="TH2I"    title="The X0 vs I Layer 1, time uncorrelated events" 
+		    name ="X_noC_I_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_I_300_l02" path="/noCorrelated/X/I" type="TH2I"    title="The X0 vs I Layer 2, time uncorrelated events" 
+		    name ="X_noC_I_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_I_300_l03" path="/noCorrelated/X/I" type="TH2I"    title="The X0 vs I Layer 3, time uncorrelated events" 
+		    name ="X_noC_I_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_I_300_l04" path="/noCorrelated/X/I" type="TH2I"    title="The X0 vs I Layer 4, time uncorrelated events" 
+		    name ="X_noC_I_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_I_300_l05" path="/noCorrelated/X/I" type="TH2I"    title="The X0 vs I Layer 5, time uncorrelated events" 
+		    name ="X_noC_I_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_I_300_l06" path="/noCorrelated/X/I" type="TH2I"   title="The X0 vs I Layer 6, time uncorrelated events" 
+		    name ="X_noC_I_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+    <!-- X_noC_J -->
+    <monitorElement ID="X_noC_J_300_l01" path="/noCorrelated/X/J" type="TH2I"    title="The X0 vs J Layer 1, time uncorrelated events" 
+		    name ="X_noC_J_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_J_300_l02" path="/noCorrelated/X/J" type="TH2I"    title="The X0 vs J Layer 2, time uncorrelated events" 
+		    name ="X_noC_J_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_J_300_l03" path="/noCorrelated/X/J" type="TH2I"    title="The X0 vs J Layer 3, time uncorrelated events" 
+		    name ="X_noC_J_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_J_300_l04" path="/noCorrelated/X/J" type="TH2I"    title="The X0 vs J Layer 4, time uncorrelated events" 
+		    name ="X_noC_J_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_J_300_l05" path="/noCorrelated/X/J" type="TH2I"    title="The X0 vs J Layer 5, time uncorrelated events" 
+		    name ="X_noC_J_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="X_noC_J_300_l06" path="/noCorrelated/X/J" type="TH2I"   title="The X0 vs J Layer 6, time uncorrelated events" 
+		    name ="X_noC_J_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="100" minY="0" maxY="1152" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+  
+    <!-- Y_noC_I -->
+    <monitorElement ID="Y_noC_I_300_l01" path="/noCorrelated/Y/I" type="TH2I"   title="The Y0 vs I Layer 1, time uncorrelated events" 
+		    name ="Y_noC_I_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_I_300_l02" path="/noCorrelated/Y/I" type="TH2I"   title="The Y0 vs I Layer 2, time uncorrelated events" 
+		    name ="Y_noC_I_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_I_300_l03" path="/noCorrelated/Y/I" type="TH2I"   title="The Y0 vs I Layer 3, time uncorrelated events" 
+		    name ="Y_noC_I_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_I_300_l04" path="/noCorrelated/Y/I" type="TH2I"   title="The Y0 vs I Layer 4, time uncorrelated events" 
+		    name ="Y_noC_I_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_I_300_l05" path="/noCorrelated/Y/I" type="TH2I"   title="The Y0 vs I Layer 5, time uncorrelated events" 
+		    name ="Y_noC_I_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_I_300_l06" path="/noCorrelated/Y/I" type="TH2I"  title="The Y0 vs I Layer 6, time uncorrelated events" 
+		    name ="Y_noC_I_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+
+    <!-- Y_noC_J -->
+    <monitorElement ID="Y_noC_J_300_l01" path="/noCorrelated/Y/J" type="TH2I"   title="The Y0 vs J Layer 1, time uncorrelated events" 
+		    name ="Y_noC_J_300_l01"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_J_300_l02" path="/noCorrelated/Y/J" type="TH2I"   title="The Y0 vs J Layer 2, time uncorrelated events" 
+		    name ="Y_noC_J_300_l02"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_J_300_l03" path="/noCorrelated/Y/J" type="TH2I"   title="The Y0 vs J Layer 3, time uncorrelated events" 
+		    name ="Y_noC_J_300_l03"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_J_300_l04" path="/noCorrelated/Y/J" type="TH2I"   title="The Y0 vs J Layer 4, time uncorrelated events" 
+		    name ="Y_noC_J_300_l04"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_J_300_l05" path="/noCorrelated/Y/J" type="TH2I"   title="The Y0 vs J Layer 5, time uncorrelated events" 
+		    name ="Y_noC_J_300_l05"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Y_noC_J_300_l06" path="/noCorrelated/Y/J" type="TH2I"  title="The Y0 vs J Layer 6, time uncorrelated events" 
+		    name ="Y_noC_J_300_l07"
+		    nBinsX="12" minX="0.5" maxX="12.5" 
+		    nBinsY="50" minY="0" maxY="576" 
+		    resetPolicy="EndOfRun" drawOption="colz"/>
 
 
   </module>

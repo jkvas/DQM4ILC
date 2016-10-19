@@ -69,6 +69,13 @@ protected:
 	DQMMonitorElementPtr                        m_pY5;
 	DQMMonitorElementPtr                        m_pY6;
 
+	DQMMonitorElementPtr                        m_pHitMap1;
+	DQMMonitorElementPtr                        m_pHitMap2;
+	DQMMonitorElementPtr                        m_pHitMap3;
+	DQMMonitorElementPtr                        m_pHitMap4;
+	DQMMonitorElementPtr                        m_pHitMap5;
+	DQMMonitorElementPtr                        m_pHitMap6;
+
 
         std::string                                 m_hotpixelsFilename;
 

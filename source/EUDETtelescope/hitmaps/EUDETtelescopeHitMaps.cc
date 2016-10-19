@@ -121,6 +121,19 @@ namespace dqm4hep
     RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"profileY5", m_pY5));
     RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"profileY6", m_pY6));
 
+    m_pHitMap1 = NULL;
+    m_pHitMap2 = NULL;
+    m_pHitMap3 = NULL;
+    m_pHitMap4 = NULL;
+    m_pHitMap5 = NULL;
+    m_pHitMap6 = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"HitMap1", m_pHitMap1));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"HitMap2", m_pHitMap2));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"HitMap3", m_pHitMap3));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"HitMap4", m_pHitMap4));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"HitMap5", m_pHitMap5));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle,"HitMap6", m_pHitMap6));
+
     m_dumpEvent = false;
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,
 													     "DumpEvent", m_dumpEvent));
@@ -191,6 +204,9 @@ namespace dqm4hep
 	      for (std::map<int,int>::iterator it=hotpixelsMap[0].begin(); it!=hotpixelsMap[0].end(); ++it) 
 		if( x_1 == it->first && y_1==it->second) hotpix=true;
 
+	      m_pHitMap1->get<TH2I>()->Fill(x_1, y_1);
+
+
 	      if(hotpix==false) {
 		
 	      for(int e=1 ; e<nElements ; e++)
@@ -222,6 +238,13 @@ namespace dqm4hep
 		      if(e==3) m_pY4->get<TH2I>()->Fill(y_1, y);
 		      if(e==4) m_pY5->get<TH2I>()->Fill(y_1, y);
 		      if(e==5) m_pY6->get<TH2I>()->Fill(y_1, y);
+ 
+		      if(e==1) m_pHitMap2->get<TH2I>()->Fill(x, y);
+		      if(e==2) m_pHitMap3->get<TH2I>()->Fill(x, y);
+		      if(e==3) m_pHitMap4->get<TH2I>()->Fill(x, y);
+		      if(e==4) m_pHitMap5->get<TH2I>()->Fill(x, y);
+		      if(e==5) m_pHitMap6->get<TH2I>()->Fill(x, y);
+
 		    }
 				
 		  }

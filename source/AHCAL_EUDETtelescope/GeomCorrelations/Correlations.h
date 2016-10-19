@@ -66,6 +66,14 @@ protected:
 
 
 	// ###########################################################################3
+	// time plots
+
+	// 2D- X - I/J MIP hitmaps
+        DQMMonitorElementPtr                        m_pLDA_TLU_Offset;
+	DQMMonitorElementPtr                        m_pTriggerID;
+	DQMMonitorElementPtr                        m_pTimeCycle;
+	DQMMonitorElementPtr                        m_pCorrelatedBXID;
+
 	// maps
 
 	// 2D- X - I/J MIP hitmaps
@@ -96,6 +104,35 @@ protected:
         DQMMonitorElementPtr                        m_pY_J_300_l04;
         DQMMonitorElementPtr                        m_pY_J_300_l05;
         DQMMonitorElementPtr                        m_pY_J_300_l06;
+
+	// 2D- X - I/J MIP hitmaps
+        DQMMonitorElementPtr                        m_pX_noC_I_300_l01;
+	DQMMonitorElementPtr                        m_pX_noC_I_300_l02;
+        DQMMonitorElementPtr                        m_pX_noC_I_300_l03;
+        DQMMonitorElementPtr                        m_pX_noC_I_300_l04;
+        DQMMonitorElementPtr                        m_pX_noC_I_300_l05;
+        DQMMonitorElementPtr                        m_pX_noC_I_300_l06;
+        DQMMonitorElementPtr                        m_pX_noC_J_300_l01;
+	DQMMonitorElementPtr                        m_pX_noC_J_300_l02;
+        DQMMonitorElementPtr                        m_pX_noC_J_300_l03;
+        DQMMonitorElementPtr                        m_pX_noC_J_300_l04;
+        DQMMonitorElementPtr                        m_pX_noC_J_300_l05;
+        DQMMonitorElementPtr                        m_pX_noC_J_300_l06;
+
+
+	// 2D- Y - I/J MIP hitmaps
+        DQMMonitorElementPtr                        m_pY_noC_I_300_l01;
+	DQMMonitorElementPtr                        m_pY_noC_I_300_l02;
+        DQMMonitorElementPtr                        m_pY_noC_I_300_l03;
+        DQMMonitorElementPtr                        m_pY_noC_I_300_l04;
+        DQMMonitorElementPtr                        m_pY_noC_I_300_l05;
+        DQMMonitorElementPtr                        m_pY_noC_I_300_l06;
+        DQMMonitorElementPtr                        m_pY_noC_J_300_l01;
+	DQMMonitorElementPtr                        m_pY_noC_J_300_l02;
+        DQMMonitorElementPtr                        m_pY_noC_J_300_l03;
+        DQMMonitorElementPtr                        m_pY_noC_J_300_l04;
+        DQMMonitorElementPtr                        m_pY_noC_J_300_l05;
+        DQMMonitorElementPtr                        m_pY_noC_J_300_l06;
 
         std::string                                 m_geometryFile;
         std::map<int, int>                          ijkmap;
