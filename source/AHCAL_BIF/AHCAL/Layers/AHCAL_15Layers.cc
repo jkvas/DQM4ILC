@@ -729,7 +729,7 @@ namespace dqm4hep
 
 		//Formatting data to go into our map
 		ChpChnNum = ChipID*100+ChannelID;
-		I=12-I;
+		//I = 13 - I; //reverse the I axis in case the HBU is rotated
 		ijkNum = I*10000 + J*100 + K;
 
 
