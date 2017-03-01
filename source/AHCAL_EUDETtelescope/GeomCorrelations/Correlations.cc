@@ -637,7 +637,7 @@ namespace dqm4hep
 		pChannelXmlElement->QueryValueAttribute<int>("j", &J);
 		pChannelXmlElement->QueryValueAttribute<int>("k", &K);
 
-		I=12-I;
+		//I = 13 - I; //uncomment for mirroring of I axis
 
 		//Formatting data to go into our map
 		ChpChnNum = ChipID*100+ChannelID;
