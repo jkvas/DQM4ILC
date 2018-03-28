@@ -75,8 +75,8 @@ namespace dqm4hep {
     // ###########################################################################3
     // AHCAL maps
     //3D
-    DQMMonitorElementPtr m_pMIP_600;
-    DQMMonitorElementPtr m_pPed_600;
+    DQMMonitorElementPtr m_pMIP_600_3d;
+    DQMMonitorElementPtr m_pPed_600_3d;
     // 2D- MIP hitmaps
     DQMMonitorElementPtr m_pMIP_600[C_MAX_LAYERS];
     // 2D- Ped hitmaps

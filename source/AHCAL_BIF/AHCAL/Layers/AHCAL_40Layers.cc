@@ -27,7 +27,7 @@
  */
 
 
-#include "AHCAL_15Layers.h"
+#include "AHCAL_40Layers.h"
 // to handle and acces to the elements in the LCIO generic Object
 
 // -- std headers
@@ -144,10 +144,10 @@ namespace dqm4hep
     
     //---------------------------------------------------------------------
     //3-D hitmaps
-    m_pMIP_600 = NULL;
-    m_pPed_600 = NULL;
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_600", m_pMIP_600));
-    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_600", m_pPed_600));
+    m_pMIP_600_3d = NULL;
+    m_pPed_600_3d = NULL;
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "MIP_600", m_pMIP_600_3d));
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, "Ped_600", m_pPed_600_3d));
 
     //---------------------------------------------------------------------
     //MIP hitmaps
@@ -206,7 +206,7 @@ namespace dqm4hep
     if(!pLCEvent) return STATUS_CODE_FAILURE;
     if(m_dumpEvent) UTIL::LCTOOLS::dumpEvent(pLCEvent);
     const std::vector<std::string> *pCollectionNames = pLCEvent->getCollectionNames();
-
+    
     //temperature variables
     float tdif[40];
     float tpwr[40];
@@ -245,85 +245,85 @@ namespace dqm4hep
 	    pointID = m_pTempPWR[layer]->get<TGraph>()->GetN();
 	    m_pTempPWR[layer]->get<TGraph>()->SetPoint(pointID, pointID, tpwr[layer] );
 	  }
-	} //tempsensor collection
-
-	// #####################################################################################################################
-	// AHCAL section
-	if(collectionName=="EUDAQDataScCAL") {
-	  if(pLCCollection->getTypeName() == EVENT::LCIO::LCGENERICOBJECT) {
-	    int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");
-	    if(daqquality==1) goodDAQ++; else badDAQ++;
-	    const int nElements = pLCCollection->getNumberOfElements();
-	    for(int e=0 ; e<nElements ; e++) {
-	      const EVENT::LCGenericObject *const pAHCALRaw = dynamic_cast<const EVENT::LCGenericObject *const>(pLCCollection->getElementAt(e));
-	      if(NULL == pAHCALRaw)continue;
-	      const int nChannels = pAHCALRaw->getIntVal(NChannelsIndex);
-	      if(nChannels!= 36) {
-		LOG4CXX_INFO( dqmMainLogger , "Wrong number of channels ("<<nChannels<<"), skip event" ); 
-		continue;
-	      }
-	      const int bxid=pAHCALRaw->getIntVal(BxIDIndex);
-	      const int memcell=pAHCALRaw->getIntVal(EvtNrIndex);
-	      float ratiobadDAQ = badDAQ / (badDAQ + goodDAQ) ;
-	      Int_t ip = pAHCALRaw->getIntVal(ChipIDIndex);
-	      if(badDAQ > 0 ) m_DAQerrors->get<TGraph>()->SetPoint(ip, pAHCALRaw->getIntVal(ChipIDIndex), ratiobadDAQ );
-	      if( daqquality!=1 ) continue;
+	}//for elements in the tempsensor collection
+      } //tempsensor collection
+      
+      // #####################################################################################################################
+      // AHCAL section
+      if(collectionName=="EUDAQDataScCAL") {
+	if(pLCCollection->getTypeName() == EVENT::LCIO::LCGENERICOBJECT) {
+	  int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");
+	  if(daqquality==1) goodDAQ++; else badDAQ++;
+	  const int nElements = pLCCollection->getNumberOfElements();
+	  for(int e=0 ; e<nElements ; e++) {
+	    const EVENT::LCGenericObject *const pAHCALRaw = dynamic_cast<const EVENT::LCGenericObject *const>(pLCCollection->getElementAt(e));
+	    if(NULL == pAHCALRaw)continue;
+	    const int nChannels = pAHCALRaw->getIntVal(NChannelsIndex);
+	    if(nChannels!= 36) {
+	      LOG4CXX_INFO( dqmMainLogger , "Wrong number of channels ("<<nChannels<<"), skip event" ); 
+	      continue;
+	    }
+	    const int bxid=pAHCALRaw->getIntVal(BxIDIndex);
+	    const int memcell=pAHCALRaw->getIntVal(EvtNrIndex);
+	    float ratiobadDAQ = badDAQ / (badDAQ + goodDAQ) ;
+	    Int_t ip = pAHCALRaw->getIntVal(ChipIDIndex);
+	    if(badDAQ > 0 ) m_DAQerrors->get<TGraph>()->SetPoint(ip, pAHCALRaw->getIntVal(ChipIDIndex), ratiobadDAQ );
+	    if( daqquality!=1 ) continue;
+	    
+	    for(int f=0; f<36; f++ ) {
+	      // Vectors for storing our TDC and ADC by channel
+	      int tdcRAW;
+	      int adcRAW;
+	      int tdc;
+	      int adc;
+	      int hitbit_tdc;
+	      int gainbit_tdc;
+	      int hitbit_adc;
+	      int gainbit_adc;
 	      
-	      for(int f=0; f<36; f++ ) {
-		// Vectors for storing our TDC and ADC by channel
-		int tdcRAW;
-		int adcRAW;
-		int tdc;
-		int adc;
-		int hitbit_tdc;
-		int gainbit_tdc;
-		int hitbit_adc;
-		int gainbit_adc;
-		
-		tdcRAW = pAHCALRaw->getIntVal(TDCFirstChannelIndex+f);
-		adcRAW = pAHCALRaw->getIntVal(ADCFirstChannelIndex+f);
-		tdc = tdcRAW & 0x0FFF;
-		adc = adcRAW& 0x0FFF;
-		
-		hitbit_adc = (adcRAW & 0x1000)?1:0;
-		gainbit_adc = (adcRAW & 0x2000)?1:0;
-		hitbit_tdc = (tdcRAW & 0x1000)?1:0;
-		gainbit_tdc = (tdcRAW & 0x2000)?1:0;
-		
-		if(pAHCALRaw->getIntVal(0)==107) {
-		  std::cout<<"chip: "<<pAHCALRaw->getIntVal(ChipIDIndex) <<" mem:" <<pAHCALRaw->getIntVal(EvtNrIndex)<< " chn:"<<f<< 			  " hb:"<<hitbit_adc<<hitbit_tdc<<" adc:"<<adc<<" tdc:"<<tdc<<std::endl;
-		}
-		if (memcell<m_minimumMemcell) continue;
-		if (bxid<m_minimumBxid) continue;
-		//if( hitbit_adc != hitbit_tdc) continue;
-		if (hitbit_adc != 1) continue;
-				
-		int ijk = electronicsToIJK(pAHCALRaw->getIntVal(ChipIDIndex),f);
-		int I = ijk / 10000;
-		int J = ( ijk  % 10000 ) /100;
-		int K = ( ijk  % 10000 ) % 100;
-		if ((K>=1) && (K<(C_MAX_LAYERS+1))) continue;
-		if (adc > 600) {
-		  m_pMIP_600->get<TH3I>()->Fill(K,I,J,adc);
-		  m_pMIP_600[K-1]->get<TH2I>()->Fill(I,J,adc);
-		}
-		if (adc <= 300) {
-		  m_pPed_600->get<TH3I>()->Fill(K,I,J,adc);
-		  m_pPed_600[K-1]->get<TH2I>()->Fill(I,J,adc);
-		}
+	      tdcRAW = pAHCALRaw->getIntVal(TDCFirstChannelIndex+f);
+	      adcRAW = pAHCALRaw->getIntVal(ADCFirstChannelIndex+f);
+	      tdc = tdcRAW & 0x0FFF;
+	      adc = adcRAW& 0x0FFF;
+	      
+	      hitbit_adc = (adcRAW & 0x1000)?1:0;
+	      gainbit_adc = (adcRAW & 0x2000)?1:0;
+	      hitbit_tdc = (tdcRAW & 0x1000)?1:0;
+	      gainbit_tdc = (tdcRAW & 0x2000)?1:0;
+	      
+	      if(pAHCALRaw->getIntVal(0)==107) {
+		std::cout<<"chip: "<<pAHCALRaw->getIntVal(ChipIDIndex) <<" mem:" <<pAHCALRaw->getIntVal(EvtNrIndex)<< " chn:"<<f<< 			  " hb:"<<hitbit_adc<<hitbit_tdc<<" adc:"<<adc<<" tdc:"<<tdc<<std::endl;
 	      }
-	      //---------------------------------------------------------------------------------------
-	    }//for elements
-	  }// if LCGENERICOBJECT
-	}//if collectionName == EUDAQDataScCAL
-      }//for collections
-      return STATUS_CODE_SUCCESS;
-    }
+	      if (memcell<m_minimumMemcell) continue;
+	      if (bxid<m_minimumBxid) continue;
+	      //if( hitbit_adc != hitbit_tdc) continue;
+	      if (hitbit_adc != 1) continue;
+	      
+	      int ijk = electronicsToIJK(pAHCALRaw->getIntVal(ChipIDIndex),f);
+	      int I = ijk / 10000;
+	      int J = ( ijk  % 10000 ) /100;
+	      int K = ( ijk  % 10000 ) % 100;
+	      if ((K>=1) && (K<(C_MAX_LAYERS+1))) continue;
+	      if (adc > 600) {
+		m_pMIP_600_3d->get<TH3I>()->Fill(K,I,J,adc);
+		m_pMIP_600[K-1]->get<TH2I>()->Fill(I,J,adc);
+	      }
+	      if (adc <= 300) {
+		m_pPed_600_3d->get<TH3I>()->Fill(K,I,J,adc);
+		m_pPed_600[K-1]->get<TH2I>()->Fill(I,J,adc);
+	      }
+	    }
+	    //---------------------------------------------------------------------------------------
+	  }//for elements
+	}// if LCGENERICOBJECT
+      }//if collectionName == EUDAQDataScCAL
+    }//for collections
+    return STATUS_CODE_SUCCESS;
+  }
 
   //-------------------------------------------------------------------------------------------------
 
-  StatusCode AHCAL_40Layers::startOfCycle()
-  {
+  StatusCode AHCAL_40Layers::startOfCycle()  {
     LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- startOfCycle()" );
     return STATUS_CODE_SUCCESS;
   }
