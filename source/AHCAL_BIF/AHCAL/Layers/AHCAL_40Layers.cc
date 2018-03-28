@@ -1,4 +1,4 @@
-/// \file AHCAL_15Layers.cc
+/// \file AHCAL_40Layers.cc
 /*
  *-------------------------------------------------------------
  * AHCALRawModule.cc source template automatically modified from 
