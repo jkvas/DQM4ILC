@@ -89,7 +89,6 @@ namespace dqm4hep
   {
     LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- readSettings()" );
 
-
    // ########################################################################################################################################
     // Monitorize the DAQ errors
     m_DAQerrors= NULL;
@@ -100,7 +99,7 @@ namespace dqm4hep
     for (int i=0; i<C_MAX_LAYERS; i++){
       m_pTempAverage[i] = NULL;
       char elementString[100];
-      sprintf(elementString, "TempAverate_%02d", i + 1);
+      sprintf(elementString, "TempAverage_%02d", i + 1);
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempAverage[i]));
     }
 
@@ -154,7 +153,7 @@ namespace dqm4hep
     for (int i=0; i<C_MAX_LAYERS; i++){
       m_pMIP_600[i] = NULL;
       char elementString[100];
-      sprintf(elementString, "MIP_600_%02d", i + 1);
+      sprintf(elementString, "MIP_600_l%02d", i + 1);
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pMIP_600[i]));
     }
 
@@ -163,15 +162,19 @@ namespace dqm4hep
     for (int i=0; i<C_MAX_LAYERS; i++){
       m_pPed_600[i] = NULL;
       char elementString[100];
-      sprintf(elementString, "Ped_600_%02d", i + 1);
+      sprintf(elementString, "Ped_600_l%02d", i + 1);
+      LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- readSettings() booking ped"<<i<<"+1" );
+
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pPed_600[i]));
     }
 
     // ####################################################################################################################################
     //-----------------------------------------------------
     m_dumpEvent = false;
+    LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- readSettings() dump event parsing" );
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"DumpEvent", m_dumpEvent));
 
+    LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- readSettings() finished successfully" );
     return STATUS_CODE_SUCCESS;
   }
 
@@ -182,6 +185,7 @@ namespace dqm4hep
     // print directory structure of monitor element storage in console
     DQMModuleApi::cd(this);
     DQMModuleApi::ls(this, true);
+    LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- init() finished" );
     return STATUS_CODE_SUCCESS;
   }
 
