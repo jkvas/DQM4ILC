@@ -272,8 +272,7 @@ namespace dqm4hep
 	    float ratiobadDAQ = badDAQ / (badDAQ + goodDAQ) ;
 	    Int_t ip = pAHCALRaw->getIntVal(ChipIDIndex);
 	    if(badDAQ > 0 ) m_DAQerrors->get<TGraph>()->SetPoint(ip, pAHCALRaw->getIntVal(ChipIDIndex), ratiobadDAQ );
-	    if( daqquality!=1 ) continue;
-	    
+	    //if( daqquality!=1 ) continue;
 	    for(int f=0; f<36; f++ ) {
 	      // Vectors for storing our TDC and ADC by channel
 	      int tdcRAW;
@@ -294,20 +293,20 @@ namespace dqm4hep
 	      gainbit_adc = (adcRAW & 0x2000)?1:0;
 	      hitbit_tdc = (tdcRAW & 0x1000)?1:0;
 	      gainbit_tdc = (tdcRAW & 0x2000)?1:0;
-	      
-	      if(pAHCALRaw->getIntVal(0)==107) {
-		std::cout<<"chip: "<<pAHCALRaw->getIntVal(ChipIDIndex) <<" mem:" <<pAHCALRaw->getIntVal(EvtNrIndex)<< " chn:"<<f<< 			  " hb:"<<hitbit_adc<<hitbit_tdc<<" adc:"<<adc<<" tdc:"<<tdc<<std::endl;
+
+	      if(pAHCALRaw->getIntVal(0)==107) {	      //?????????
+		std::cout<<"chip: "<<pAHCALRaw->getIntVal(ChipIDIndex) <<" mem:" <<pAHCALRaw->getIntVal(EvtNrIndex)<< " chn:"<<f<< " hb:"<<hitbit_adc<<hitbit_tdc<<" adc:"<<adc<<" tdc:"<<tdc<<std::endl;
 	      }
 	      if (memcell<m_minimumMemcell) continue;
 	      if (bxid<m_minimumBxid) continue;
 	      //if( hitbit_adc != hitbit_tdc) continue;
 	      if (hitbit_adc != 1) continue;
-	      
 	      int ijk = electronicsToIJK(pAHCALRaw->getIntVal(ChipIDIndex),f);
 	      int I = ijk / 10000;
 	      int J = ( ijk  % 10000 ) /100;
 	      int K = ( ijk  % 10000 ) % 100;
-	      if ((K>=1) && (K<(C_MAX_LAYERS+1))) continue;
+	      if ((K<1) || (K>(C_MAX_LAYERS)) ) continue;
+	      // LOG4CXX_DEBUG( dqmMainLogger , "Filling I="<<std::to_string(I)<<" J="<<std::to_string(J)<<" K="<<std::to_string(K)); 
 	      if (adc > 600) {
 		m_pMIP_600_3d->get<TH3I>()->Fill(K,I,J,adc);
 		m_pMIP_600[K-1]->get<TH2I>()->Fill(I,J,adc);
