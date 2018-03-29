@@ -96,37 +96,40 @@ namespace dqm4hep
 
     // ########################################################################################################################################
     // TEMPERATURE
-    for (int i=0; i<C_MAX_LAYERS; i++){
+    for (int i=0; i<48; i++){
       m_pTempAverage[i] = NULL;
       char elementString[100];
-      sprintf(elementString, "TempAverage_%02d", i + 1);
+      sprintf(elementString, "TempAverage_%02d", i );
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempAverage[i]));
     }
 
     // DIF
-    for (int i=0; i<C_MAX_LAYERS; i++){
+    for (int i=0; i<48; i++){
       m_pTempDIF[i] = NULL;
       char elementString[100];
-      sprintf(elementString, "TempDIF_%02d", i + 1);
+      sprintf(elementString, "TempDIF_%02d", i );
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempDIF[i]));
     }
 
     // PWR
-    for (int i=0; i<C_MAX_LAYERS; i++){
+    for (int i=0; i<48; i++){
       m_pTempPWR[i] = NULL;
       char elementString[100];
-      sprintf(elementString, "TempPWR_%02d", i + 1);
+      sprintf(elementString, "TempPWR_%02d", i );
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempPWR[i]));
     }
 
     // ####################################################################################################################################
     // AHCAL section
     m_minimumBxid    = 2; 
-    m_minimumMemcell = 2;
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"MinimumBxid", m_minimumBxid))
+    LOG4CXX_INFO( dqmMainLogger , "minimum memcell : " << std::to_string(m_minimumMemcell) );
+    m_minimumMemcell = 2;
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"MinimumMemcell", m_minimumMemcell))
     LOG4CXX_INFO( dqmMainLogger , "minimum Bxid : " << std::to_string(m_minimumBxid) );
-    LOG4CXX_INFO( dqmMainLogger , "minimum memcell : " << std::to_string(m_minimumMemcell) );
+    m_defaultPedestal = 600;
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"MinimumMemcell", m_defaultPedestal))
+    LOG4CXX_INFO( dqmMainLogger , "Default pedestal value : " << std::to_string(m_defaultPedestal) );
 
     std::string m_geometryFilename = "";
 
@@ -155,6 +158,15 @@ namespace dqm4hep
       char elementString[100];
       sprintf(elementString, "MIP_600_l%02d", i + 1);
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pMIP_600[i]));
+    }
+
+    //---------------------------------------------------------------------
+    //pure hitmaps
+    for (int i=0; i<C_MAX_LAYERS; i++){
+      m_pHIT_600[i] = NULL;
+      char elementString[100];
+      sprintf(elementString, "HIT_600_l%02d", i + 1);
+      RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pHIT_600[i]));
     }
 
     //---------------------------------------------------------------------
@@ -212,9 +224,9 @@ namespace dqm4hep
     const std::vector<std::string> *pCollectionNames = pLCEvent->getCollectionNames();
     
     //temperature variables
-    float tdif[40];
-    float tpwr[40];
-    float tav[40];
+    float tdif;
+    float tpwr;
+    float tav;
 
     for(std::vector<std::string>::const_iterator colIter = pCollectionNames->begin(); colIter != pCollectionNames->end() ; ++colIter) {
       const std::string &collectionName(*colIter);
@@ -222,34 +234,46 @@ namespace dqm4hep
       
       // #####################################################################################################################
       // temperature section
+      // LOG4CXX_INFO( dqmMainLogger , "going through the collection: "<<collectionName ); 
       if(collectionName=="TempSensor") {
 	const int nElements = pLCCollection->getNumberOfElements();
-	long64 epoch = pLCEvent->getTimeStamp();
+	//long64 epoch = pLCEvent->getTimeStamp();
 	for(int e=0 ; e<nElements ; e++) {
 	  const EVENT::LCGenericObject *const pTempRaw = dynamic_cast<const EVENT::LCGenericObject *const>(pLCCollection->getElementAt(e));
 	  if(NULL == pTempRaw) continue;
-	  if (e<C_MAX_LAYERS){
-	    tdif[e] = pTempRaw->getIntVal(8); 
-	    tpwr[e] = pTempRaw->getIntVal(9);		  
-	    int ntemps=0, tempav=0;
-	    for(int i=0; i<6; i++) { 
-	      if(pTempRaw->getIntVal(2+i) < 1000) {
-		ntemps++; 
-		tempav += pTempRaw->getIntVal(2+i);
-	      }  
-	    }
-	    tempav=tempav/ntemps;
-	    tav[e]=tempav/10.;
-	  }//for elements in tempsensor collection
-	  for (int layer=0 ; layer<C_MAX_LAYERS; layer++){
-	    Int_t pointID = m_pTempAverage[layer]->get<TGraph>()->GetN();
-	    m_pTempAverage[layer]->get<TGraph>()->SetPoint(pointID, pointID, tav[layer] );
-	    pointID = m_pTempDIF[layer]->get<TGraph>()->GetN();
-	    m_pTempDIF[layer]->get<TGraph>()->SetPoint(pointID, pointID, tdif[layer] );
-	    pointID = m_pTempPWR[layer]->get<TGraph>()->GetN();
-	    m_pTempPWR[layer]->get<TGraph>()->SetPoint(pointID, pointID, tpwr[layer] );
+	  int ldaPortNumber=pTempRaw->getIntVal(1);
+	  if (ldaPortNumber>47) {
+	    LOG4CXX_WARN( dqmMainLogger , "Wrong number port number in the temperature data: "<<ldaPortNumber<<". Skipping event "<< e ); 
+	    continue;
 	  }
-	}//for elements in the tempsensor collection
+	  LOG4CXX_INFO( dqmMainLogger , "Filling temperature for port: "<<ldaPortNumber ); 
+	    
+	  tdif = pTempRaw->getIntVal(8); 
+	  tpwr = pTempRaw->getIntVal(9);		  
+	  int ntemps=0, tempav=0;
+	  for(int i=0; i<6; i++) { //indexes 2..7
+	    int read_t=pTempRaw->getIntVal(2+i);
+	    if((read_t < 900) && (read_t > 100)) {
+	      ntemps++; 
+	      tempav += read_t;
+	    }  
+	  }
+	  if ((tdif>10) && (tdif < 90)) {
+	    Int_t pointID = m_pTempDIF[ldaPortNumber]->get<TGraph>()->GetN();
+	    m_pTempDIF[ldaPortNumber]->get<TGraph>()->SetPoint(pointID, pointID, tdif);
+	  }
+	  if ((tpwr>10) && (tpwr < 90)) {
+	    Int_t pointID = m_pTempPWR[ldaPortNumber]->get<TGraph>()->GetN();
+	    m_pTempPWR[ldaPortNumber]->get<TGraph>()->SetPoint(pointID, pointID, tpwr);
+	  }
+	  if (ntemps>0) {
+	    tempav=((1.0 * tempav)/ntemps)/10;
+	    if ((tempav > 10.0) && (tempav < 90.0)) {
+	      Int_t pointID = m_pTempAverage[ldaPortNumber]->get<TGraph>()->GetN();
+	      m_pTempAverage[ldaPortNumber]->get<TGraph>()->SetPoint(pointID, pointID, tav);
+	    }
+	  }
+	}//for elements in collection
       } //tempsensor collection
       
       // #####################################################################################################################
@@ -306,12 +330,13 @@ namespace dqm4hep
 	      int J = ( ijk  % 10000 ) /100;
 	      int K = ( ijk  % 10000 ) % 100;
 	      if ((K<1) || (K>(C_MAX_LAYERS)) ) continue;
-	      // LOG4CXX_DEBUG( dqmMainLogger , "Filling I="<<std::to_string(I)<<" J="<<std::to_string(J)<<" K="<<std::to_string(K)); 
-	      if (adc > 600) {
+	      //LOG4CXX_DEBUG( dqmMainLogger , "Filling I="<<std::to_string(I)<<" J="<<std::to_string(J)<<" K="<<std::to_string(K)); 
+	      if (adc > m_defaultPedestal) {
 		m_pMIP_600_3d->get<TH3I>()->Fill(K,I,J,adc);
 		m_pMIP_600[K-1]->get<TH2I>()->Fill(I,J,adc);
+		m_pHIT_600[K-1]->get<TH2I>()->Fill(I,J,1);
 	      }
-	      if (adc <= 300) {
+	      if (adc <= 600) {
 		m_pPed_600_3d->get<TH3I>()->Fill(K,I,J,adc);
 		m_pPed_600[K-1]->get<TH2I>()->Fill(I,J,adc);
 	      }

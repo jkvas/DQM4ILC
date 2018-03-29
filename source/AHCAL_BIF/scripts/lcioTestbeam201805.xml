@@ -19,7 +19,7 @@
     <parameter name="DumpEvent"> false </parameter>    
     <parameter name="MinimumBxid">3</parameter> <!-- minimum accepted bxid (otherwise thrown away) -->
     <parameter name="MinimumMemcell">1</parameter> <!-- minimum memory cell (otherwise thrown away) -->
-    
+    <parameter name="DefaultPedestal">600</parameter> <!-- minimum memory cell (otherwise thrown away) -->
     <!--  ######################################################  --> 
     <!--  AHCAL mapping plots --> 
     <!--  ######################################################  --> 
@@ -55,51 +55,52 @@
 	for l in `seq -f "%02g" 1 48` 
 	do 
 	echo "    <monitorElement ID=\"MIP_600_l${l}\" path=\"/Maps/MIP\" type=\"TH2I\"
-	name =\"MIP_600_l${l}\"
+	name =\"MIP_600_l${l}\"	title=\"Hitmap Layer ${l}\"
 	nBinsX=\"24\" minX=\"0.5\" maxX=\"24.5\" 
 	nBinsY=\"24\" minY=\"0.5\" maxY=\"24.5\" 
 	resetPolicy=\"EndOfRun\" drawOption=\"colz\"/>"
 	done-->
-    <monitorElement ID="MIP_600_l01" path="/Maps/MIP" type="TH2I" name ="MIP_600_l01" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l02" path="/Maps/MIP" type="TH2I" name ="MIP_600_l02" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l03" path="/Maps/MIP" type="TH2I" name ="MIP_600_l03" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l04" path="/Maps/MIP" type="TH2I" name ="MIP_600_l04" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l05" path="/Maps/MIP" type="TH2I" name ="MIP_600_l05" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l06" path="/Maps/MIP" type="TH2I" name ="MIP_600_l06" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l07" path="/Maps/MIP" type="TH2I" name ="MIP_600_l07" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l08" path="/Maps/MIP" type="TH2I" name ="MIP_600_l08" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l09" path="/Maps/MIP" type="TH2I" name ="MIP_600_l09" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l10" path="/Maps/MIP" type="TH2I" name ="MIP_600_l10" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l11" path="/Maps/MIP" type="TH2I" name ="MIP_600_l11" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l12" path="/Maps/MIP" type="TH2I" name ="MIP_600_l12" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l13" path="/Maps/MIP" type="TH2I" name ="MIP_600_l13" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l14" path="/Maps/MIP" type="TH2I" name ="MIP_600_l14" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l15" path="/Maps/MIP" type="TH2I" name ="MIP_600_l15" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l16" path="/Maps/MIP" type="TH2I" name ="MIP_600_l16" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l17" path="/Maps/MIP" type="TH2I" name ="MIP_600_l17" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l18" path="/Maps/MIP" type="TH2I" name ="MIP_600_l18" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l19" path="/Maps/MIP" type="TH2I" name ="MIP_600_l19" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l20" path="/Maps/MIP" type="TH2I" name ="MIP_600_l20" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l21" path="/Maps/MIP" type="TH2I" name ="MIP_600_l21" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l22" path="/Maps/MIP" type="TH2I" name ="MIP_600_l22" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l23" path="/Maps/MIP" type="TH2I" name ="MIP_600_l23" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l24" path="/Maps/MIP" type="TH2I" name ="MIP_600_l24" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l25" path="/Maps/MIP" type="TH2I" name ="MIP_600_l25" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l26" path="/Maps/MIP" type="TH2I" name ="MIP_600_l26" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l27" path="/Maps/MIP" type="TH2I" name ="MIP_600_l27" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l28" path="/Maps/MIP" type="TH2I" name ="MIP_600_l28" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l29" path="/Maps/MIP" type="TH2I" name ="MIP_600_l29" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l30" path="/Maps/MIP" type="TH2I" name ="MIP_600_l30" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l31" path="/Maps/MIP" type="TH2I" name ="MIP_600_l31" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l32" path="/Maps/MIP" type="TH2I" name ="MIP_600_l32" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l33" path="/Maps/MIP" type="TH2I" name ="MIP_600_l33" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l34" path="/Maps/MIP" type="TH2I" name ="MIP_600_l34" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l35" path="/Maps/MIP" type="TH2I" name ="MIP_600_l35" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l36" path="/Maps/MIP" type="TH2I" name ="MIP_600_l36" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l37" path="/Maps/MIP" type="TH2I" name ="MIP_600_l37" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l38" path="/Maps/MIP" type="TH2I" name ="MIP_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l39" path="/Maps/MIP" type="TH2I" name ="MIP_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l40" path="/Maps/MIP" type="TH2I" name ="MIP_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+
+    <monitorElement ID="MIP_600_l01" title="L01 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l01" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l02" title="L02 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l02" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l03" title="L03 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l03" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l04" title="L04 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l04" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l05" title="L05 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l05" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l06" title="L06 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l06" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l07" title="L07 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l07" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l08" title="L08 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l08" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l09" title="L09 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l09" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l10" title="L10 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l10" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l11" title="L11 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l11" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l12" title="L12 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l12" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l13" title="L13 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l13" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l14" title="L14 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l14" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l15" title="L15 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l15" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l16" title="L16 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l16" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l17" title="L17 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l17" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l18" title="L18 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l18" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l19" title="L19 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l19" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l20" title="L20 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l20" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l21" title="L21 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l21" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l22" title="L22 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l22" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l23" title="L23 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l23" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l24" title="L24 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l24" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l25" title="L25 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l25" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l26" title="L26 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l26" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l27" title="L27 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l27" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l28" title="L28 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l28" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l29" title="L29 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l29" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l30" title="L30 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l30" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l31" title="L31 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l31" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l32" title="L32 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l32" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l33" title="L33 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l33" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l34" title="L34 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l34" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l35" title="L35 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l35" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l36" title="L36 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l36" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l37" title="L37 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l37" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l38" title="L38 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l39" title="L39 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l40" title="L40 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <!-- <monitorElement ID="MIP_600_l41" path="/Maps/MIP" type="TH2I" name ="MIP_600_l41" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
     <!-- <monitorElement ID="MIP_600_l42" path="/Maps/MIP" type="TH2I" name ="MIP_600_l42" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
     <!-- <monitorElement ID="MIP_600_l43" path="/Maps/MIP" type="TH2I" name ="MIP_600_l43" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
@@ -108,6 +109,51 @@
     <!-- <monitorElement ID="MIP_600_l46" path="/Maps/MIP" type="TH2I" name ="MIP_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
     <!-- <monitorElement ID="MIP_600_l47" path="/Maps/MIP" type="TH2I" name ="MIP_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
     <!-- <monitorElement ID="MIP_600_l48" path="/Maps/MIP" type="TH2I" name ="MIP_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
+
+    <!-- NON-weighted HITmap -->
+    <!--#shell script to generate:
+	for l in `seq -f "%02g" 1 40`; do echo "    <monitorElement ID=\"HIT_600_l${l}\" title=\"L${l} Hitmap unweighted\" path=\"/Maps/HIT\" type=\"TH2I\" name =\"HIT_600_l${l}\" nBinsX=\"24\" minX=\"0.5\" maxX=\"24.5\" nBinsY=\"24\" minY=\"0.5\" maxY=\"24.5\" resetPolicy=\"EndOfRun\" drawOption=\"colz\"/>"; done
+    -->
+    <monitorElement ID="HIT_600_l01" title="L01 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l01" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l02" title="L02 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l02" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l03" title="L03 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l03" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l04" title="L04 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l04" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l05" title="L05 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l05" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l06" title="L06 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l06" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l07" title="L07 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l07" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l08" title="L08 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l08" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l09" title="L09 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l09" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l10" title="L10 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l10" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l11" title="L11 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l11" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l12" title="L12 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l12" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l13" title="L13 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l13" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l14" title="L14 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l14" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l15" title="L15 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l15" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l16" title="L16 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l16" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l17" title="L17 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l17" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l18" title="L18 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l18" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l19" title="L19 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l19" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l20" title="L20 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l20" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l21" title="L21 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l21" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l22" title="L22 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l22" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l23" title="L23 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l23" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l24" title="L24 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l24" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l25" title="L25 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l25" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l26" title="L26 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l26" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l27" title="L27 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l27" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l28" title="L28 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l28" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l29" title="L29 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l29" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l30" title="L30 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l30" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l31" title="L31 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l31" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l32" title="L32 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l32" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l33" title="L33 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l33" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l34" title="L34 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l34" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l35" title="L35 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l35" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l36" title="L36 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l36" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l37" title="L37 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l37" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l38" title="L38 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l39" title="L39 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l40" title="L40 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     
     <!-- Ped -->
     <!-- #generation script
@@ -119,46 +165,46 @@
 	 nBinsY=\"24\" minY=\"0.5\" maxY=\"24.5\" 
 	 resetPolicy=\"EndOfRun\" drawOption=\"colz\"/>"
 	 done-->
-    <monitorElement ID="Ped_600_l01" path="/Maps/Ped" type="TH2I" name ="Ped_600_l01" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l02" path="/Maps/Ped" type="TH2I" name ="Ped_600_l02" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l03" path="/Maps/Ped" type="TH2I" name ="Ped_600_l03" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l04" path="/Maps/Ped" type="TH2I" name ="Ped_600_l04" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l05" path="/Maps/Ped" type="TH2I" name ="Ped_600_l05" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l06" path="/Maps/Ped" type="TH2I" name ="Ped_600_l06" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l07" path="/Maps/Ped" type="TH2I" name ="Ped_600_l07" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l08" path="/Maps/Ped" type="TH2I" name ="Ped_600_l08" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l09" path="/Maps/Ped" type="TH2I" name ="Ped_600_l09" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l10" path="/Maps/Ped" type="TH2I" name ="Ped_600_l10" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l11" path="/Maps/Ped" type="TH2I" name ="Ped_600_l11" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l12" path="/Maps/Ped" type="TH2I" name ="Ped_600_l12" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l13" path="/Maps/Ped" type="TH2I" name ="Ped_600_l13" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l14" path="/Maps/Ped" type="TH2I" name ="Ped_600_l14" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l15" path="/Maps/Ped" type="TH2I" name ="Ped_600_l15" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l16" path="/Maps/Ped" type="TH2I" name ="Ped_600_l16" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l17" path="/Maps/Ped" type="TH2I" name ="Ped_600_l17" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l18" path="/Maps/Ped" type="TH2I" name ="Ped_600_l18" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l19" path="/Maps/Ped" type="TH2I" name ="Ped_600_l19" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l20" path="/Maps/Ped" type="TH2I" name ="Ped_600_l20" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l21" path="/Maps/Ped" type="TH2I" name ="Ped_600_l21" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l22" path="/Maps/Ped" type="TH2I" name ="Ped_600_l22" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l23" path="/Maps/Ped" type="TH2I" name ="Ped_600_l23" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l24" path="/Maps/Ped" type="TH2I" name ="Ped_600_l24" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l25" path="/Maps/Ped" type="TH2I" name ="Ped_600_l25" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l26" path="/Maps/Ped" type="TH2I" name ="Ped_600_l26" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l27" path="/Maps/Ped" type="TH2I" name ="Ped_600_l27" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l28" path="/Maps/Ped" type="TH2I" name ="Ped_600_l28" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l29" path="/Maps/Ped" type="TH2I" name ="Ped_600_l29" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l30" path="/Maps/Ped" type="TH2I" name ="Ped_600_l30" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l31" path="/Maps/Ped" type="TH2I" name ="Ped_600_l31" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l32" path="/Maps/Ped" type="TH2I" name ="Ped_600_l32" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l33" path="/Maps/Ped" type="TH2I" name ="Ped_600_l33" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l34" path="/Maps/Ped" type="TH2I" name ="Ped_600_l34" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l35" path="/Maps/Ped" type="TH2I" name ="Ped_600_l35" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l36" path="/Maps/Ped" type="TH2I" name ="Ped_600_l36" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l37" path="/Maps/Ped" type="TH2I" name ="Ped_600_l37" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l38" path="/Maps/Ped" type="TH2I" name ="Ped_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l39" path="/Maps/Ped" type="TH2I" name ="Ped_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l40" path="/Maps/Ped" type="TH2I" name ="Ped_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l01" title="Pedestal Layer 01" path="/Maps/Ped" type="TH2I" name ="Ped_600_l01" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l02" title="Pedestal Layer 02" path="/Maps/Ped" type="TH2I" name ="Ped_600_l02" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l03" title="Pedestal Layer 03" path="/Maps/Ped" type="TH2I" name ="Ped_600_l03" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l04" title="Pedestal Layer 04" path="/Maps/Ped" type="TH2I" name ="Ped_600_l04" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l05" title="Pedestal Layer 05" path="/Maps/Ped" type="TH2I" name ="Ped_600_l05" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l06" title="Pedestal Layer 06" path="/Maps/Ped" type="TH2I" name ="Ped_600_l06" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l07" title="Pedestal Layer 07" path="/Maps/Ped" type="TH2I" name ="Ped_600_l07" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l08" title="Pedestal Layer 08" path="/Maps/Ped" type="TH2I" name ="Ped_600_l08" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l09" title="Pedestal Layer 09" path="/Maps/Ped" type="TH2I" name ="Ped_600_l09" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l10" title="Pedestal Layer 10" path="/Maps/Ped" type="TH2I" name ="Ped_600_l10" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l11" title="Pedestal Layer 11" path="/Maps/Ped" type="TH2I" name ="Ped_600_l11" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l12" title="Pedestal Layer 12" path="/Maps/Ped" type="TH2I" name ="Ped_600_l12" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l13" title="Pedestal Layer 13" path="/Maps/Ped" type="TH2I" name ="Ped_600_l13" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l14" title="Pedestal Layer 14" path="/Maps/Ped" type="TH2I" name ="Ped_600_l14" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l15" title="Pedestal Layer 15" path="/Maps/Ped" type="TH2I" name ="Ped_600_l15" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l16" title="Pedestal Layer 16" path="/Maps/Ped" type="TH2I" name ="Ped_600_l16" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l17" title="Pedestal Layer 17" path="/Maps/Ped" type="TH2I" name ="Ped_600_l17" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l18" title="Pedestal Layer 18" path="/Maps/Ped" type="TH2I" name ="Ped_600_l18" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l19" title="Pedestal Layer 19" path="/Maps/Ped" type="TH2I" name ="Ped_600_l19" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l20" title="Pedestal Layer 20" path="/Maps/Ped" type="TH2I" name ="Ped_600_l20" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l21" title="Pedestal Layer 21" path="/Maps/Ped" type="TH2I" name ="Ped_600_l21" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l22" title="Pedestal Layer 22" path="/Maps/Ped" type="TH2I" name ="Ped_600_l22" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l23" title="Pedestal Layer 23" path="/Maps/Ped" type="TH2I" name ="Ped_600_l23" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l24" title="Pedestal Layer 24" path="/Maps/Ped" type="TH2I" name ="Ped_600_l24" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l25" title="Pedestal Layer 25" path="/Maps/Ped" type="TH2I" name ="Ped_600_l25" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l26" title="Pedestal Layer 26" path="/Maps/Ped" type="TH2I" name ="Ped_600_l26" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l27" title="Pedestal Layer 27" path="/Maps/Ped" type="TH2I" name ="Ped_600_l27" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l28" title="Pedestal Layer 28" path="/Maps/Ped" type="TH2I" name ="Ped_600_l28" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l29" title="Pedestal Layer 29" path="/Maps/Ped" type="TH2I" name ="Ped_600_l29" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l30" title="Pedestal Layer 30" path="/Maps/Ped" type="TH2I" name ="Ped_600_l30" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l31" title="Pedestal Layer 31" path="/Maps/Ped" type="TH2I" name ="Ped_600_l31" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l32" title="Pedestal Layer 32" path="/Maps/Ped" type="TH2I" name ="Ped_600_l32" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l33" title="Pedestal Layer 33" path="/Maps/Ped" type="TH2I" name ="Ped_600_l33" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l34" title="Pedestal Layer 34" path="/Maps/Ped" type="TH2I" name ="Ped_600_l34" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l35" title="Pedestal Layer 35" path="/Maps/Ped" type="TH2I" name ="Ped_600_l35" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l36" title="Pedestal Layer 36" path="/Maps/Ped" type="TH2I" name ="Ped_600_l36" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l37" title="Pedestal Layer 37" path="/Maps/Ped" type="TH2I" name ="Ped_600_l37" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l38" title="Pedestal Layer 38" path="/Maps/Ped" type="TH2I" name ="Ped_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l39" title="Pedestal Layer 39" path="/Maps/Ped" type="TH2I" name ="Ped_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l40" title="Pedestal Layer 40" path="/Maps/Ped" type="TH2I" name ="Ped_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <!-- <monitorElement ID="Ped_600_l41" path="/Maps/Ped" type="TH2I" name ="Ped_600_l41" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
     <!-- <monitorElement ID="Ped_600_l42" path="/Maps/Ped" type="TH2I" name ="Ped_600_l42" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
     <!-- <monitorElement ID="Ped_600_l43" path="/Maps/Ped" type="TH2I" name ="Ped_600_l43" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
@@ -172,173 +218,161 @@
     <!--  AHCAL temperature plots --> 
     <!--  ######################################################  --> 
     <!-- 
-	 for l in `seq -f "%02g" 1 48` 
-	 do 
-	 shortl=`expr "$l" + "0"`
-	 echo "    <monitorElement ID=\"TempAverage_${l}\" name=\"TempAverage_${l}\" path=\"/Temp/Average\" type=\"user\" ROOTClass=\"TGraph\" title=\"Temp (Average) on Layer ${shortl}\" resetPolicy=\"NoReset\" drawOption=\"alp\"/>"
-	 done 
+	 for l in `seq -f "%02g" 0 47` ; do shortl=`expr "$l" + "0"` ; echo "    <monitorElement ID=\"TempAverage_${l}\" name=\"TempAverage_${l}\" path=\"/Temp/Average\" type=\"user\" ROOTClass=\"TGraph\" title=\"Temp (Average) on LDA port ${shortl}\" resetPolicy=\"NoReset\" drawOption=\"alp\"/>" ;  done 
     -->
-    <monitorElement ID="TempAverage_01" name="TempAverage_01" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 1" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_02" name="TempAverage_02" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 2" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_03" name="TempAverage_03" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 3" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_04" name="TempAverage_04" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 4" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_05" name="TempAverage_05" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 5" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_06" name="TempAverage_06" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 6" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_07" name="TempAverage_07" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 7" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_08" name="TempAverage_08" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 8" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_09" name="TempAverage_09" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 9" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_10" name="TempAverage_10" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 10" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_11" name="TempAverage_11" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 11" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_12" name="TempAverage_12" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 12" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_13" name="TempAverage_13" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 13" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_14" name="TempAverage_14" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 14" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_15" name="TempAverage_15" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 15" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_16" name="TempAverage_16" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 16" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_17" name="TempAverage_17" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 17" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_18" name="TempAverage_18" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 18" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_19" name="TempAverage_19" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 19" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_20" name="TempAverage_20" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 20" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_21" name="TempAverage_21" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 21" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_22" name="TempAverage_22" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 22" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_23" name="TempAverage_23" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 23" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_24" name="TempAverage_24" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 24" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_25" name="TempAverage_25" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 25" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_26" name="TempAverage_26" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 26" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_27" name="TempAverage_27" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 27" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_28" name="TempAverage_28" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 28" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_29" name="TempAverage_29" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 29" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_30" name="TempAverage_30" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 30" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_31" name="TempAverage_31" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 31" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_32" name="TempAverage_32" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 32" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_33" name="TempAverage_33" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 33" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_34" name="TempAverage_34" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 34" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_35" name="TempAverage_35" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 35" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_36" name="TempAverage_36" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 36" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_37" name="TempAverage_37" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 37" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_38" name="TempAverage_38" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 38" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_39" name="TempAverage_39" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 39" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_40" name="TempAverage_40" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 40" resetPolicy="NoReset" drawOption="alp"/>
-    <!-- <monitorElement ID="TempAverage_41" name="TempAverage_41" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 41" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempAverage_42" name="TempAverage_42" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 42" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempAverage_43" name="TempAverage_43" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 43" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempAverage_44" name="TempAverage_44" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 44" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempAverage_45" name="TempAverage_45" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 45" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempAverage_46" name="TempAverage_46" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 46" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempAverage_47" name="TempAverage_47" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 47" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempAverage_48" name="TempAverage_48" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on Layer 48" resetPolicy="NoReset" drawOption="alp"/> -->
+    <monitorElement ID="TempAverage_00" name="TempAverage_00" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 0" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_01" name="TempAverage_01" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 1" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_02" name="TempAverage_02" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 2" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_03" name="TempAverage_03" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 3" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_04" name="TempAverage_04" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 4" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_05" name="TempAverage_05" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 5" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_06" name="TempAverage_06" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 6" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_07" name="TempAverage_07" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 7" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_08" name="TempAverage_08" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 8" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_09" name="TempAverage_09" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 9" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_10" name="TempAverage_10" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 10" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_11" name="TempAverage_11" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 11" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_12" name="TempAverage_12" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 12" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_13" name="TempAverage_13" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 13" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_14" name="TempAverage_14" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 14" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_15" name="TempAverage_15" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 15" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_16" name="TempAverage_16" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 16" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_17" name="TempAverage_17" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 17" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_18" name="TempAverage_18" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 18" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_19" name="TempAverage_19" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 19" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_20" name="TempAverage_20" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 20" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_21" name="TempAverage_21" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 21" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_22" name="TempAverage_22" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 22" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_23" name="TempAverage_23" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 23" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_24" name="TempAverage_24" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 24" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_25" name="TempAverage_25" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 25" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_26" name="TempAverage_26" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 26" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_27" name="TempAverage_27" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 27" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_28" name="TempAverage_28" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 28" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_29" name="TempAverage_29" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 29" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_30" name="TempAverage_30" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 30" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_31" name="TempAverage_31" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 31" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_32" name="TempAverage_32" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 32" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_33" name="TempAverage_33" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 33" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_34" name="TempAverage_34" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 34" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_35" name="TempAverage_35" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 35" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_36" name="TempAverage_36" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 36" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_37" name="TempAverage_37" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 37" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_38" name="TempAverage_38" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 38" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_39" name="TempAverage_39" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 39" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_40" name="TempAverage_40" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 40" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_41" name="TempAverage_41" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 41" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_42" name="TempAverage_42" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 42" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_43" name="TempAverage_43" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 43" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_44" name="TempAverage_44" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 44" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_45" name="TempAverage_45" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 45" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_46" name="TempAverage_46" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 46" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempAverage_47" name="TempAverage_47" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 47" resetPolicy="NoReset" drawOption="alp"/>
     
     <!-- DIF-->
     <!-- 
-	 for l in `seq -f "%02g" 1 48` 
-	 do 
-	 shortl=`expr "$l" + "0"`
-	 echo "    <monitorElement ID=\"TempDIF_${l}\" name=\"TempDIF_${l}\" path=\"/Temp/DIF\" type=\"user\" ROOTClass=\"TGraph\" title=\"Temp (DIF) on Layer ${shortl}\" resetPolicy=\"NoReset\" drawOption=\"alp\"/>"
-	 done
+	 for l in `seq -f "%02g" 0 47` ; do shortl=`expr "$l" + "0"`; echo "    <monitorElement ID=\"TempDIF_${l}\" name=\"TempDIF_${l}\" path=\"/Temp/DIF\" type=\"user\" ROOTClass=\"TGraph\" title=\"Temp (DIF) on LDA port ${shortl}\" resetPolicy=\"NoReset\" drawOption=\"alp\"/>"; done
     -->
-    <monitorElement ID="TempDIF_01" name="TempDIF_01" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 1" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_02" name="TempDIF_02" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 2" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_03" name="TempDIF_03" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 3" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_04" name="TempDIF_04" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 4" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_05" name="TempDIF_05" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 5" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_06" name="TempDIF_06" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 6" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_07" name="TempDIF_07" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 7" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_08" name="TempDIF_08" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 8" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_09" name="TempDIF_09" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 9" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_10" name="TempDIF_10" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 10" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_11" name="TempDIF_11" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 11" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_12" name="TempDIF_12" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 12" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_13" name="TempDIF_13" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 13" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_14" name="TempDIF_14" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 14" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_15" name="TempDIF_15" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 15" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_16" name="TempDIF_16" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 16" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_17" name="TempDIF_17" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 17" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_18" name="TempDIF_18" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 18" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_19" name="TempDIF_19" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 19" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_20" name="TempDIF_20" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 20" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_21" name="TempDIF_21" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 21" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_22" name="TempDIF_22" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 22" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_23" name="TempDIF_23" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 23" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_24" name="TempDIF_24" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 24" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_25" name="TempDIF_25" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 25" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_26" name="TempDIF_26" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 26" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_27" name="TempDIF_27" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 27" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_28" name="TempDIF_28" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 28" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_29" name="TempDIF_29" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 29" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_30" name="TempDIF_30" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 30" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_31" name="TempDIF_31" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 31" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_32" name="TempDIF_32" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 32" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_33" name="TempDIF_33" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 33" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_34" name="TempDIF_34" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 34" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_35" name="TempDIF_35" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 35" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_36" name="TempDIF_36" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 36" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_37" name="TempDIF_37" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 37" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_38" name="TempDIF_38" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 38" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_39" name="TempDIF_39" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 39" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempDIF_40" name="TempDIF_40" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 40" resetPolicy="NoReset" drawOption="alp"/>
-    <!-- <monitorElement ID="TempDIF_41" name="TempDIF_41" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 41" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempDIF_42" name="TempDIF_42" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 42" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempDIF_43" name="TempDIF_43" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 43" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempDIF_44" name="TempDIF_44" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 44" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempDIF_45" name="TempDIF_45" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 45" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempDIF_46" name="TempDIF_46" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 46" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempDIF_47" name="TempDIF_47" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 47" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempDIF_48" name="TempDIF_48" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on Layer 48" resetPolicy="NoReset" drawOption="alp"/> -->
-    
+    <monitorElement ID="TempDIF_00" name="TempDIF_00" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 0" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_01" name="TempDIF_01" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 1" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_02" name="TempDIF_02" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 2" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_03" name="TempDIF_03" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 3" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_04" name="TempDIF_04" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 4" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_05" name="TempDIF_05" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 5" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_06" name="TempDIF_06" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 6" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_07" name="TempDIF_07" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 7" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_08" name="TempDIF_08" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 8" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_09" name="TempDIF_09" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 9" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_10" name="TempDIF_10" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 10" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_11" name="TempDIF_11" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 11" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_12" name="TempDIF_12" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 12" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_13" name="TempDIF_13" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 13" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_14" name="TempDIF_14" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 14" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_15" name="TempDIF_15" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 15" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_16" name="TempDIF_16" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 16" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_17" name="TempDIF_17" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 17" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_18" name="TempDIF_18" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 18" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_19" name="TempDIF_19" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 19" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_20" name="TempDIF_20" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 20" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_21" name="TempDIF_21" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 21" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_22" name="TempDIF_22" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 22" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_23" name="TempDIF_23" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 23" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_24" name="TempDIF_24" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 24" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_25" name="TempDIF_25" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 25" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_26" name="TempDIF_26" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 26" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_27" name="TempDIF_27" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 27" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_28" name="TempDIF_28" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 28" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_29" name="TempDIF_29" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 29" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_30" name="TempDIF_30" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 30" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_31" name="TempDIF_31" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 31" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_32" name="TempDIF_32" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 32" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_33" name="TempDIF_33" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 33" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_34" name="TempDIF_34" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 34" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_35" name="TempDIF_35" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 35" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_36" name="TempDIF_36" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 36" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_37" name="TempDIF_37" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 37" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_38" name="TempDIF_38" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 38" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_39" name="TempDIF_39" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 39" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_40" name="TempDIF_40" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 40" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_41" name="TempDIF_41" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 41" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_42" name="TempDIF_42" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 42" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_43" name="TempDIF_43" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 43" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_44" name="TempDIF_44" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 44" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_45" name="TempDIF_45" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 45" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_46" name="TempDIF_46" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 46" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempDIF_47" name="TempDIF_47" path="/Temp/DIF" type="user" ROOTClass="TGraph" title="Temp (DIF) on LDA port 47" resetPolicy="NoReset" drawOption="alp"/>
+
     <!-- PWR-->
     <!-- 
-	 for l in `seq -f "%02g" 1 48` 
-	 do 
-	 shortl=`expr "$l" + "0"`
-	 echo "    <monitorElement ID=\"TempPWR_${l}\" name=\"TempPWR_${l}\" path=\"/Temp/PWR\" type=\"user\" ROOTClass=\"TGraph\" title=\"Temp (PWR) on Layer ${shortl}\" resetPolicy=\"NoReset\" drawOption=\"alp\"/>"
-	 done
+	 for l in `seq -f "%02g" 0 47` ;do shortl=`expr "$l" + "0"`; echo "    <monitorElement ID=\"TempPWR_${l}\" name=\"TempPWR_${l}\" path=\"/Temp/PWR\" type=\"user\" ROOTClass=\"TGraph\" title=\"Temp (PWR) on LDA port ${shortl}\" resetPolicy=\"NoReset\" drawOption=\"alp\"/>"; done
     -->
-    <monitorElement ID="TempPWR_01" name="TempPWR_01" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 1" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_02" name="TempPWR_02" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 2" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_03" name="TempPWR_03" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 3" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_04" name="TempPWR_04" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 4" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_05" name="TempPWR_05" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 5" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_06" name="TempPWR_06" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 6" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_07" name="TempPWR_07" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 7" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_08" name="TempPWR_08" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 8" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_09" name="TempPWR_09" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 9" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_10" name="TempPWR_10" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 10" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_11" name="TempPWR_11" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 11" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_12" name="TempPWR_12" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 12" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_13" name="TempPWR_13" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 13" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_14" name="TempPWR_14" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 14" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_15" name="TempPWR_15" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 15" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_16" name="TempPWR_16" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 16" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_17" name="TempPWR_17" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 17" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_18" name="TempPWR_18" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 18" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_19" name="TempPWR_19" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 19" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_20" name="TempPWR_20" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 20" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_21" name="TempPWR_21" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 21" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_22" name="TempPWR_22" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 22" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_23" name="TempPWR_23" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 23" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_24" name="TempPWR_24" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 24" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_25" name="TempPWR_25" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 25" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_26" name="TempPWR_26" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 26" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_27" name="TempPWR_27" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 27" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_28" name="TempPWR_28" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 28" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_29" name="TempPWR_29" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 29" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_30" name="TempPWR_30" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 30" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_31" name="TempPWR_31" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 31" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_32" name="TempPWR_32" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 32" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_33" name="TempPWR_33" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 33" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_34" name="TempPWR_34" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 34" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_35" name="TempPWR_35" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 35" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_36" name="TempPWR_36" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 36" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_37" name="TempPWR_37" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 37" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_38" name="TempPWR_38" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 38" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_39" name="TempPWR_39" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 39" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempPWR_40" name="TempPWR_40" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 40" resetPolicy="NoReset" drawOption="alp"/>
-    <!-- <monitorElement ID="TempPWR_41" name="TempPWR_41" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 41" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempPWR_42" name="TempPWR_42" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 42" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempPWR_43" name="TempPWR_43" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 43" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempPWR_44" name="TempPWR_44" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 44" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempPWR_45" name="TempPWR_45" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 45" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempPWR_46" name="TempPWR_46" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 46" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempPWR_47" name="TempPWR_47" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 47" resetPolicy="NoReset" drawOption="alp"/> -->
-    <!-- <monitorElement ID="TempPWR_48" name="TempPWR_48" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on Layer 48" resetPolicy="NoReset" drawOption="alp"/> -->
+    <monitorElement ID="TempPWR_00" name="TempPWR_00" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 0" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_01" name="TempPWR_01" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 1" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_02" name="TempPWR_02" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 2" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_03" name="TempPWR_03" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 3" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_04" name="TempPWR_04" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 4" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_05" name="TempPWR_05" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 5" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_06" name="TempPWR_06" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 6" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_07" name="TempPWR_07" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 7" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_08" name="TempPWR_08" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 8" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_09" name="TempPWR_09" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 9" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_10" name="TempPWR_10" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 10" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_11" name="TempPWR_11" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 11" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_12" name="TempPWR_12" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 12" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_13" name="TempPWR_13" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 13" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_14" name="TempPWR_14" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 14" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_15" name="TempPWR_15" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 15" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_16" name="TempPWR_16" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 16" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_17" name="TempPWR_17" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 17" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_18" name="TempPWR_18" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 18" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_19" name="TempPWR_19" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 19" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_20" name="TempPWR_20" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 20" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_21" name="TempPWR_21" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 21" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_22" name="TempPWR_22" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 22" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_23" name="TempPWR_23" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 23" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_24" name="TempPWR_24" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 24" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_25" name="TempPWR_25" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 25" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_26" name="TempPWR_26" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 26" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_27" name="TempPWR_27" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 27" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_28" name="TempPWR_28" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 28" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_29" name="TempPWR_29" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 29" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_30" name="TempPWR_30" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 30" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_31" name="TempPWR_31" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 31" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_32" name="TempPWR_32" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 32" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_33" name="TempPWR_33" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 33" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_34" name="TempPWR_34" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 34" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_35" name="TempPWR_35" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 35" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_36" name="TempPWR_36" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 36" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_37" name="TempPWR_37" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 37" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_38" name="TempPWR_38" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 38" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_39" name="TempPWR_39" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 39" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_40" name="TempPWR_40" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 40" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_41" name="TempPWR_41" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 41" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_42" name="TempPWR_42" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 42" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_43" name="TempPWR_43" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 43" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_44" name="TempPWR_44" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 44" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_45" name="TempPWR_45" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 45" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_46" name="TempPWR_46" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 46" resetPolicy="NoReset" drawOption="alp"/>
+    <monitorElement ID="TempPWR_47" name="TempPWR_47" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 47" resetPolicy="NoReset" drawOption="alp"/>
   </module>
 </dqm4hep>

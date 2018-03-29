@@ -78,9 +78,11 @@ namespace dqm4hep {
     DQMMonitorElementPtr m_pMIP_600_3d;
     DQMMonitorElementPtr m_pPed_600_3d;
     // 2D- MIP hitmaps
-    DQMMonitorElementPtr m_pMIP_600[C_MAX_LAYERS];
+    DQMMonitorElementPtr m_pMIP_600[C_MAX_LAYERS];// ADC-signal weighted
+    DQMMonitorElementPtr m_pHIT_600[C_MAX_LAYERS];// just a hit counting
     // 2D- Ped hitmaps
     DQMMonitorElementPtr m_pPed_600[C_MAX_LAYERS];
+
     
     std::string                                 m_geometryFile;
     std::map<int, int>                          ijkmap;
@@ -94,6 +96,8 @@ namespace dqm4hep {
 
     int m_minimumBxid;
     int m_minimumMemcell;
+    int m_defaultPedestal; //default pedestal, which will be used to compare, whether the hit will be considered a hit or not. Can be adjusted by Testbeam201815.xml line: <parameter name="DefaultPedestal">600</parameter> <!-- minimum memory cell (otherwise thrown away) -->
+   
   }; 
 } 
 
