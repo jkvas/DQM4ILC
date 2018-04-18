@@ -101,18 +101,18 @@
     <monitorElement ID="MIP_600_l38" title="L38 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="MIP_600_l39" title="L39 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="MIP_600_l40" title="L40 MIP weighted Hitmap" path="/Maps/MIP" type="TH2I" name ="MIP_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <!-- <monitorElement ID="MIP_600_l41" path="/Maps/MIP" type="TH2I" name ="MIP_600_l41" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="MIP_600_l42" path="/Maps/MIP" type="TH2I" name ="MIP_600_l42" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="MIP_600_l43" path="/Maps/MIP" type="TH2I" name ="MIP_600_l43" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="MIP_600_l44" path="/Maps/MIP" type="TH2I" name ="MIP_600_l44" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="MIP_600_l45" path="/Maps/MIP" type="TH2I" name ="MIP_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="MIP_600_l46" path="/Maps/MIP" type="TH2I" name ="MIP_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="MIP_600_l47" path="/Maps/MIP" type="TH2I" name ="MIP_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="MIP_600_l48" path="/Maps/MIP" type="TH2I" name ="MIP_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
+    <monitorElement ID="MIP_600_l41" path="/Maps/MIP" type="TH2I" name ="MIP_600_l41" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l42" path="/Maps/MIP" type="TH2I" name ="MIP_600_l42" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l43" path="/Maps/MIP" type="TH2I" name ="MIP_600_l43" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l44" path="/Maps/MIP" type="TH2I" name ="MIP_600_l44" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l45" path="/Maps/MIP" type="TH2I" name ="MIP_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l46" path="/Maps/MIP" type="TH2I" name ="MIP_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l47" path="/Maps/MIP" type="TH2I" name ="MIP_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="MIP_600_l48" path="/Maps/MIP" type="TH2I" name ="MIP_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
 
     <!-- NON-weighted HITmap -->
     <!--#shell script to generate:
-	for l in `seq -f "%02g" 1 40`; do echo "    <monitorElement ID=\"HIT_600_l${l}\" title=\"L${l} Hitmap unweighted\" path=\"/Maps/HIT\" type=\"TH2I\" name =\"HIT_600_l${l}\" nBinsX=\"24\" minX=\"0.5\" maxX=\"24.5\" nBinsY=\"24\" minY=\"0.5\" maxY=\"24.5\" resetPolicy=\"EndOfRun\" drawOption=\"colz\"/>"; done
+	for l in `seq -f "%02g" 1 48`; do echo "    <monitorElement ID=\"HIT_600_l${l}\" title=\"L${l} Hitmap unweighted\" path=\"/Maps/HIT\" type=\"TH2I\" name =\"HIT_600_l${l}\" nBinsX=\"24\" minX=\"0.5\" maxX=\"24.5\" nBinsY=\"24\" minY=\"0.5\" maxY=\"24.5\" resetPolicy=\"EndOfRun\" drawOption=\"colz\"/>"; done
     -->
     <monitorElement ID="HIT_600_l01" title="L01 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l01" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="HIT_600_l02" title="L02 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l02" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
@@ -154,17 +154,22 @@
     <monitorElement ID="HIT_600_l38" title="L38 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="HIT_600_l39" title="L39 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="HIT_600_l40" title="L40 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    
+    <monitorElement ID="HIT_600_l41" title="L41 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l41" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l42" title="L42 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l42" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l43" title="L43 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l43" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l44" title="L44 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l44" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l45" title="L45 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l46" title="L46 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l47" title="L47 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="HIT_600_l48" title="L48 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+  
     <!-- Ped -->
     <!-- #generation script
 	 for l in `seq -f "%02g" 1 48` 
 	 do 
-	 echo "    <monitorElement ID=\"Ped_600_l${l}\" path=\"/Maps/Ped\" type=\"TH2I\" 
-	 name =\"Ped_600_l${l}\"
-	 nBinsX=\"24\" minX=\"0.5\" maxX=\"24.5\" 
-	 nBinsY=\"24\" minY=\"0.5\" maxY=\"24.5\" 
-	 resetPolicy=\"EndOfRun\" drawOption=\"colz\"/>"
-	 done-->
+	 echo "    <monitorElement ID=\"Ped_600_l${l}\" title=\"Pedestal Layer ${l}\" path=\"/Maps/Ped\" type=\"TH2I\" name =\"Ped_600_l${l}\" nBinsX=\"24\" minX=\"0.5\" maxX=\"24.5\" nBinsY=\"24\" minY=\"0.5\" maxY=\"24.5\" resetPolicy=\"EndOfRun\" drawOption=\"colz\"/>"
+	 done
+-->
     <monitorElement ID="Ped_600_l01" title="Pedestal Layer 01" path="/Maps/Ped" type="TH2I" name ="Ped_600_l01" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="Ped_600_l02" title="Pedestal Layer 02" path="/Maps/Ped" type="TH2I" name ="Ped_600_l02" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="Ped_600_l03" title="Pedestal Layer 03" path="/Maps/Ped" type="TH2I" name ="Ped_600_l03" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
@@ -205,14 +210,14 @@
     <monitorElement ID="Ped_600_l38" title="Pedestal Layer 38" path="/Maps/Ped" type="TH2I" name ="Ped_600_l38" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="Ped_600_l39" title="Pedestal Layer 39" path="/Maps/Ped" type="TH2I" name ="Ped_600_l39" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="Ped_600_l40" title="Pedestal Layer 40" path="/Maps/Ped" type="TH2I" name ="Ped_600_l40" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <!-- <monitorElement ID="Ped_600_l41" path="/Maps/Ped" type="TH2I" name ="Ped_600_l41" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="Ped_600_l42" path="/Maps/Ped" type="TH2I" name ="Ped_600_l42" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="Ped_600_l43" path="/Maps/Ped" type="TH2I" name ="Ped_600_l43" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="Ped_600_l44" path="/Maps/Ped" type="TH2I" name ="Ped_600_l44" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="Ped_600_l45" path="/Maps/Ped" type="TH2I" name ="Ped_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="Ped_600_l46" path="/Maps/Ped" type="TH2I" name ="Ped_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="Ped_600_l47" path="/Maps/Ped" type="TH2I" name ="Ped_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
-    <!-- <monitorElement ID="Ped_600_l48" path="/Maps/Ped" type="TH2I" name ="Ped_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
+    <monitorElement ID="Ped_600_l41" title="Pedestal Layer 41" path="/Maps/Ped" type="TH2I" name ="Ped_600_l41" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l42" title="Pedestal Layer 42" path="/Maps/Ped" type="TH2I" name ="Ped_600_l42" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l43" title="Pedestal Layer 43" path="/Maps/Ped" type="TH2I" name ="Ped_600_l43" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l44" title="Pedestal Layer 44" path="/Maps/Ped" type="TH2I" name ="Ped_600_l44" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l45" title="Pedestal Layer 45" path="/Maps/Ped" type="TH2I" name ="Ped_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l46" title="Pedestal Layer 46" path="/Maps/Ped" type="TH2I" name ="Ped_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l47" title="Pedestal Layer 47" path="/Maps/Ped" type="TH2I" name ="Ped_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <monitorElement ID="Ped_600_l48" title="Pedestal Layer 48" path="/Maps/Ped" type="TH2I" name ="Ped_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     
     <!--  ######################################################  --> 
     <!--  AHCAL temperature plots --> 
