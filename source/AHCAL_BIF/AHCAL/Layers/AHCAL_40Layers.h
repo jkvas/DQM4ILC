@@ -31,7 +31,7 @@
 #ifndef AHCAL_40Layers_H
 #define AHCAL_40Layers_H
 
-#define C_MAX_LAYERS 40
+#define C_MAX_LAYERS 48
 
 #include "dqm4hep/DQMAnalysisModule.h"
 
