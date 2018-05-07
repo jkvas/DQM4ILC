@@ -9,12 +9,11 @@ dqm4hep_start_run_control_interface -v ALL -r AHCALRunControl
 #--settings-file Runcontrol_Detector_center.xml &
 
 export DQM4HEP_PLUGIN_DLL=/home/calice/TB2018/DQM4ILC/lib/libAHCAL_40Layers.so
-dqm4hep_start_event_collector -v ALL -c ahcal_event_collector &
+dqm4hep_start_event_collector -v WARN -c ahcal_event_collector &
 
-dqm4hep_start_monitor_element_collector -v ALL -c ahcal_me_collector &
-
-
-dqm4hep_start_dqm_monitor_gui -v ALL
+dqm4hep_start_monitor_element_collector -v WARN -c ahcal_me_collector &
+dqm4hep_start_dqm_monitor_gui -v WARN -f /home/calice/TB2018/scripts/test_canvases1.xml &
+dqm4hep_start_analysis_module -v WARN -f /home/calice/TB2018/scripts/lcioTestbeam201805.xml &
 
 
 
@@ -27,7 +26,7 @@ dqm4hep_start_dqm_monitor_gui -v ALL
 
 sleep 2;
 
-dqm4hep_start_analysis_module -v ALL -f /home/calice/TB2018/scripts/lcioTestbeam201805.xml &
+#dqm4hep_start_analysis_module -v ALL -f /home/calice/TB2018/scripts/lcioTestbeam201805.xml &
 
 #start the analysis modules
 #dqm4hep_start_analysis_module -v WARN -f ../DQM4HEP/DQM4ILC/source/AHCAL_BIF/AHCAL/Layers/lcioTestbeam201707.xml&

@@ -6,3 +6,4 @@ killall -g dqm4hep_start_monitor_element_collector
 killall -g dqm4hep_start_run_control_server
 killall -g dqm4hep_start_run_control_interface
 killall -g dqm4hep_start_dqm_monitor_gui
+killall -g dqm4hep_start_lcio_file_service

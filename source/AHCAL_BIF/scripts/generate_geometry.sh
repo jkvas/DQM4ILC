@@ -1,46 +1,45 @@
-#!/bin/sh
-LAYERS=40
-LayerOrder=(1 #module No. of 1st layer
-    2 #module No. of 2nd layer ...
-    3 
-    4
+#!/bin/bash
+LAYERS=38 #edit here for the number of elements in the array
+LayerOrder=(2 #module No. of 1st layer
+    3 #module No. of 2nd layer ...
+    4 
     5
     6
-    7
     8
     9
     10
     11
-    12
     13
     14
+    19
+    21
+    23
+    24
+    25
+    30
+    12
     15
     16
     17
     18
-    19
-    20 
-    21 
     22
-    23
-    24
-    25
-    26
-    27
     28
-    29
-    30 
-    31
+    39
+    1
+    20
+    26
     32
+    40
+    27
+    31
+    38
+    37
+    29
     33
     34
-    35
     36
-    37
-    38
-    39
-    40
 )
+
 ModuleFirstAsics=(
     0 #1st asic# of module 1
     0 #1st asic# of module 2
@@ -87,6 +86,9 @@ ModuleFirstAsics=(
 I_OFFSET=1 ; #where the I starts from
 J_OFFSET=1 
 K_OFFSET=1
+echo "<?xml version=\"1.0\" ?>"
+echo "<dqm4hepGeometryMap>"
+
 for layer in `seq 0 $((LAYERS-1))` 
 do
     module=${LayerOrder[layer]}
@@ -130,3 +132,4 @@ do
     echo "  </layer>"
     echo "" ; #empty new line
 done ; #layer
+echo "</dqm4hepGeometryMap>"

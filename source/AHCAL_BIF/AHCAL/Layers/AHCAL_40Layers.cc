@@ -124,7 +124,7 @@ namespace dqm4hep
     m_minimumBxid    = 2; 
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"MinimumBxid", m_minimumBxid))
     LOG4CXX_INFO( dqmMainLogger , "minimum memcell : " << std::to_string(m_minimumMemcell) );
-    m_minimumMemcell = 2;
+    m_minimumMemcell = 0;
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"MinimumMemcell", m_minimumMemcell))
     LOG4CXX_INFO( dqmMainLogger , "minimum Bxid : " << std::to_string(m_minimumBxid) );
     m_defaultPedestal = 600;
@@ -132,7 +132,6 @@ namespace dqm4hep
     LOG4CXX_INFO( dqmMainLogger , "Default pedestal value : " << std::to_string(m_defaultPedestal) );
 
     std::string m_geometryFilename = "";
-
     RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"GeometryFilename", m_geometryFilename));
     dqm4hep::TiXmlDocument m_geometryFile(m_geometryFilename);
     
