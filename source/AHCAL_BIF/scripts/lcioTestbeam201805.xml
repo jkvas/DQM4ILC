@@ -108,7 +108,7 @@
     <monitorElement ID="MIP_600_l45" path="/Maps/MIP" type="TH2I" name ="MIP_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="MIP_600_l46" path="/Maps/MIP" type="TH2I" name ="MIP_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="MIP_600_l47" path="/Maps/MIP" type="TH2I" name ="MIP_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="MIP_600_l48" path="/Maps/MIP" type="TH2I" name ="MIP_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <!-- <monitorElement ID="MIP_600_l48" path="/Maps/MIP" type="TH2I" name ="MIP_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
 
     <!-- NON-weighted HITmap -->
     <!--#shell script to generate:
@@ -161,7 +161,7 @@
     <monitorElement ID="HIT_600_l45" title="L45 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="HIT_600_l46" title="L46 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="HIT_600_l47" title="L47 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="HIT_600_l48" title="L48 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <!-- <monitorElement ID="HIT_600_l48" title="L48 Hitmap unweighted" path="/Maps/HIT" type="TH2I" name ="HIT_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
   
     <!-- Ped -->
     <!-- #generation script
@@ -217,7 +217,7 @@
     <monitorElement ID="Ped_600_l45" title="Pedestal Layer 45" path="/Maps/Ped" type="TH2I" name ="Ped_600_l45" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="Ped_600_l46" title="Pedestal Layer 46" path="/Maps/Ped" type="TH2I" name ="Ped_600_l46" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
     <monitorElement ID="Ped_600_l47" title="Pedestal Layer 47" path="/Maps/Ped" type="TH2I" name ="Ped_600_l47" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
-    <monitorElement ID="Ped_600_l48" title="Pedestal Layer 48" path="/Maps/Ped" type="TH2I" name ="Ped_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/>
+    <!-- <monitorElement ID="Ped_600_l48" title="Pedestal Layer 48" path="/Maps/Ped" type="TH2I" name ="Ped_600_l48" nBinsX="24" minX="0.5" maxX="24.5" nBinsY="24" minY="0.5" maxY="24.5" resetPolicy="EndOfRun" drawOption="colz"/> -->
     
     <!--  ######################################################  --> 
     <!--  AHCAL temperature plots --> 
