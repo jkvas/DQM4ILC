@@ -47,8 +47,8 @@
             <item path="/Maps/HIT/" name="HIT_600_l36" checked="1" />
             <item path="/Maps/HIT/" name="HIT_600_l37" checked="1" />
             <item path="/Maps/HIT/" name="HIT_600_l38" checked="1" />
-            <item path="/Maps/HIT/" name="HIT_600_l39" checked="1" />
-            <item path="/Maps/HIT/" name="HIT_600_l40" checked="1" />
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l39" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l40" checked="1" /> -->
             <item path="/Maps/MIP/" name="MIP_600_l01" checked="1" />
             <item path="/Maps/MIP/" name="MIP_600_l02" checked="1" />
             <item path="/Maps/MIP/" name="MIP_600_l03" checked="1" />
@@ -87,8 +87,8 @@
             <item path="/Maps/MIP/" name="MIP_600_l36" checked="1" />
             <item path="/Maps/MIP/" name="MIP_600_l37" checked="1" />
             <item path="/Maps/MIP/" name="MIP_600_l38" checked="1" />
-            <item path="/Maps/MIP/" name="MIP_600_l39" checked="1" />
-            <item path="/Maps/MIP/" name="MIP_600_l40" checked="1" />
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l39" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l40" checked="1" /> -->
             <item path="/Maps/Ped/" name="Ped_600_l01" checked="1" />
             <item path="/Maps/Ped/" name="Ped_600_l02" checked="1" />
             <item path="/Maps/Ped/" name="Ped_600_l03" checked="1" />
@@ -127,8 +127,8 @@
             <item path="/Maps/Ped/" name="Ped_600_l36" checked="1" />
             <item path="/Maps/Ped/" name="Ped_600_l37" checked="1" />
             <item path="/Maps/Ped/" name="Ped_600_l38" checked="1" />
-            <item path="/Maps/Ped/" name="Ped_600_l39" checked="1" />
-            <item path="/Maps/Ped/" name="Ped_600_l40" checked="1" />
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l39" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l40" checked="1" /> -->
             <item path="/Temp/Average/" name="TempAverage_00" checked="1" />
             <item path="/Temp/Average/" name="TempAverage_01" checked="1" />
             <item path="/Temp/Average/" name="TempAverage_02" checked="1" />
@@ -318,8 +318,8 @@
 	  <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/HIT" name="HIT_600_l36" /></canvas>
 	  <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/HIT" name="HIT_600_l37" /></canvas>
 	  <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/HIT" name="HIT_600_l38" /></canvas>
-	  <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/HIT" name="HIT_600_l39" /></canvas>
-	  <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/HIT" name="HIT_600_l40" /></canvas>
+	  <!-- <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/HIT" name="HIT_600_l39" /></canvas> -->
+	  <!-- <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/HIT" name="HIT_600_l40" /></canvas> -->
 	</canvasArea>
 	<canvasArea name="MIPs">
 	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l01" /></canvas>
@@ -360,8 +360,8 @@
 	  <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l36" /></canvas>
 	  <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l37" /></canvas>
 	  <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l38" /></canvas>
-	  <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l39" /></canvas>
-	  <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l40" /></canvas>
+	  <!-- <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l39" /></canvas> -->
+	  <!-- <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/MIP" name="MIP_600_l40" /></canvas> -->
 	</canvasArea>
 	<canvasArea name="Ped">
 	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l01" /></canvas>
@@ -402,8 +402,8 @@
 	  <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l36" /></canvas>
 	  <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l37" /></canvas>
 	  <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l38" /></canvas>
-	  <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l39" /></canvas>
-	  <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l40" /></canvas>
+	  <!-- <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l39" /></canvas> -->
+	  <!-- <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Maps/Ped" name="Ped_600_l40" /></canvas> -->
 	</canvasArea>
 	<canvasArea name="Temp">
 	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="Temp/Average" name="TempAverage_00" /></canvas>
