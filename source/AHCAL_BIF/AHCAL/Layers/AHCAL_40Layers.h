@@ -69,6 +69,8 @@ namespace dqm4hep {
     //################################################################
     // temperature 
     DQMMonitorElementPtr m_pTempAverage[C_MAX_LAYERS];
+    DQMMonitorElementPtr m_pTempLayer[C_MAX_LAYERS];
+    DQMMonitorElementPtr m_pTempiLayer[C_MAX_LAYERS][6];
     DQMMonitorElementPtr m_pTempDIF[C_MAX_LAYERS];
     DQMMonitorElementPtr m_pTempPWR[C_MAX_LAYERS];
 

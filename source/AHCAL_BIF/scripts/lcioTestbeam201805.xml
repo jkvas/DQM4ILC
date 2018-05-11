@@ -225,54 +225,54 @@
     <!-- 
 	 for l in `seq -f "%02g" 0 47` ; do shortl=`expr "$l" + "0"` ; echo "    <monitorElement ID=\"TempAverage_${l}\" name=\"TempAverage_${l}\" path=\"/Temp/Average\" type=\"user\" ROOTClass=\"TGraph\" title=\"Temp (Average) on LDA port ${shortl}\" resetPolicy=\"NoReset\" drawOption=\"alp\"/>" ;  done 
     -->
-    <monitorElement ID="TempAverage_00" name="TempAverage_00" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 0" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_01" name="TempAverage_01" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 1" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_02" name="TempAverage_02" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 2" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_03" name="TempAverage_03" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 3" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_04" name="TempAverage_04" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 4" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_05" name="TempAverage_05" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 5" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_06" name="TempAverage_06" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 6" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_07" name="TempAverage_07" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 7" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_08" name="TempAverage_08" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 8" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_09" name="TempAverage_09" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 9" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_10" name="TempAverage_10" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 10" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_11" name="TempAverage_11" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 11" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_12" name="TempAverage_12" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 12" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_13" name="TempAverage_13" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 13" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_14" name="TempAverage_14" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 14" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_15" name="TempAverage_15" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 15" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_16" name="TempAverage_16" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 16" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_17" name="TempAverage_17" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 17" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_18" name="TempAverage_18" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 18" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_19" name="TempAverage_19" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 19" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_20" name="TempAverage_20" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 20" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_21" name="TempAverage_21" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 21" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_22" name="TempAverage_22" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 22" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_23" name="TempAverage_23" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 23" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_24" name="TempAverage_24" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 24" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_25" name="TempAverage_25" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 25" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_26" name="TempAverage_26" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 26" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_27" name="TempAverage_27" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 27" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_28" name="TempAverage_28" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 28" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_29" name="TempAverage_29" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 29" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_30" name="TempAverage_30" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 30" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_31" name="TempAverage_31" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 31" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_32" name="TempAverage_32" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 32" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_33" name="TempAverage_33" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 33" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_34" name="TempAverage_34" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 34" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_35" name="TempAverage_35" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 35" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_36" name="TempAverage_36" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 36" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_37" name="TempAverage_37" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 37" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_38" name="TempAverage_38" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 38" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_39" name="TempAverage_39" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 39" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_40" name="TempAverage_40" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 40" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_41" name="TempAverage_41" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 41" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_42" name="TempAverage_42" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 42" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_43" name="TempAverage_43" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 43" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_44" name="TempAverage_44" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 44" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_45" name="TempAverage_45" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 45" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_46" name="TempAverage_46" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 46" resetPolicy="NoReset" drawOption="alp"/>
-    <monitorElement ID="TempAverage_47" name="TempAverage_47" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 47" resetPolicy="NoReset" drawOption="alp"/>
+    <!-- <monitorElement ID="TempAverage_00" name="TempAverage_00" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 0" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_01" name="TempAverage_01" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 1" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_02" name="TempAverage_02" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 2" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_03" name="TempAverage_03" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 3" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_04" name="TempAverage_04" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 4" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_05" name="TempAverage_05" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 5" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_06" name="TempAverage_06" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 6" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_07" name="TempAverage_07" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 7" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_08" name="TempAverage_08" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 8" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_09" name="TempAverage_09" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 9" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_10" name="TempAverage_10" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 10" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_11" name="TempAverage_11" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 11" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_12" name="TempAverage_12" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 12" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_13" name="TempAverage_13" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 13" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_14" name="TempAverage_14" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 14" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_15" name="TempAverage_15" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 15" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_16" name="TempAverage_16" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 16" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_17" name="TempAverage_17" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 17" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_18" name="TempAverage_18" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 18" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_19" name="TempAverage_19" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 19" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_20" name="TempAverage_20" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 20" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_21" name="TempAverage_21" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 21" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_22" name="TempAverage_22" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 22" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_23" name="TempAverage_23" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 23" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_24" name="TempAverage_24" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 24" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_25" name="TempAverage_25" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 25" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_26" name="TempAverage_26" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 26" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_27" name="TempAverage_27" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 27" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_28" name="TempAverage_28" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 28" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_29" name="TempAverage_29" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 29" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_30" name="TempAverage_30" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 30" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_31" name="TempAverage_31" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 31" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_32" name="TempAverage_32" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 32" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_33" name="TempAverage_33" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 33" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_34" name="TempAverage_34" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 34" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_35" name="TempAverage_35" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 35" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_36" name="TempAverage_36" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 36" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_37" name="TempAverage_37" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 37" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_38" name="TempAverage_38" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 38" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_39" name="TempAverage_39" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 39" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_40" name="TempAverage_40" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 40" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_41" name="TempAverage_41" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 41" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_42" name="TempAverage_42" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 42" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_43" name="TempAverage_43" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 43" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_44" name="TempAverage_44" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 44" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_45" name="TempAverage_45" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 45" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_46" name="TempAverage_46" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 46" resetPolicy="NoReset" drawOption="alp"/> -->
+    <!-- <monitorElement ID="TempAverage_47" name="TempAverage_47" path="/Temp/Average" type="user" ROOTClass="TGraph" title="Temp (Average) on LDA port 47" resetPolicy="NoReset" drawOption="alp"/> -->
     
     <!-- DIF-->
     <!-- 
@@ -379,5 +379,54 @@
     <monitorElement ID="TempPWR_45" name="TempPWR_45" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 45" resetPolicy="NoReset" drawOption="alp"/>
     <monitorElement ID="TempPWR_46" name="TempPWR_46" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 46" resetPolicy="NoReset" drawOption="alp"/>
     <monitorElement ID="TempPWR_47" name="TempPWR_47" path="/Temp/PWR" type="user" ROOTClass="TGraph" title="Temp (PWR) on LDA port 47" resetPolicy="NoReset" drawOption="alp"/>
+
+    <monitorElement ID="TempLayer_00" name="TempLayer_00" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 0" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_01" name="TempLayer_01" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 1" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_02" name="TempLayer_02" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 2" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_03" name="TempLayer_03" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 3" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_04" name="TempLayer_04" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 4" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_05" name="TempLayer_05" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 5" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_06" name="TempLayer_06" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 6" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_07" name="TempLayer_07" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 7" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_08" name="TempLayer_08" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 8" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_09" name="TempLayer_09" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 9" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_10" name="TempLayer_10" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 10" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_11" name="TempLayer_11" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 11" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_12" name="TempLayer_12" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 12" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_13" name="TempLayer_13" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 13" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_14" name="TempLayer_14" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 14" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_15" name="TempLayer_15" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 15" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_16" name="TempLayer_16" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 16" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_17" name="TempLayer_17" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 17" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_18" name="TempLayer_18" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 18" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_19" name="TempLayer_19" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 19" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_20" name="TempLayer_20" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 20" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_21" name="TempLayer_21" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 21" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_22" name="TempLayer_22" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 22" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_23" name="TempLayer_23" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 23" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_24" name="TempLayer_24" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 24" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_25" name="TempLayer_25" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 25" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_26" name="TempLayer_26" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 26" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_27" name="TempLayer_27" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 27" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_28" name="TempLayer_28" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 28" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_29" name="TempLayer_29" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 29" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_30" name="TempLayer_30" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 30" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_31" name="TempLayer_31" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 31" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_32" name="TempLayer_32" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 32" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_33" name="TempLayer_33" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 33" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_34" name="TempLayer_34" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 34" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_35" name="TempLayer_35" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 35" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_36" name="TempLayer_36" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 36" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_37" name="TempLayer_37" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 37" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_38" name="TempLayer_38" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 38" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_39" name="TempLayer_39" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 39" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_40" name="TempLayer_40" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 40" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_41" name="TempLayer_41" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 41" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_42" name="TempLayer_42" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 42" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_43" name="TempLayer_43" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 43" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_44" name="TempLayer_44" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 44" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_45" name="TempLayer_45" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 45" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_46" name="TempLayer_46" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 46" resetPolicy="NoReset" drawOption="ap"/>
+    <monitorElement ID="TempLayer_47" name="TempLayer_47" path="" type="user" ROOTClass="TMultiGraph" title="Temp (Layer) on LDA port 47" resetPolicy="NoReset" drawOption="ap"/>
   </module>
 </dqm4hep>

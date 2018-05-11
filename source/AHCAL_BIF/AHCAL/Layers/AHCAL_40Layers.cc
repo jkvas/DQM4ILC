@@ -60,6 +60,8 @@
 // -- root headers
 #include "TRandom.h"
 #include "TString.h" // Added by Tom for TString handling
+#include "TMultiGraph.h"
+#include "TList.h"
 
 //using namespace lcio;
 
@@ -96,12 +98,12 @@ namespace dqm4hep
 
     // ########################################################################################################################################
     // TEMPERATURE
-    for (int i=0; i<48; i++){
-      m_pTempAverage[i] = NULL;
-      char elementString[100];
-      sprintf(elementString, "TempAverage_%02d", i );
-      RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempAverage[i]));
-    }
+    // for (int i=0; i<48; i++){
+    //   m_pTempAverage[i] = NULL;
+    //   char elementString[100];
+    //   sprintf(elementString, "TempAverage_%02d", i );
+    //   RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempAverage[i]));
+    // }
 
     // DIF
     for (int i=0; i<48; i++){
@@ -118,6 +120,14 @@ namespace dqm4hep
       sprintf(elementString, "TempPWR_%02d", i );
       RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempPWR[i]));
     }
+
+    // book xml handler for layer temp multygraphs
+
+    // for (int i=0; i<48; i++){
+    //   char elementString[100];
+    //   sprintf(elementString, "TempLayer_%02d", i );
+    //   RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempLayer[i]));
+    // }
 
     // ####################################################################################################################################
     // AHCAL section
@@ -197,6 +207,45 @@ namespace dqm4hep
     DQMModuleApi::cd(this);
     DQMModuleApi::ls(this, true);
     LOG4CXX_INFO( dqmMainLogger , "Module : " << getName() << " -- init() finished" );
+
+    //===== Temperature multigraphs =====
+
+    for (int i=0; i<48; i++){
+      for (int j = 0; j < 6; j++){
+        m_pTempiLayer[i][j] = NULL;
+        char elementString[100];
+        sprintf(elementString, "Layer_%02d_Sensor_%01d", i, j);
+        RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMModuleApi::bookObject(this, m_pTempiLayer[i][j], std::string(elementString), "", allocator_helper<TObject, TGraph>()));
+      }
+    }
+    for (int i=0; i<48; i++){
+      m_pTempLayer[i] = NULL;
+      char elementString[100];
+      sprintf(elementString, "TempLayer_%02d", i );
+      // char title[100];
+      // sprintf(elementString, "Temp (Layer) on LDA port %02d", i );
+      RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMModuleApi::bookObject(this, m_pTempLayer[i], std::string(elementString), "", allocator_helper<TObject, TMultiGraph>()));    
+      sprintf(elementString, "Temp (Layer) on LDA port %02d", i );
+      m_pTempLayer[i]->setDrawOption("AP");
+      m_pTempLayer[i]->setTitle(std::string(elementString));
+    }
+
+
+    for(int i = 0; i < 48; i++){
+       for (int j = 0; j < 6; j++){
+	 
+	 m_pTempiLayer[i][j]->get<TGraph>()->SetLineWidth(3);
+	 
+	 if (j < 4) {
+	   m_pTempiLayer[i][j]->get<TGraph>()->SetLineColor(j + 1);
+	 } else m_pTempiLayer[i][j]->get<TGraph>()->SetLineColor(j + 2);
+	   
+	 
+	  
+	 m_pTempLayer[i]->get<TMultiGraph>()->Add(m_pTempiLayer[i][j]->get<TGraph>(), "PL");
+       }
+    }
+
     return STATUS_CODE_SUCCESS;
   }
 
@@ -257,6 +306,23 @@ namespace dqm4hep
 	      tempav += read_t;
 	    }  
 	  }
+	  
+	  TObject* iObj;
+	  TGraph* iGraph;
+	  Float_t temp;
+
+	  for(int SensorNr = 0; SensorNr < 6; SensorNr++) { //indexes 2..7                               
+            int read_t = pTempRaw->getIntVal(2 + SensorNr);
+            if((read_t < 900) && (read_t > 100)) {
+	      temp = (1.0*read_t)/10.0;
+	      //char grname[20];
+	      //sprintf(grname, "Layer_%02d_Sensor_%01d", ldaPortNumber, SensorNr);
+	      iObj = m_pTempLayer[ldaPortNumber]->get<TMultiGraph>()->GetListOfGraphs()->At(SensorNr); 
+              iGraph = (TGraph*)iObj;
+	      Int_t pointID = iGraph->GetN();
+              iGraph->SetPoint(pointID, pointID, (temp + SensorNr/100));
+            }
+          }
 	  if ((tdif>10) && (tdif < 90)) {
 	    Int_t pointID = m_pTempDIF[ldaPortNumber]->get<TGraph>()->GetN();
 	    m_pTempDIF[ldaPortNumber]->get<TGraph>()->SetPoint(pointID, pointID, tdif);
@@ -265,14 +331,15 @@ namespace dqm4hep
 	    Int_t pointID = m_pTempPWR[ldaPortNumber]->get<TGraph>()->GetN();
 	    m_pTempPWR[ldaPortNumber]->get<TGraph>()->SetPoint(pointID, pointID, tpwr);
 	  }
-	  if (ntemps>0) {
-	    tempav=((1.0 * tempav)/ntemps)/10;
-	    if ((tempav > 10.0) && (tempav < 90.0)) {
-	      Int_t pointID = m_pTempAverage[ldaPortNumber]->get<TGraph>()->GetN();
-	      m_pTempAverage[ldaPortNumber]->get<TGraph>()->SetPoint(pointID, pointID, tav);
-	    }
-	  }
-	}//for elements in collection
+
+	  // if (ntemps>0) {
+	  //   tempav=((1.0 * tempav)/ntemps)/10;
+	  //   if ((tempav > 10.0) && (tempav < 90.0)) {
+	  //     Int_t pointID = m_pTempAverage[ldaPortNumber]->get<TGraph>()->GetN();
+	  //     m_pTempAverage[ldaPortNumber]->get<TGraph>()->SetPoint(pointID, pointID, tempav);
+	  //   }
+	  // }
+	}//for elements in collection	
       } //tempsensor collection
       
       // #####################################################################################################################
@@ -345,6 +412,7 @@ namespace dqm4hep
 	}// if LCGENERICOBJECT
       }//if collectionName == EUDAQDataScCAL
     }//for collections
+
     return STATUS_CODE_SUCCESS;
   }
 
@@ -363,7 +431,7 @@ namespace dqm4hep
 
     // run all quality tests on all monitor elements
     RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMModuleApi::runQualityTests(this));
-
+    
     return STATUS_CODE_SUCCESS;
   }
 
