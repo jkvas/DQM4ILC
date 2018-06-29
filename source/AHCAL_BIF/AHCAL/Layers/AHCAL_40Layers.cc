@@ -129,6 +129,14 @@ namespace dqm4hep
     //   RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTempLayer[i]));
     // }
 
+    // LDA Time Stamp
+    
+    m_pTimeStamp = NULL;
+    char elementString[100];
+    sprintf(elementString, "TimeStamp");
+    RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, DQMXmlHelper::bookMonitorElement(this, xmlHandle, std::string(elementString), m_pTimeStamp))
+    
+
     // ####################################################################################################################################
     // AHCAL section
     m_minimumBxid    = 2; 
@@ -266,11 +274,22 @@ namespace dqm4hep
     int NChannelsIndex = 4;
     int TDCFirstChannelIndex = 5;
     int ADCFirstChannelIndex = TDCFirstChannelIndex+36;
+
+    int TSLowIndex = 5;
+    int TSHighIndex = 6;
+
     EVENT::LCEvent *pLCEvent = pEvent->getEvent<EVENT::LCEvent>();
+    int EvtNr = pLCEvent->getEventNumber();
     if(!pLCEvent) return STATUS_CODE_FAILURE;
     if(m_dumpEvent) UTIL::LCTOOLS::dumpEvent(pLCEvent);
     const std::vector<std::string> *pCollectionNames = pLCEvent->getCollectionNames();
     
+    //Time stamp variables
+
+    //unsigned int ts_lu, ts_h_lu;
+    int ts;
+    
+
     //temperature variables
     float tdif;
     float tpwr;
@@ -341,9 +360,39 @@ namespace dqm4hep
 	  // }
 	}//for elements in collection	
       } //tempsensor collection
-      
+
       // #####################################################################################################################
       // AHCAL section
+
+      if(collectionName=="EUDAQDataLDATS") {
+	if(pLCCollection->getTypeName() == EVENT::LCIO::LCGENERICOBJECT) {
+
+	  // int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");
+	  // if(daqquality==1) goodDAQ++; else badDAQ++;
+	  const int nElements = pLCCollection->getNumberOfElements();
+	   for(int e = 0 ; e < nElements ; e++) {
+
+	     const EVENT::LCGenericObject *const pTS = dynamic_cast<const EVENT::LCGenericObject *const>(pLCCollection->getElementAt(e)); 	  
+
+	     if(NULL == pTS) continue;
+
+	     const int ts_l = pTS->getIntVal(TSLowIndex);
+	     const int ts_h = pTS->getIntVal(TSHighIndex);
+
+	     //=== conversion 2 parts of raw variable to time stamp ===
+	     const uint64_t ts_lu = (uint64_t)ts_l;
+	     const uint64_t ts_hu = (uint64_t)ts_h << 32;
+	     ts = ts_hu|ts_lu;	     
+	     //--------------------------------------------------------
+
+	     //=== Filling graph ===
+	     Int_t pointID = m_pTimeStamp->get<TGraph>()->GetN();
+	     m_pTimeStamp->get<TGraph>()->SetPoint(pointID, EvtNr, ts);
+
+	   }
+	}
+      }      
+
       if(collectionName=="EUDAQDataScCAL") {
 	if(pLCCollection->getTypeName() == EVENT::LCIO::LCGENERICOBJECT) {
 	  int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");

@@ -74,6 +74,11 @@ namespace dqm4hep {
     DQMMonitorElementPtr m_pTempDIF[C_MAX_LAYERS];
     DQMMonitorElementPtr m_pTempPWR[C_MAX_LAYERS];
 
+    //################################################################
+    // Time stamps
+
+    DQMMonitorElementPtr m_pTimeStamp;
+
     // ###########################################################################3
     // AHCAL maps
     //3D

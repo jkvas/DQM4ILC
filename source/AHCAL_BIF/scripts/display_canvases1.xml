@@ -324,6 +324,7 @@
             <item path="/" name="TempLayer_46" checked="1" />
             <item path="/" name="TempLayer_47" checked="1" />
             
+	    <item path="/LDA/" name="TimeStamp" checked="1" />
           </module>
         </collector>
       </meView>
@@ -655,7 +656,10 @@
 	  <canvas x="888" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="" name="TempLayer_46" /></canvas>
 	  <canvas x="1036" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="" name="TempLayer_47" /></canvas>
 	</canvasArea>
-
+	<canvasArea name="LDA">
+	  <canvas x="0" y="0" w="656" h="470"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_40Layers" path="LDA" name="TimeStamp" /></canvas>
+	</canvasArea> 
+	
 	
       </canvasView>
     </view>

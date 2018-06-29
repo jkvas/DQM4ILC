@@ -34,6 +34,12 @@
     <monitorElement ID="DAQerrors" name="DAQerrors" path="/DAQquality" type="user" ROOTClass="TGraph" title="Ratio of ROC with DAQ errors vs chipID" resetPolicy="EndOfRun" drawOption="ap*"/>
 
     <!--  ######################################################  --> 
+    <!--  AHCAL LDA timestamp graph--> 
+    <!--  ######################################################  --> 
+
+    <monitorElement ID="TimeStamp" name="TimeStamp" path="/LDA/" type="user" ROOTClass="TGraph" title="Timestamp vs Event number" resetPolicy="NoReset" drawOption="alp"/>
+
+    <!--  ######################################################  --> 
     <!-- 3D -->
     <!--  ######################################################  --> 
     <monitorElement ID="MIP_600" path="/Maps/3D" type="TH3I" 
