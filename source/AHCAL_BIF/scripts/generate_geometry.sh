@@ -1,6 +1,7 @@
 #!/bin/bash
-LAYERS=38 #edit here for the number of elements in the array
-LayerOrder=(2 #module No. of 1st layer
+LAYERS=52 #edit here for the number of elements in the array
+LayerOrder=(42  #module No. of 1st layer
+    2
     3 #module No. of 2nd layer ...
     4 
     5
@@ -37,7 +38,21 @@ LayerOrder=(2 #module No. of 1st layer
     29
     33
     34
+    41  #tokyo
     36
+    43 #tokyo
+    44
+    45
+    46
+    47
+    48
+    49
+    50
+    51
+    52
+    53
+    54
+
 )
 
 ModuleFirstAsics=(
@@ -81,6 +96,20 @@ ModuleFirstAsics=(
     0 #1st asic# of module 38
     0 #1st asic# of module 39
     0 #1st asic# of module 40
+    0 #1st asic# of module 41
+    -12 #1st asic# of module 42 0-3
+    0 #1st asic# of module 43  12-15
+    -12 #1st asic# of module 44  0-3
+    -8 #1st asic# of module 45  4-7
+    -4 #1st asic# of module 46  8-11
+    -8 #1st asic# of module 47  4-7
+    -4 #1st asic# of module 48  8-11
+    -12 #1st asic# of module 49  0-3
+    -4 #1st asic# of module 50  8-11
+    -8 #1st asic# of module 51  4-7
+    0 #1st asic# of module 52  12-15
+    0 #1st asic# of module 53  12-15
+    -4 #1st asic# of module 54  8-11
 )
 
 I_OFFSET=1 ; #where the I starts from
@@ -104,14 +133,14 @@ do
 	    10|11|14|15) ASICX=0 ;;
 	esac;
 	case $asic in 
-	    0|8)ASICY=18;;
-	    1|9)ASICY=12;;
-	    2|10)ASICY=23;;
-	    3|11)ASICY=17;;
-	    4|12)ASICY=6;;
-	    5|13)ASICY=0;;
-	    6|14)ASICY=11;;
-	    7|15)ASICY=5;;
+	    0|8) ASICY=18;;
+	    1|9) ASICY=12;;
+	    2|10) ASICY=23;;
+	    3|11) ASICY=17;;
+	    4|12) ASICY=6;;
+	    5|13) ASICY=0;;
+	    6|14) ASICY=11;;
+	    7|15) ASICY=5;;
 	esac;
 	case $asic in 
 	    0|1|4|5|8|9|12|13)ASICYDIRECTION=1;;
