@@ -1,6 +1,6 @@
 #!/bin/bash
 #generated text should be placed in the <canvasView> tag
-XSIZE=156; YSIZE=170; XOVERLAP=8; YOVERLAP=15; CANVASES=52; XCANVASES=10
+XSIZE=156; YSIZE=170; XOVERLAP=8; YOVERLAP=15; CANVASES=39; XCANVASES=10
 echo " <canvasArea name=\"HITs\">"
 for c in `seq 0 $((CANVASES-1))` ; do
     X=$(( (c % XCANVASES) * (XSIZE - XOVERLAP) ));    Y=$(( (c / XCANVASES) * (YSIZE - YOVERLAP) ));    L=`printf "%02d" $((c+1))`
