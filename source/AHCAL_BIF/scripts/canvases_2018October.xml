@@ -1,0 +1,1065 @@
+<?xml version="1.0" ?>
+<dqm4hep>
+  <monitoring>
+    <dimDnsNode value="localhost" />
+    <view>
+      <meView>
+        <collector name="ahcal_me_collector">
+          <module name="myAHCAL_96Layers">
+            <item path="/DAQquality/" name="DAQerrors" checked="1" />
+            <item path="/Maps/3D/" name="MIP_600" checked="1" />
+            <item path="/Maps/3D/" name="Ped_600" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l01" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l02" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l03" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l04" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l05" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l06" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l07" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l08" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l09" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l10" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l11" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l12" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l13" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l14" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l15" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l16" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l17" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l18" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l19" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l20" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l21" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l22" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l23" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l24" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l25" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l26" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l27" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l28" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l29" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l30" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l31" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l32" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l33" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l34" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l35" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l36" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l37" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l38" checked="1" />
+            <item path="/Maps/HIT/" name="HIT_600_l39" checked="1" />
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l40" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l41" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l42" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l43" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l44" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l45" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l46" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l47" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l48" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l49" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l50" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l51" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l52" checked="1" /> -->
+            <!-- <item path="/Maps/HIT/" name="HIT_600_l53" checked="1" /> -->
+
+            <item path="/Maps/MIP/" name="MIP_600_l01" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l02" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l03" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l04" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l05" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l06" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l07" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l08" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l09" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l10" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l11" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l12" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l13" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l14" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l15" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l16" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l17" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l18" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l19" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l20" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l21" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l22" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l23" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l24" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l25" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l26" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l27" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l28" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l29" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l30" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l31" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l32" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l33" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l34" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l35" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l36" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l37" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l38" checked="1" />
+            <item path="/Maps/MIP/" name="MIP_600_l39" checked="1" />
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l40" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l41" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l42" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l43" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l44" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l45" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l46" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l47" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l48" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l49" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l50" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l51" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l52" checked="1" /> -->
+            <!-- <item path="/Maps/MIP/" name="MIP_600_l53" checked="1" /> -->
+
+            <item path="/Maps/Ped/" name="Ped_600_l01" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l02" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l03" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l04" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l05" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l06" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l07" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l08" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l09" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l10" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l11" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l12" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l13" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l14" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l15" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l16" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l17" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l18" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l19" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l20" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l21" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l22" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l23" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l24" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l25" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l26" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l27" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l28" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l29" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l30" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l31" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l32" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l33" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l34" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l35" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l36" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l37" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l38" checked="1" />
+            <item path="/Maps/Ped/" name="Ped_600_l39" checked="1" />
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l40" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l41" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l42" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l43" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l44" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l45" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l46" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l47" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l48" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l49" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l50" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l51" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l52" checked="1" /> -->
+            <!-- <item path="/Maps/Ped/" name="Ped_600_l53" checked="1" /> -->
+	    
+            <!-- <item path="/Temp/Average/" name="TempAverage_00" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_01" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_02" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_03" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_04" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_05" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_06" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_07" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_08" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_09" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_10" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_11" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_12" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_13" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_14" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_15" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_16" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_17" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_18" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_19" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_20" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_21" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_22" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_23" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_24" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_25" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_26" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_27" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_28" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_29" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_30" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_31" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_32" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_33" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_34" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_35" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_36" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_37" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_38" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_39" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_40" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_41" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_42" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_43" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_44" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_45" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_46" checked="1" /> -->
+            <!-- <item path="/Temp/Average/" name="TempAverage_47" checked="1" /> -->
+            
+	    <item path="/Temp/DIF/" name="TempDIF_00" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_01" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_02" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_03" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_04" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_05" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_06" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_07" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_08" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_09" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_10" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_11" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_12" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_13" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_14" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_15" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_16" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_17" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_18" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_19" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_20" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_21" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_22" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_23" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_24" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_25" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_26" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_27" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_28" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_29" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_30" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_31" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_32" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_33" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_34" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_35" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_36" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_37" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_38" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_39" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_40" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_41" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_42" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_43" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_44" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_45" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_46" checked="1" />
+            <item path="/Temp/DIF/" name="TempDIF_47" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_00" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_01" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_02" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_03" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_04" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_05" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_06" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_07" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_08" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_09" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_10" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_11" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_12" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_13" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_14" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_15" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_16" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_17" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_18" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_19" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_20" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_21" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_22" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_23" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_24" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_25" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_26" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_27" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_28" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_29" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_30" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_31" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_32" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_33" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_34" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_35" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_36" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_37" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_38" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_39" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_40" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_41" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_42" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_43" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_44" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_45" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_46" checked="1" />
+            <item path="/Temp/PWR/" name="TempPWR_47" checked="1" />
+
+	    <item path="/" name="TempLayer_00" checked="1" />
+            <item path="/" name="TempLayer_01" checked="1" />
+            <item path="/" name="TempLayer_02" checked="1" />
+            <item path="/" name="TempLayer_03" checked="1" />
+            <item path="/" name="TempLayer_04" checked="1" />
+            <item path="/" name="TempLayer_05" checked="1" />
+            <item path="/" name="TempLayer_06" checked="1" />
+            <item path="/" name="TempLayer_07" checked="1" />
+            <item path="/" name="TempLayer_08" checked="1" />
+            <item path="/" name="TempLayer_09" checked="1" />
+            <item path="/" name="TempLayer_10" checked="1" />
+            <item path="/" name="TempLayer_11" checked="1" />
+            <item path="/" name="TempLayer_12" checked="1" />
+            <item path="/" name="TempLayer_13" checked="1" />
+            <item path="/" name="TempLayer_14" checked="1" />
+            <item path="/" name="TempLayer_15" checked="1" />
+            <item path="/" name="TempLayer_16" checked="1" />
+            <item path="/" name="TempLayer_17" checked="1" />
+            <item path="/" name="TempLayer_18" checked="1" />
+            <item path="/" name="TempLayer_19" checked="1" />
+            <item path="/" name="TempLayer_20" checked="1" />
+            <item path="/" name="TempLayer_21" checked="1" />
+            <item path="/" name="TempLayer_22" checked="1" />
+            <item path="/" name="TempLayer_23" checked="1" />
+            <item path="/" name="TempLayer_24" checked="1" />
+            <item path="/" name="TempLayer_25" checked="1" />
+            <item path="/" name="TempLayer_26" checked="1" />
+            <item path="/" name="TempLayer_27" checked="1" />
+            <item path="/" name="TempLayer_28" checked="1" />
+            <item path="/" name="TempLayer_29" checked="1" />
+            <item path="/" name="TempLayer_30" checked="1" />
+            <item path="/" name="TempLayer_31" checked="1" />
+            <item path="/" name="TempLayer_32" checked="1" />
+            <item path="/" name="TempLayer_33" checked="1" />
+            <item path="/" name="TempLayer_34" checked="1" />
+            <item path="/" name="TempLayer_35" checked="1" />
+            <item path="/" name="TempLayer_36" checked="1" />
+            <item path="/" name="TempLayer_37" checked="1" />
+            <item path="/" name="TempLayer_38" checked="1" />
+            <item path="/" name="TempLayer_39" checked="1" />
+            <item path="/" name="TempLayer_40" checked="1" />
+            <item path="/" name="TempLayer_41" checked="1" />
+            <item path="/" name="TempLayer_42" checked="1" />
+            <item path="/" name="TempLayer_43" checked="1" />
+            <item path="/" name="TempLayer_44" checked="1" />
+            <item path="/" name="TempLayer_45" checked="1" />
+            <item path="/" name="TempLayer_46" checked="1" />
+            <item path="/" name="TempLayer_47" checked="1" />
+            
+          </module>
+        </collector>
+      </meView>
+
+      <canvasView>
+	<canvasArea name="HITs">
+	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l01" /></canvas>
+	  <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l02" /></canvas>
+	  <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l03" /></canvas>
+	  <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l04" /></canvas>
+	  <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l05" /></canvas>
+	  <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l06" /></canvas>
+	  <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l07" /></canvas>
+	  <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l08" /></canvas>
+	  <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l09" /></canvas>
+	  <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l10" /></canvas>
+	  <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l11" /></canvas>
+	  <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l12" /></canvas>
+	  <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l13" /></canvas>
+	  <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l14" /></canvas>
+	  <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l15" /></canvas>
+	  <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l16" /></canvas>
+	  <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l17" /></canvas>
+	  <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l18" /></canvas>
+	  <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l19" /></canvas>
+	  <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l20" /></canvas>
+	  <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l21" /></canvas>
+	  <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l22" /></canvas>
+	  <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l23" /></canvas>
+	  <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l24" /></canvas>
+	  <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l25" /></canvas>
+	  <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l26" /></canvas>
+	  <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l27" /></canvas>
+	  <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l28" /></canvas>
+	  <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l29" /></canvas>
+	  <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l30" /></canvas>
+	  <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l31" /></canvas>
+	  <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l32" /></canvas>
+	  <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l33" /></canvas>
+	  <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l34" /></canvas>
+	  <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l35" /></canvas>
+	  <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l36" /></canvas>
+	  <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l37" /></canvas>
+	  <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l38" /></canvas>
+	  <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l39" /></canvas>
+	</canvasArea>
+	<canvasArea name="MIPs">
+	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l01" /></canvas>
+	  <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l02" /></canvas>
+	  <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l03" /></canvas>
+	  <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l04" /></canvas>
+	  <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l05" /></canvas>
+	  <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l06" /></canvas>
+	  <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l07" /></canvas>
+	  <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l08" /></canvas>
+	  <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l09" /></canvas>
+	  <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l10" /></canvas>
+	  <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l11" /></canvas>
+	  <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l12" /></canvas>
+	  <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l13" /></canvas>
+	  <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l14" /></canvas>
+	  <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l15" /></canvas>
+	  <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l16" /></canvas>
+	  <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l17" /></canvas>
+	  <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l18" /></canvas>
+	  <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l19" /></canvas>
+	  <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l20" /></canvas>
+	  <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l21" /></canvas>
+	  <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l22" /></canvas>
+	  <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l23" /></canvas>
+	  <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l24" /></canvas>
+	  <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l25" /></canvas>
+	  <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l26" /></canvas>
+	  <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l27" /></canvas>
+	  <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l28" /></canvas>
+	  <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l29" /></canvas>
+	  <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l30" /></canvas>
+	  <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l31" /></canvas>
+	  <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l32" /></canvas>
+	  <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l33" /></canvas>
+	  <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l34" /></canvas>
+	  <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l35" /></canvas>
+	  <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l36" /></canvas>
+	  <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l37" /></canvas>
+	  <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l38" /></canvas>
+	  <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l39" /></canvas>
+	</canvasArea>
+	<canvasArea name="Ped">
+	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l01" /></canvas>
+	  <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l02" /></canvas>
+	  <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l03" /></canvas>
+	  <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l04" /></canvas>
+	  <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l05" /></canvas>
+	  <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l06" /></canvas>
+	  <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l07" /></canvas>
+	  <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l08" /></canvas>
+	  <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l09" /></canvas>
+	  <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l10" /></canvas>
+	  <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l11" /></canvas>
+	  <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l12" /></canvas>
+	  <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l13" /></canvas>
+	  <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l14" /></canvas>
+	  <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l15" /></canvas>
+	  <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l16" /></canvas>
+	  <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l17" /></canvas>
+	  <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l18" /></canvas>
+	  <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l19" /></canvas>
+	  <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l20" /></canvas>
+	  <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l21" /></canvas>
+	  <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l22" /></canvas>
+	  <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l23" /></canvas>
+	  <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l24" /></canvas>
+	  <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l25" /></canvas>
+	  <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l26" /></canvas>
+	  <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l27" /></canvas>
+	  <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l28" /></canvas>
+	  <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l29" /></canvas>
+	  <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l30" /></canvas>
+	  <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l31" /></canvas>
+	  <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l32" /></canvas>
+	  <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l33" /></canvas>
+	  <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l34" /></canvas>
+	  <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l35" /></canvas>
+	  <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l36" /></canvas>
+	  <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l37" /></canvas>
+	  <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l38" /></canvas>
+	  <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l39" /></canvas>
+	</canvasArea>
+	<canvasArea name="Temp">
+	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_00" /></canvas>
+	  <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_01" /></canvas>
+	  <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_02" /></canvas>
+	  <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_03" /></canvas>
+	  <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_04" /></canvas>
+	  <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_05" /></canvas>
+	  <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_06" /></canvas>
+	  <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_07" /></canvas>
+	  <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_08" /></canvas>
+	  <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_09" /></canvas>
+	  <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_10" /></canvas>
+	  <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_11" /></canvas>
+	  <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_12" /></canvas>
+	  <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_13" /></canvas>
+	  <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_14" /></canvas>
+	  <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_15" /></canvas>
+	  <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_16" /></canvas>
+	  <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_17" /></canvas>
+	  <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_18" /></canvas>
+	  <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_19" /></canvas>
+	  <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_20" /></canvas>
+	  <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_21" /></canvas>
+	  <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_22" /></canvas>
+	  <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_23" /></canvas>
+	  <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_24" /></canvas>
+	  <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_25" /></canvas>
+	  <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_26" /></canvas>
+	  <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_27" /></canvas>
+	  <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_28" /></canvas>
+	  <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_29" /></canvas>
+	  <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_30" /></canvas>
+	  <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_31" /></canvas>
+	  <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_32" /></canvas>
+	  <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_33" /></canvas>
+	  <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_34" /></canvas>
+	  <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_35" /></canvas>
+	  <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_36" /></canvas>
+	  <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_37" /></canvas>
+	  <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_38" /></canvas>
+	  <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_39" /></canvas>
+	  <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_40" /></canvas>
+	  <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_41" /></canvas>
+	  <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_42" /></canvas>
+	  <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_43" /></canvas>
+	  <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_44" /></canvas>
+	  <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_45" /></canvas>
+	  <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_46" /></canvas>
+	  <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_47" /></canvas>
+	</canvasArea>
+	<canvasArea name="PWR">
+	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_00" /></canvas>
+	  <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_01" /></canvas>
+	  <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_02" /></canvas>
+	  <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_03" /></canvas>
+	  <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_04" /></canvas>
+	  <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_05" /></canvas>
+	  <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_06" /></canvas>
+	  <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_07" /></canvas>
+	  <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_08" /></canvas>
+	  <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_09" /></canvas>
+	  <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_10" /></canvas>
+	  <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_11" /></canvas>
+	  <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_12" /></canvas>
+	  <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_13" /></canvas>
+	  <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_14" /></canvas>
+	  <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_15" /></canvas>
+	  <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_16" /></canvas>
+	  <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_17" /></canvas>
+	  <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_18" /></canvas>
+	  <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_19" /></canvas>
+	  <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_20" /></canvas>
+	  <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_21" /></canvas>
+	  <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_22" /></canvas>
+	  <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_23" /></canvas>
+	  <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_24" /></canvas>
+	  <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_25" /></canvas>
+	  <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_26" /></canvas>
+	  <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_27" /></canvas>
+	  <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_28" /></canvas>
+	  <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_29" /></canvas>
+	  <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_30" /></canvas>
+	  <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_31" /></canvas>
+	  <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_32" /></canvas>
+	  <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_33" /></canvas>
+	  <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_34" /></canvas>
+	  <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_35" /></canvas>
+	  <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_36" /></canvas>
+	  <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_37" /></canvas>
+	  <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_38" /></canvas>
+	  <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_39" /></canvas>
+	  <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_40" /></canvas>
+	  <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_41" /></canvas>
+	  <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_42" /></canvas>
+	  <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_43" /></canvas>
+	  <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_44" /></canvas>
+	  <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_45" /></canvas>
+	  <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_46" /></canvas>
+	  <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_47" /></canvas>
+	</canvasArea>
+	<canvasArea name="DIF">
+	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_00" /></canvas>
+	  <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_01" /></canvas>
+	  <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_02" /></canvas>
+	  <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_03" /></canvas>
+	  <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_04" /></canvas>
+	  <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_05" /></canvas>
+	  <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_06" /></canvas>
+	  <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_07" /></canvas>
+	  <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_08" /></canvas>
+	  <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_09" /></canvas>
+	  <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_10" /></canvas>
+	  <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_11" /></canvas>
+	  <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_12" /></canvas>
+	  <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_13" /></canvas>
+	  <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_14" /></canvas>
+	  <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_15" /></canvas>
+	  <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_16" /></canvas>
+	  <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_17" /></canvas>
+	  <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_18" /></canvas>
+	  <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_19" /></canvas>
+	  <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_20" /></canvas>
+	  <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_21" /></canvas>
+	  <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_22" /></canvas>
+	  <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_23" /></canvas>
+	  <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_24" /></canvas>
+	  <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_25" /></canvas>
+	  <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_26" /></canvas>
+	  <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_27" /></canvas>
+	  <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_28" /></canvas>
+	  <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_29" /></canvas>
+	  <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_30" /></canvas>
+	  <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_31" /></canvas>
+	  <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_32" /></canvas>
+	  <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_33" /></canvas>
+	  <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_34" /></canvas>
+	  <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_35" /></canvas>
+	  <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_36" /></canvas>
+	  <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_37" /></canvas>
+	  <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_38" /></canvas>
+	  <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_39" /></canvas>
+	  <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_40" /></canvas>
+	  <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_41" /></canvas>
+	  <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_42" /></canvas>
+	  <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_43" /></canvas>
+	  <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_44" /></canvas>
+	  <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_45" /></canvas>
+	  <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_46" /></canvas>
+	  <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_47" /></canvas>
+	</canvasArea>
+	<canvasArea name="Layer">
+	  <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_00" /></canvas>
+	  <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_01" /></canvas>
+	  <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_02" /></canvas>
+	  <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_03" /></canvas>
+	  <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_04" /></canvas>
+	  <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_05" /></canvas>
+	  <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_06" /></canvas>
+	  <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_07" /></canvas>
+	  <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_08" /></canvas>
+	  <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_09" /></canvas>
+	  <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_10" /></canvas>
+	  <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_11" /></canvas>
+	  <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_12" /></canvas>
+	  <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_13" /></canvas>
+	  <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_14" /></canvas>
+	  <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_15" /></canvas>
+	  <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_16" /></canvas>
+	  <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_17" /></canvas>
+	  <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_18" /></canvas>
+	  <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_19" /></canvas>
+	  <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_20" /></canvas>
+	  <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_21" /></canvas>
+	  <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_22" /></canvas>
+	  <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_23" /></canvas>
+	  <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_24" /></canvas>
+	  <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_25" /></canvas>
+	  <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_26" /></canvas>
+	  <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_27" /></canvas>
+	  <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_28" /></canvas>
+	  <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_29" /></canvas>
+	  <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_30" /></canvas>
+	  <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_31" /></canvas>
+	  <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_32" /></canvas>
+	  <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_33" /></canvas>
+	  <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_34" /></canvas>
+	  <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_35" /></canvas>
+	  <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_36" /></canvas>
+	  <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_37" /></canvas>
+	  <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_38" /></canvas>
+	  <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_39" /></canvas>
+	  <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_40" /></canvas>
+	  <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_41" /></canvas>
+	  <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_42" /></canvas>
+	  <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_43" /></canvas>
+	  <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_44" /></canvas>
+	  <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_45" /></canvas>
+	  <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_46" /></canvas>
+	  <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_47" /></canvas>
+	</canvasArea>
+	<!-- <canvasArea name="HITs"> -->
+	<!--   <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l01" /></canvas> -->
+	<!--   <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l02" /></canvas> -->
+	<!--   <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l03" /></canvas> -->
+	<!--   <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l04" /></canvas> -->
+	<!--   <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l05" /></canvas> -->
+	<!--   <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l06" /></canvas> -->
+	<!--   <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l07" /></canvas> -->
+	<!--   <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l08" /></canvas> -->
+	<!--   <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l09" /></canvas> -->
+	<!--   <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l10" /></canvas> -->
+	<!--   <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l11" /></canvas> -->
+	<!--   <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l12" /></canvas> -->
+	<!--   <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l13" /></canvas> -->
+	<!--   <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l14" /></canvas> -->
+	<!--   <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l15" /></canvas> -->
+	<!--   <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l16" /></canvas> -->
+	<!--   <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l17" /></canvas> -->
+	<!--   <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l18" /></canvas> -->
+	<!--   <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l19" /></canvas> -->
+	<!--   <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l20" /></canvas> -->
+	<!--   <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l21" /></canvas> -->
+	<!--   <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l22" /></canvas> -->
+	<!--   <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l23" /></canvas> -->
+	<!--   <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l24" /></canvas> -->
+	<!--   <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l25" /></canvas> -->
+	<!--   <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l26" /></canvas> -->
+	<!--   <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l27" /></canvas> -->
+	<!--   <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l28" /></canvas> -->
+	<!--   <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l29" /></canvas> -->
+	<!--   <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l30" /></canvas> -->
+	<!--   <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l31" /></canvas> -->
+	<!--   <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l32" /></canvas> -->
+	<!--   <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l33" /></canvas> -->
+	<!--   <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l34" /></canvas> -->
+	<!--   <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l35" /></canvas> -->
+	<!--   <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l36" /></canvas> -->
+	<!--   <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l37" /></canvas> -->
+	<!--   <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l38" /></canvas> -->
+	<!--   <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l39" /></canvas> -->
+	<!--   <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l40" /></canvas> -->
+	<!--   <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l41" /></canvas> -->
+	<!--   <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l42" /></canvas> -->
+	<!--   <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l43" /></canvas> -->
+	<!--   <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l44" /></canvas> -->
+	<!--   <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l45" /></canvas> -->
+	<!--   <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l46" /></canvas> -->
+	<!--   <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l47" /></canvas> -->
+	<!--   <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l48" /></canvas> -->
+	<!--   <canvas x="1184" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l49" /></canvas> -->
+	<!--   <canvas x="1332" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l50" /></canvas> -->
+	<!--   <canvas x="0" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l51" /></canvas> -->
+	<!--   <canvas x="148" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/HIT" name="HIT_600_l52" /></canvas> -->
+	<!-- </canvasArea> -->
+	<!-- <canvasArea name="MIPs"> -->
+	<!--   <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l01" /></canvas> -->
+	<!--   <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l02" /></canvas> -->
+	<!--   <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l03" /></canvas> -->
+	<!--   <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l04" /></canvas> -->
+	<!--   <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l05" /></canvas> -->
+	<!--   <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l06" /></canvas> -->
+	<!--   <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l07" /></canvas> -->
+	<!--   <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l08" /></canvas> -->
+	<!--   <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l09" /></canvas> -->
+	<!--   <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l10" /></canvas> -->
+	<!--   <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l11" /></canvas> -->
+	<!--   <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l12" /></canvas> -->
+	<!--   <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l13" /></canvas> -->
+	<!--   <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l14" /></canvas> -->
+	<!--   <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l15" /></canvas> -->
+	<!--   <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l16" /></canvas> -->
+	<!--   <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l17" /></canvas> -->
+	<!--   <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l18" /></canvas> -->
+	<!--   <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l19" /></canvas> -->
+	<!--   <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l20" /></canvas> -->
+	<!--   <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l21" /></canvas> -->
+	<!--   <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l22" /></canvas> -->
+	<!--   <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l23" /></canvas> -->
+	<!--   <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l24" /></canvas> -->
+	<!--   <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l25" /></canvas> -->
+	<!--   <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l26" /></canvas> -->
+	<!--   <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l27" /></canvas> -->
+	<!--   <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l28" /></canvas> -->
+	<!--   <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l29" /></canvas> -->
+	<!--   <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l30" /></canvas> -->
+	<!--   <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l31" /></canvas> -->
+	<!--   <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l32" /></canvas> -->
+	<!--   <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l33" /></canvas> -->
+	<!--   <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l34" /></canvas> -->
+	<!--   <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l35" /></canvas> -->
+	<!--   <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l36" /></canvas> -->
+	<!--   <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l37" /></canvas> -->
+	<!--   <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l38" /></canvas> -->
+	<!--   <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l39" /></canvas> -->
+	<!--   <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l40" /></canvas> -->
+	<!--   <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l41" /></canvas> -->
+	<!--   <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l42" /></canvas> -->
+	<!--   <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l43" /></canvas> -->
+	<!--   <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l44" /></canvas> -->
+	<!--   <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l45" /></canvas> -->
+	<!--   <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l46" /></canvas> -->
+	<!--   <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l47" /></canvas> -->
+	<!--   <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l48" /></canvas> -->
+	<!--   <canvas x="1184" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l49" /></canvas> -->
+	<!--   <canvas x="1332" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l50" /></canvas> -->
+	<!--   <canvas x="0" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l51" /></canvas> -->
+	<!--   <canvas x="148" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/MIP" name="MIP_600_l52" /></canvas> -->
+	<!-- </canvasArea> -->
+	<!-- <canvasArea name="Ped"> -->
+	<!--   <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l01" /></canvas> -->
+	<!--   <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l02" /></canvas> -->
+	<!--   <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l03" /></canvas> -->
+	<!--   <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l04" /></canvas> -->
+	<!--   <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l05" /></canvas> -->
+	<!--   <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l06" /></canvas> -->
+	<!--   <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l07" /></canvas> -->
+	<!--   <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l08" /></canvas> -->
+	<!--   <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l09" /></canvas> -->
+	<!--   <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l10" /></canvas> -->
+	<!--   <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l11" /></canvas> -->
+	<!--   <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l12" /></canvas> -->
+	<!--   <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l13" /></canvas> -->
+	<!--   <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l14" /></canvas> -->
+	<!--   <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l15" /></canvas> -->
+	<!--   <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l16" /></canvas> -->
+	<!--   <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l17" /></canvas> -->
+	<!--   <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l18" /></canvas> -->
+	<!--   <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l19" /></canvas> -->
+	<!--   <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l20" /></canvas> -->
+	<!--   <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l21" /></canvas> -->
+	<!--   <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l22" /></canvas> -->
+	<!--   <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l23" /></canvas> -->
+	<!--   <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l24" /></canvas> -->
+	<!--   <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l25" /></canvas> -->
+	<!--   <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l26" /></canvas> -->
+	<!--   <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l27" /></canvas> -->
+	<!--   <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l28" /></canvas> -->
+	<!--   <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l29" /></canvas> -->
+	<!--   <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l30" /></canvas> -->
+	<!--   <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l31" /></canvas> -->
+	<!--   <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l32" /></canvas> -->
+	<!--   <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l33" /></canvas> -->
+	<!--   <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l34" /></canvas> -->
+	<!--   <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l35" /></canvas> -->
+	<!--   <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l36" /></canvas> -->
+	<!--   <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l37" /></canvas> -->
+	<!--   <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l38" /></canvas> -->
+	<!--   <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l39" /></canvas> -->
+	<!--   <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l40" /></canvas> -->
+	<!--   <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l41" /></canvas> -->
+	<!--   <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l42" /></canvas> -->
+	<!--   <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l43" /></canvas> -->
+	<!--   <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l44" /></canvas> -->
+	<!--   <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l45" /></canvas> -->
+	<!--   <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l46" /></canvas> -->
+	<!--   <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l47" /></canvas> -->
+	<!--   <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l48" /></canvas> -->
+	<!--   <canvas x="1184" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l49" /></canvas> -->
+	<!--   <canvas x="1332" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l50" /></canvas> -->
+	<!--   <canvas x="0" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l51" /></canvas> -->
+	<!--   <canvas x="148" y="775" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Maps/Ped" name="Ped_600_l52" /></canvas> -->
+	<!-- </canvasArea> -->
+	<!-- <canvasArea name="Temp"> -->
+	<!--   <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_00" /></canvas> -->
+	<!--   <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_01" /></canvas> -->
+	<!--   <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_02" /></canvas> -->
+	<!--   <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_03" /></canvas> -->
+	<!--   <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_04" /></canvas> -->
+	<!--   <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_05" /></canvas> -->
+	<!--   <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_06" /></canvas> -->
+	<!--   <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_07" /></canvas> -->
+	<!--   <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_08" /></canvas> -->
+	<!--   <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_09" /></canvas> -->
+	<!--   <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_10" /></canvas> -->
+	<!--   <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_11" /></canvas> -->
+	<!--   <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_12" /></canvas> -->
+	<!--   <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_13" /></canvas> -->
+	<!--   <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_14" /></canvas> -->
+	<!--   <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_15" /></canvas> -->
+	<!--   <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_16" /></canvas> -->
+	<!--   <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_17" /></canvas> -->
+	<!--   <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_18" /></canvas> -->
+	<!--   <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_19" /></canvas> -->
+	<!--   <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_20" /></canvas> -->
+	<!--   <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_21" /></canvas> -->
+	<!--   <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_22" /></canvas> -->
+	<!--   <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_23" /></canvas> -->
+	<!--   <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_24" /></canvas> -->
+	<!--   <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_25" /></canvas> -->
+	<!--   <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_26" /></canvas> -->
+	<!--   <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_27" /></canvas> -->
+	<!--   <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_28" /></canvas> -->
+	<!--   <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_29" /></canvas> -->
+	<!--   <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_30" /></canvas> -->
+	<!--   <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_31" /></canvas> -->
+	<!--   <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_32" /></canvas> -->
+	<!--   <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_33" /></canvas> -->
+	<!--   <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_34" /></canvas> -->
+	<!--   <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_35" /></canvas> -->
+	<!--   <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_36" /></canvas> -->
+	<!--   <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_37" /></canvas> -->
+	<!--   <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_38" /></canvas> -->
+	<!--   <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_39" /></canvas> -->
+	<!--   <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_40" /></canvas> -->
+	<!--   <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_41" /></canvas> -->
+	<!--   <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_42" /></canvas> -->
+	<!--   <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_43" /></canvas> -->
+	<!--   <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_44" /></canvas> -->
+	<!--   <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_45" /></canvas> -->
+	<!--   <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_46" /></canvas> -->
+	<!--   <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Average" name="TempAverage_47" /></canvas> -->
+	<!-- </canvasArea> -->
+	<!-- <canvasArea name="PWR"> -->
+	<!--   <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_00" /></canvas> -->
+	<!--   <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_01" /></canvas> -->
+	<!--   <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_02" /></canvas> -->
+	<!--   <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_03" /></canvas> -->
+	<!--   <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_04" /></canvas> -->
+	<!--   <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_05" /></canvas> -->
+	<!--   <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_06" /></canvas> -->
+	<!--   <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_07" /></canvas> -->
+	<!--   <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_08" /></canvas> -->
+	<!--   <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_09" /></canvas> -->
+	<!--   <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_10" /></canvas> -->
+	<!--   <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_11" /></canvas> -->
+	<!--   <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_12" /></canvas> -->
+	<!--   <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_13" /></canvas> -->
+	<!--   <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_14" /></canvas> -->
+	<!--   <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_15" /></canvas> -->
+	<!--   <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_16" /></canvas> -->
+	<!--   <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_17" /></canvas> -->
+	<!--   <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_18" /></canvas> -->
+	<!--   <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_19" /></canvas> -->
+	<!--   <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_20" /></canvas> -->
+	<!--   <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_21" /></canvas> -->
+	<!--   <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_22" /></canvas> -->
+	<!--   <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_23" /></canvas> -->
+	<!--   <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_24" /></canvas> -->
+	<!--   <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_25" /></canvas> -->
+	<!--   <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_26" /></canvas> -->
+	<!--   <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_27" /></canvas> -->
+	<!--   <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_28" /></canvas> -->
+	<!--   <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_29" /></canvas> -->
+	<!--   <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_30" /></canvas> -->
+	<!--   <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_31" /></canvas> -->
+	<!--   <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_32" /></canvas> -->
+	<!--   <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_33" /></canvas> -->
+	<!--   <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_34" /></canvas> -->
+	<!--   <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_35" /></canvas> -->
+	<!--   <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_36" /></canvas> -->
+	<!--   <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_37" /></canvas> -->
+	<!--   <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_38" /></canvas> -->
+	<!--   <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_39" /></canvas> -->
+	<!--   <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_40" /></canvas> -->
+	<!--   <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_41" /></canvas> -->
+	<!--   <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_42" /></canvas> -->
+	<!--   <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_43" /></canvas> -->
+	<!--   <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_44" /></canvas> -->
+	<!--   <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_45" /></canvas> -->
+	<!--   <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_46" /></canvas> -->
+	<!--   <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/PWR" name="TempPWR_47" /></canvas> -->
+	<!-- </canvasArea> -->
+	<!-- <canvasArea name="DIF"> -->
+	<!--   <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_00" /></canvas> -->
+	<!--   <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_01" /></canvas> -->
+	<!--   <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_02" /></canvas> -->
+	<!--   <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_03" /></canvas> -->
+	<!--   <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_04" /></canvas> -->
+	<!--   <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_05" /></canvas> -->
+	<!--   <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_06" /></canvas> -->
+	<!--   <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_07" /></canvas> -->
+	<!--   <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_08" /></canvas> -->
+	<!--   <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_09" /></canvas> -->
+	<!--   <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_10" /></canvas> -->
+	<!--   <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_11" /></canvas> -->
+	<!--   <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_12" /></canvas> -->
+	<!--   <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_13" /></canvas> -->
+	<!--   <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_14" /></canvas> -->
+	<!--   <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_15" /></canvas> -->
+	<!--   <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_16" /></canvas> -->
+	<!--   <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_17" /></canvas> -->
+	<!--   <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_18" /></canvas> -->
+	<!--   <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_19" /></canvas> -->
+	<!--   <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_20" /></canvas> -->
+	<!--   <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_21" /></canvas> -->
+	<!--   <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_22" /></canvas> -->
+	<!--   <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_23" /></canvas> -->
+	<!--   <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_24" /></canvas> -->
+	<!--   <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_25" /></canvas> -->
+	<!--   <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_26" /></canvas> -->
+	<!--   <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_27" /></canvas> -->
+	<!--   <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_28" /></canvas> -->
+	<!--   <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_29" /></canvas> -->
+	<!--   <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_30" /></canvas> -->
+	<!--   <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_31" /></canvas> -->
+	<!--   <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_32" /></canvas> -->
+	<!--   <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_33" /></canvas> -->
+	<!--   <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_34" /></canvas> -->
+	<!--   <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_35" /></canvas> -->
+	<!--   <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_36" /></canvas> -->
+	<!--   <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_37" /></canvas> -->
+	<!--   <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_38" /></canvas> -->
+	<!--   <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_39" /></canvas> -->
+	<!--   <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_40" /></canvas> -->
+	<!--   <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_41" /></canvas> -->
+	<!--   <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_42" /></canvas> -->
+	<!--   <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_43" /></canvas> -->
+	<!--   <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_44" /></canvas> -->
+	<!--   <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_45" /></canvas> -->
+	<!--   <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_46" /></canvas> -->
+	<!--   <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/DIF" name="TempDIF_47" /></canvas> -->
+	<!-- </canvasArea> -->
+	<!-- <canvasArea name="Layer"> -->
+	<!--   <canvas x="0" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_00" /></canvas> -->
+	<!--   <canvas x="148" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_01" /></canvas> -->
+	<!--   <canvas x="296" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_02" /></canvas> -->
+	<!--   <canvas x="444" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_03" /></canvas> -->
+	<!--   <canvas x="592" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_04" /></canvas> -->
+	<!--   <canvas x="740" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_05" /></canvas> -->
+	<!--   <canvas x="888" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_06" /></canvas> -->
+	<!--   <canvas x="1036" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_07" /></canvas> -->
+	<!--   <canvas x="1184" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_08" /></canvas> -->
+	<!--   <canvas x="1332" y="0" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_09" /></canvas> -->
+	<!--   <canvas x="0" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_10" /></canvas> -->
+	<!--   <canvas x="148" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_11" /></canvas> -->
+	<!--   <canvas x="296" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_12" /></canvas> -->
+	<!--   <canvas x="444" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_13" /></canvas> -->
+	<!--   <canvas x="592" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_14" /></canvas> -->
+	<!--   <canvas x="740" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_15" /></canvas> -->
+	<!--   <canvas x="888" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_16" /></canvas> -->
+	<!--   <canvas x="1036" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_17" /></canvas> -->
+	<!--   <canvas x="1184" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_18" /></canvas> -->
+	<!--   <canvas x="1332" y="155" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_19" /></canvas> -->
+	<!--   <canvas x="0" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_20" /></canvas> -->
+	<!--   <canvas x="148" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_21" /></canvas> -->
+	<!--   <canvas x="296" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_22" /></canvas> -->
+	<!--   <canvas x="444" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_23" /></canvas> -->
+	<!--   <canvas x="592" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_24" /></canvas> -->
+	<!--   <canvas x="740" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_25" /></canvas> -->
+	<!--   <canvas x="888" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_26" /></canvas> -->
+	<!--   <canvas x="1036" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_27" /></canvas> -->
+	<!--   <canvas x="1184" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_28" /></canvas> -->
+	<!--   <canvas x="1332" y="310" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_29" /></canvas> -->
+	<!--   <canvas x="0" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_30" /></canvas> -->
+	<!--   <canvas x="148" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_31" /></canvas> -->
+	<!--   <canvas x="296" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_32" /></canvas> -->
+	<!--   <canvas x="444" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_33" /></canvas> -->
+	<!--   <canvas x="592" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_34" /></canvas> -->
+	<!--   <canvas x="740" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_35" /></canvas> -->
+	<!--   <canvas x="888" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_36" /></canvas> -->
+	<!--   <canvas x="1036" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_37" /></canvas> -->
+	<!--   <canvas x="1184" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_38" /></canvas> -->
+	<!--   <canvas x="1332" y="465" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_39" /></canvas> -->
+	<!--   <canvas x="0" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_40" /></canvas> -->
+	<!--   <canvas x="148" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_41" /></canvas> -->
+	<!--   <canvas x="296" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_42" /></canvas> -->
+	<!--   <canvas x="444" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_43" /></canvas> -->
+	<!--   <canvas x="592" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_44" /></canvas> -->
+	<!--   <canvas x="740" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_45" /></canvas> -->
+	<!--   <canvas x="888" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_46" /></canvas> -->
+	<!--   <canvas x="1036" y="620" w="156" h="170"> <monitorElement collector="ahcal_me_collector" module="myAHCAL_96Layers" path="Temp/Layer" name="TempLayer_47" /></canvas> -->
+	<!-- </canvasArea> -->
+</canvasView>
+</view>
+<controller>
+  <collector value="ahcal_me_collector" />
+</controller>
+</monitoring>
+</dqm4hep>

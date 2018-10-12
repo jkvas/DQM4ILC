@@ -1,7 +1,6 @@
 #!/bin/bash
-LAYERS=52 #edit here for the number of elements in the array
-LayerOrder=(42  #module No. of 1st layer
-    2
+LAYERS=39 #edit here for the number of elements in the array
+LayerOrder=(2 #module No. of 1st layer
     3 #module No. of 2nd layer ...
     4 
     5
@@ -40,19 +39,6 @@ LayerOrder=(42  #module No. of 1st layer
     34
     41  #tokyo
     36
-    43 #tokyo
-    44
-    45
-    46
-    47
-    48
-    49
-    50
-    51
-    52
-    53
-    54
-
 )
 
 ModuleFirstAsics=(
