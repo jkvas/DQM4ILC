@@ -1,44 +1,44 @@
 #!/bin/bash
-LAYERS=39 #edit here for the number of elements in the array
-LayerOrder=(2 #module No. of 1st layer
-    3 #module No. of 2nd layer ...
-    4 
-    5
-    6
-    8
-    9
-    10
-    11
-    13
-    14
-    19
-    21
-    23
-    24
-    25
-    30
-    12
-    15
-    16
-    17
-    18
-    22
-    28
-    39
-    1
-    20
-    26
-    32
-    40
-    27
-    31
-    38
-    37
-    29
-    33
-    34
-    41  #tokyo
-    36
+LAYERS=3 #edit here for the number of elements in the array
+LayerOrder=(43 #module No. of 1st layer
+    42 #module No. of 2nd layer ...
+    44 
+    # 5
+    # 6
+    # 8
+    # 9
+    # 10
+    # 11
+    # 13
+    # 14
+    # 19
+    # 21
+    # 23
+    # 24
+    # 25
+    # 30
+    # 12
+    # 15
+    # 16
+    # 17
+    # 18
+    # 22
+    # 28
+    # 39
+    # 1
+    # 20
+    # 26
+    # 32
+    # 40
+    # 27
+    # 31
+    # 38
+    # 37
+    # 29
+    # 33
+    # 34
+    # 41  #tokyo
+    # 36
 )
 
 ModuleFirstAsics=(
@@ -84,7 +84,7 @@ ModuleFirstAsics=(
     0 #1st asic# of module 40
     0 #1st asic# of module 41
     -12 #1st asic# of module 42 0-3
-    0 #1st asic# of module 43  12-15
+    -12 #1st asic# of module 43  12-15
     -12 #1st asic# of module 44  0-3
     -8 #1st asic# of module 45  4-7
     -4 #1st asic# of module 46  8-11
