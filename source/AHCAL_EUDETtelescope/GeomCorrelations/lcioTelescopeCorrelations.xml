@@ -20,23 +20,18 @@
   <cycle type="TimerCycle" value="1" timeout="1" />
   
   <module type="TelescopeAHCALCorrelations" name="TelescopeAHCALCorrelations">
-    
     <parameter name="DumpEvent"> false </parameter>    
-
-
+    <parameter name="RequireDaqQuality"> false </parameter>    
     <!--  ######################################################  --> 
     <!--  telescope hotpixel mapping  --> 
     <!--  ######################################################  --> 
-
-      <parameter name="HotPixelsFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/EUDETtelescope/hotpixels/hotpixelsmap_october.xml </parameter>
-
+    <parameter name="HotPixelsFilename">/home/calice/TB2019/DQM4ILC/source/AHCAL_BIF/scripts/hotpixelmap_azalea_201905_level001.xml </parameter>
     <!--  ######################################################  --> 
     <!--  AHCAL mapping plots --> 
     <!--  ######################################################  --> 
 
-    <parameter name="GeometryFilename"> /home/calice/TB2016/DQM4HEP-test/DQM4ILC/source/AHCAL_BIF/AHCAL/ElectronicsMapping/maps/JulyAugust2016/geometrymap_airstack.xml </parameter>
-
-
+    <parameter name="GeometryFilename">/home/calice/TB2019/DQM4ILC/source/AHCAL_BIF/scripts/Geometry_2019May.xml</parameter>
+                                       
     <!--  ######################################################  --> 
     <!--  Correlation plots   --> 
     <!--  ######################################################  --> 
