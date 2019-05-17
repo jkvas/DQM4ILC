@@ -270,8 +270,10 @@ namespace dqm4hep
     // ####################################################################################################################################
     //-----------------------------------------------------
     m_dumpEvent = false;
-    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,
-													     "DumpEvent", m_dumpEvent));
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"DumpEvent", m_dumpEvent));
+
+    m_requireDaqQuality = false; 
+    RETURN_RESULT_IF_AND_IF(STATUS_CODE_SUCCESS, STATUS_CODE_NOT_FOUND, !=, DQMXmlHelper::readParameterValue(xmlHandle,"RequireDaqQuality", m_requireDaqQuality));
 
     return STATUS_CODE_SUCCESS;
   }
@@ -301,7 +303,6 @@ namespace dqm4hep
 
   StatusCode Correlations::processEvent(DQMEvent *pEvent)
   {
-
     int EventCntIndex = 1;
     int BxIDIndex = 1;
     int EvtNrIndex = 2;
@@ -328,22 +329,18 @@ namespace dqm4hep
 
     int allcollections=0;
 
-    for(std::vector<std::string>::const_iterator colIter = pCollectionNames->begin();
-	colIter != pCollectionNames->end() ; ++colIter)
+    for(std::vector<std::string>::const_iterator colIter = pCollectionNames->begin(); colIter != pCollectionNames->end() ; ++colIter)
       {
-
 	const std::string &collectionName(*colIter);
-
-	if(collectionName=="TimeStamps" || collectionName=="EUDAQDataScCAL" || collectionName=="zsdata" ) 
+	if(collectionName=="EUDAQDataLDATS" || collectionName=="EUDAQDataScCAL" || collectionName=="zsdata_m26" ) 
 	  allcollections++;
       }
 
     if(allcollections != 3)  {
+      std::cout<<"DEBUG: not all collections present. only "<<allcollections<<" Found."<<std::endl;
       return STATUS_CODE_SUCCESS;
     }   else {
-
-	
-      EVENT::LCCollection *pLCCollection = pLCEvent->getCollection("TimeStamps");
+      EVENT::LCCollection *pLCCollection = pLCEvent->getCollection("EUDAQDataLDATS");
 
       // #####################################################################################################################
       // Timestamp section
@@ -380,7 +377,7 @@ namespace dqm4hep
      
       // #####################################################################################################################
       // TELESCOPE section
-      pLCCollection = pLCEvent->getCollection("zsdata");
+      pLCCollection = pLCEvent->getCollection("zsdata_m26");
 
       UTIL::CellIDDecoder<EVENT::TrackerData> cellIdDecoder(pLCCollection);
       
@@ -409,7 +406,7 @@ namespace dqm4hep
 	
     
       int daqquality = pLCCollection->getParameters().getIntVal("DAQquality");
-      if( daqquality==1 ) {
+      if( (!m_requireDaqQuality) | (daqquality==1) ) {
 	    
 	const int nElements = pLCCollection->getNumberOfElements();
 
@@ -445,22 +442,14 @@ namespace dqm4hep
 	      hitbit_tdc = (tdcRAW & 0x1000)?1:0;
 	      gainbit_tdc = (tdcRAW & 0x2000)?1:0;
 		  
-			
-	      if( hitbit_adc == hitbit_tdc && pAHCALRaw->getIntVal(EvtNrIndex) !=0 && hitbit_adc == 1) {
-		  
-	    
+	      if ( hitbit_adc == hitbit_tdc && pAHCALRaw->getIntVal(EvtNrIndex) !=0 && hitbit_adc == 1) {
 		int ijk = electronicsToIJK(pAHCALRaw->getIntVal(ChipIDIndex),f);
 		int I = ijk / 10000;
 		int J = ( ijk  % 10000 ) /100;
 		int K = ( ijk  % 10000 ) % 100;
-
-
 		if(adc>300 ) {
-			  
 		  m_pCorrelatedBXID->get<TH1I>()->Fill((TimeStamp_trig-TimeStamp_start)-pAHCALRaw->getIntVal(BxIDIndex)*4);
-
 		  if( ((TimeStamp_trig-TimeStamp_start)-pAHCALRaw->getIntVal(BxIDIndex)*4)>50 && ((TimeStamp_trig-TimeStamp_start)-pAHCALRaw->getIntVal(BxIDIndex)*4)<62 ) {
-		    
 		    for(int i=0; i< X_sensor0.size(); i++) {
 		      if(K==1) m_pX_I_300_l01->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
 		      if(K==2) m_pX_I_300_l02->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
@@ -492,7 +481,6 @@ namespace dqm4hep
 		      if(K==6) m_pY_J_300_l06->get<TH2I>()->Fill(J,Y_sensor0.at(i),adc);
 		    }
 		  } else  {
-			  
 		    for(int i=0; i< X_sensor0.size(); i++) {
 		      if(K==1) m_pX_noC_I_300_l01->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
 		      if(K==2) m_pX_noC_I_300_l02->get<TH2I>()->Fill(I,X_sensor0.at(i),adc);
@@ -525,7 +513,6 @@ namespace dqm4hep
 		    }
 		  }
 		}
-	
 	      }
 	      //---------------------------------------------------------------------------------------
 	    }		    

@@ -153,6 +153,7 @@ protected:
 
 	int goodDAQ;
 	int badDAQ;
+	bool m_requireDaqQuality;
 
 }; 
 
