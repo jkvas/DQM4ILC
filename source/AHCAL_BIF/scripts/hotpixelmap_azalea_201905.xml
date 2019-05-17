@@ -1,0 +1,82 @@
+<dqm4hepHotPixelsMap>
+  <sensor id="1">
+    <pixel x="38"  y="397"/>
+    <pixel x="158"  y="232"/>
+    <pixel x="173"  y="283"/>
+    <pixel x="298"  y="564"/>
+    <pixel x="591"  y="413"/>
+    <pixel x="806"  y="87"/>
+    <pixel x="933"  y="472"/>
+    <pixel x="945"  y="416"/>
+    <pixel x="1064"  y="453"/>
+    <pixel x="1132"  y="565"/>
+  </sensor>
+  <sensor id="2">
+    <pixel x="663"  y="303"/>
+    <pixel x="783"  y="30"/>
+    <pixel x="1028"  y="306"/>
+  </sensor>
+  <sensor id="3">
+    <pixel x="204"  y="565"/>
+    <pixel x="331"  y="12"/>
+    <pixel x="467"  y="131"/>
+    <pixel x="476"  y="411"/>
+    <pixel x="636"  y="94"/>
+    <pixel x="646"  y="426"/>
+    <pixel x="654"  y="11"/>
+    <pixel x="757"  y="6"/>
+    <pixel x="770"  y="36"/>
+    <pixel x="797"  y="288"/>
+    <pixel x="869"  y="481"/>
+    <pixel x="946"  y="386"/>
+    <pixel x="967"  y="523"/>
+    <pixel x="1008"  y="90"/>
+    <pixel x="1038"  y="72"/>
+    <pixel x="1074"  y="378"/>
+    <pixel x="1087"  y="270"/>
+    <pixel x="1104"  y="453"/>
+    <pixel x="1131"  y="124"/>
+    <pixel x="1149"  y="384"/>
+  </sensor>
+  <sensor id="4">
+    <pixel x="44"  y="366"/>
+    <pixel x="56"  y="114"/>
+    <pixel x="331"  y="64"/>
+    <pixel x="402"  y="51"/>
+    <pixel x="414"  y="400"/>
+    <pixel x="537"  y="54"/>
+    <pixel x="576"  y="530"/>
+    <pixel x="654"  y="569"/>
+    <pixel x="684"  y="107"/>
+    <pixel x="841"  y="0"/>
+    <pixel x="841"  y="56"/>
+  </sensor>
+  <sensor id="5">
+    <pixel x="61"  y="505"/>
+    <pixel x="419"  y="318"/>
+    <pixel x="422"  y="387"/>
+    <pixel x="608"  y="10"/>
+    <pixel x="719"  y="292"/>
+    <pixel x="747"  y="561"/>
+    <pixel x="839"  y="439"/>
+    <pixel x="861"  y="105"/>
+    <pixel x="862"  y="29"/>
+    <pixel x="911"  y="132"/>
+    <pixel x="938"  y="243"/>
+    <pixel x="940"  y="210"/>
+    <pixel x="1014"  y="573"/>
+    <pixel x="1020"  y="464"/>
+    <pixel x="1091"  y="331"/>
+    <pixel x="1111"  y="100"/>
+    <pixel x="1111"  y="284"/>
+    <pixel x="1118"  y="337"/>
+  </sensor>
+  <sensor id="6">
+    <pixel x="48"  y="93"/>
+    <pixel x="462"  y="244"/>
+    <pixel x="953"  y="206"/>
+    <pixel x="954"  y="423"/>
+    <pixel x="978"  y="45"/>
+    <pixel x="1083"  y="148"/>
+  </sensor>
+</dqm4hepHotPixelsMap>
